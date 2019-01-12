@@ -3,19 +3,20 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
-  <title>Z&#39;s Notes</title>
+  <title>golang standard library  | Z&#39;s Notes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="97 年本科生，目前在北京字节跳动实习，热爱一切美好的事物。你可以通过我以前的文章来深入了解我，或者通过以下方式和我交流：  email： menghacker@gmail.com wechat： guozhen2xiaolu">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Z&#39;s Notes">
-<meta property="og:url" content="http://zjdznl.github.io/about.html">
+  <meta name="description" content="introduction主要介绍 golang 标准库的用法、原理和最佳实践。   sync  atomic  fmt">
+<meta name="keywords" content="golang">
+<meta property="og:type" content="article">
+<meta property="og:title" content="golang standard library ">
+<meta property="og:url" content="http://zjdznl.github.io/2019/01/12/golang-standard-library/index.html">
 <meta property="og:site_name" content="Z&#39;s Notes">
-<meta property="og:description" content="97 年本科生，目前在北京字节跳动实习，热爱一切美好的事物。你可以通过我以前的文章来深入了解我，或者通过以下方式和我交流：  email： menghacker@gmail.com wechat： guozhen2xiaolu">
+<meta property="og:description" content="introduction主要介绍 golang 标准库的用法、原理和最佳实践。   sync  atomic  fmt">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-01-01T10:16:31.258Z">
+<meta property="og:updated_time" content="2019-01-12T13:39:25.231Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Z&#39;s Notes">
-<meta name="twitter:description" content="97 年本科生，目前在北京字节跳动实习，热爱一切美好的事物。你可以通过我以前的文章来深入了解我，或者通过以下方式和我交流：  email： menghacker@gmail.com wechat： guozhen2xiaolu">
+<meta name="twitter:title" content="golang standard library ">
+<meta name="twitter:description" content="introduction主要介绍 golang 标准库的用法、原理和最佳实践。   sync  atomic  fmt">
   
     <link rel="alternate" href="/atom.xml" title="Z&#39;s Notes" type="application/atom+xml">
   
@@ -72,33 +73,46 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="page-" class="article article-type-page" itemscope="" itemprop="blogPost">
+        <section id="main"><article id="blog-golang-standard-library" class="article article-type-blog" itemscope="" itemprop="blogPost">
   <div class="article-meta">
-    <a href="/about.html" class="article-date">
-  <time datetime="2019-01-01T09:47:17.000Z" itemprop="datePublished">2019-01-01</time>
+    <a href="/2019/01/12/golang-standard-library/" class="article-date">
+  <time datetime="2019-01-12T13:34:59.000Z" itemprop="datePublished">2019-01-12</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      golang standard library 
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
         <!-- Table of Contents -->
         
-        <p>97 年本科生，目前在北京字节跳动实习，热爱一切美好的事物。<br>你可以通过我以前的文章来深入了解我，或者通过以下方式和我交流：</p>
+        <h1 id="introduction"><a href="#introduction" class="headerlink" title="introduction"></a>introduction</h1><p>主要介绍 golang 标准库的用法、原理和最佳实践。</p>
 <ul>
-<li>email： <a href="mailto:menghacker@gmail.com" target="_blank" rel="noopener">menghacker@gmail.com</a></li>
-<li>wechat： guozhen2xiaolu</li>
+<li style="list-style: none"><input type="checkbox"> sync</li>
+<li style="list-style: none"><input type="checkbox"> atomic</li>
+<li style="list-style: none"><input type="checkbox"> fmt</li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zjdznl.github.io/about.html" data-id="cjqtioxn70000c4fyshsi1o9r" class="article-share-link">分享</a>
+      <a data-url="http://zjdznl.github.io/2019/01/12/golang-standard-library/" data-id="cjqtioxnz0001c4fyvawdzses" class="article-share-link">分享</a>
       
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/golang/">golang</a></li></ul>
+
     </footer>
   </div>
   
@@ -145,6 +159,16 @@
   </div>
 
     
+<nav id="article-nav">
+  
+  
+    <a href="/2019/01/05/MethodSets/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">MethodSets</div>
+    </a>
+  
+</nav>
+
   
 </article>
  
@@ -170,34 +194,24 @@
 
   
     
-  
+    <div class="widget-wrap">
     
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title recent-posts">最新文章</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2019/01/12/golang-standard-library/">golang standard library </a>
-          </li>
-        
-          <li>
-            <a href="/2019/01/05/MethodSets/">MethodSets</a>
-          </li>
-        
-          <li>
-            <a href="/2019/01/01/2018 && 2019/">2018 &amp;&amp; 2019</a>
-          </li>
-        
-      </ul>
+      <div class="widget" id="toc-widget-fixed">
+      
+        <strong class="toc-title">文章目录</strong>
+        <div class="toc-widget-list">
+              <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#introduction"><span class="toc-number">1.</span> <span class="toc-text">introduction</span></a></li></ol>
+          </div>
+      </div>
     </div>
-  </div>
 
+  
+    
+
+  
+    
+  
+    
   
     
 
