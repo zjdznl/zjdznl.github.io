@@ -14,7 +14,7 @@ title = "郑甲第"
 
   [params.author]
     name = "郑甲第"
-    headline = "后端工程师 · AI Agent · 业余投资者"
+    headline = "后端工程师 · AI Agent"
     bio = "写代码、做投资、思考输出。这里是信号发射塔。"
     links = [
       { github = "https://github.com/zjdznl" },
