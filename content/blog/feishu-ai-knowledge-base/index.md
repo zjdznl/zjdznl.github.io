@@ -1,3 +1,11 @@
+---
+title: "飞书 + Claude Code：我把 AI 变成了一个会记事的幕僚团队"
+date: 2026-06-15T12:00:00+08:00
+draft: false
+tags: ['AI', 'Claude Code', '飞书', 'botmux', '知识库', 'Agent']
+categories: ["blog"]
+---
+
 # 飞书 + Claude Code：我把 AI 变成了一个会记事的幕僚团队
 
 > Claude Code 是业内最好的 LLM Harness 框架。把它装进飞书，一个机器人分裂出多个数字人格——投资分析、技术搭档、内容编辑、学习教练——每个都有自己的思维框架、共享持久记忆。这不是 SaaS 产品能做到的。
