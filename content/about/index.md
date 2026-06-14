@@ -1,6 +1,9 @@
 ---
 title: 关于
 layout: page
+showDate: false
+showReadingTime: false
+showWordCount: false
 showTableOfContents: false
 ---
 
