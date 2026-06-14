@@ -1,0 +1,16 @@
+# Hugo build output
+/public/
+
+# Node.js (if using Tailwind/PostCSS)
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.hugo_build.lock

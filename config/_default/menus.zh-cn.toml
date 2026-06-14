@@ -1,0 +1,19 @@
+[[main]]
+  name = "博客"
+  pageRef = "/blog"
+  weight = 10
+
+[[main]]
+  name = "投资"
+  pageRef = "/investment"
+  weight = 20
+
+[[main]]
+  name = "思考"
+  pageRef = "/thoughts"
+  weight = 30
+
+[[main]]
+  name = "关于"
+  pageRef = "/about"
+  weight = 40

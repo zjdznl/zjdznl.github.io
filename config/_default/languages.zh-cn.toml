@@ -1,0 +1,22 @@
+disabled = false
+locale = "zh-CN"
+label = "简体中文"
+weight = 1
+title = "郭朕"
+
+[params]
+  displayName = "CN"
+  isoCode = "zh-CN"
+  rtl = false
+  dateFormat = "2006-01-02"
+  description = "郭朕的个人网站 — 技术、投资与思考"
+  copyright = "© 2026 郭朕"
+
+  [params.author]
+    name = "郭朕"
+    email = "menghacker@gmail.com"
+    headline = "后端工程师 · AI Agent 构建者 · 业余投资者"
+    bio = "字节跳动 2-2，电商搜索后台。写代码、做投资、思考输出。这里是我的信号发射塔。"
+    links = [
+      { github = "https://github.com/zjdznl" },
+    ]

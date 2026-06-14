@@ -1,0 +1,67 @@
+# -- Theme Parameters --
+# https://blowfish.page/docs/configuration/#theme-parameters
+
+colorScheme = "blowfish"
+defaultAppearance = "light"
+autoSwitchAppearance = true
+
+enableSearch = true
+enableCodeCopy = true
+enableA11y = true
+
+mainSections = ["blog", "investment", "thoughts"]
+
+fingerprintAlgorithm = "sha512"
+
+[header]
+  layout = "basic"
+
+[footer]
+  showMenu = true
+  showCopyright = true
+  showThemeAttribution = true
+  showAppearanceSwitcher = true
+  showScrollToTop = true
+
+[homepage]
+  layout = "profile"
+  showRecent = true
+  showRecentItems = 5
+  showMoreLink = true
+  showMoreLinkDest = "/blog/"
+  cardView = false
+
+[article]
+  showDate = true
+  showDateUpdated = true
+  showAuthor = true
+  showBreadcrumbs = false
+  showDraftLabel = true
+  showEdit = false
+  showHeadingAnchors = true
+  showPagination = true
+  showReadingTime = true
+  showTableOfContents = true
+  showTaxonomies = true
+  showCategories = true
+  showTags = true
+  showWordCount = true
+
+[list]
+  showBreadcrumbs = false
+  showSummary = false
+  showTableOfContents = false
+  groupByYear = true
+  cardView = false
+
+[taxonomy]
+  showTermCount = true
+  showBreadcrumbs = false
+  showTableOfContents = false
+  cardView = false
+
+[term]
+  showBreadcrumbs = false
+  showTableOfContents = true
+  groupByYear = false
+  cardView = false
