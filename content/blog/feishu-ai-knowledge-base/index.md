@@ -1,6 +1,6 @@
 ---
 title: "飞书 + Claude Code：我把 AI 变成了一个会记事的幕僚团队"
-date: 2026-06-15T01:33:55+08:00
+date: 2026-06-15T01:37:11+08:00
 draft: false
 ---
 
@@ -163,8 +163,6 @@ botmux 给 CLI 环境注入一组 `botmux` skills——**让 Claude Code 通过 
 - **Claude Code**负责 LLM 的 Harness——身份、记忆、技能、边界
 - **本地 Git 仓库**负责知识持久化
 
-![四层系统架构图](images/architecture.png)
-
 ---
 
 ## AI 人格的三层架构：角色 → 视角 → 记忆
@@ -195,8 +193,6 @@ botmux 给 CLI 环境注入一组 `botmux` skills——**让 Claude Code 通过 
 - **记忆**回答「它记得什么」——确保 AI 跟你的每一次对话都有连续性，知识持续沉淀
 
 大多数人的 AI 系统只做到第一层（写个 system prompt 说「你是 XX 专家」），然后奇怪为什么回复没有深度——因为缺少思考框架（第二层）和记忆积累（第三层）。
-
-![AI人格三层架构](images/personality-layers.png)
 
 ---
 
