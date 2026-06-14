@@ -6,7 +6,7 @@ showTableOfContents: false
 
 ## 我是谁
 
-zjdznl，后端工程师，主攻 Go/Python/C++，近年聚焦 AI Agent 方向。
+郑甲第，后端工程师，主攻 Go/Python/C++，近年聚焦 AI Agent 方向。
 
 ## 这个网站
 
