@@ -46,6 +46,7 @@ fingerprintAlgorithm = "sha512"
   showCategories = true
   showTags = true
   showWordCount = true
+  showComments = true
 
 [list]
   showBreadcrumbs = false
@@ -54,14 +55,21 @@ fingerprintAlgorithm = "sha512"
   groupByYear = true
   cardView = false
 
+
 [taxonomy]
   showTermCount = true
   showBreadcrumbs = false
   showTableOfContents = false
   cardView = false
 
+
 [term]
   showBreadcrumbs = false
   showTableOfContents = true
   groupByYear = false
   cardView = false
+
+
+[umamiAnalytics]
+  websiteid = "0d44dcab-f20d-44e5-bdcc-8e7c46791f51"
+  domain = "zjdznl.github.io"
