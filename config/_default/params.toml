@@ -73,3 +73,4 @@ fingerprintAlgorithm = "sha512"
 [umamiAnalytics]
   websiteid = "0d44dcab-f20d-44e5-bdcc-8e7c46791f51"
   domain = "zjdznl.github.io"
+  dataDomains = "zjdznl.github.io"
