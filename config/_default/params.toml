@@ -47,6 +47,7 @@ fingerprintAlgorithm = "sha512"
   showCategories = true
   showTags = true
   showWordCount = true
+  showViews = true
   showComments = true
   showZenMode = true
 
