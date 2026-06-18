@@ -1,0 +1,56 @@
+{{ if .Params.showTableOfContents }}
+<script>
+(function() {
+  const toc = document.querySelector('.toc');
+  if (!toc) return;
+
+  const tocLinks = toc.querySelectorAll('a[href^="#"]');
+  if (!tocLinks.length) return;
+
+  // Build heading id → TOC link map
+  const linkMap = new Map();
+  tocLinks.forEach(a => linkMap.set(a.getAttribute('href').slice(1), a));
+
+  // Collect headings in document order
+  const headings = [];
+  linkMap.forEach((_, id) => {
+    const el = document.getElementById(id);
+    if (el) headings.push(el);
+  });
+  headings.sort((a, b) => a.offsetTop - b.offsetTop);
+  if (!headings.length) return;
+
+  let activeLink = null;
+  let ticking = false;
+
+  function update() {
+    const scrollTop = window.scrollY + 130;
+    let activeId = null;
+
+    for (const h of headings) {
+      if (h.offsetTop <= scrollTop) activeId = h.id;
+      else break;
+    }
+
+    if (activeId) {
+      const link = linkMap.get(activeId);
+      if (link && link !== activeLink) {
+        if (activeLink) activeLink.classList.remove('active-toc');
+        link.classList.add('active-toc');
+        activeLink = link;
+      }
+    }
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(update);
+      ticking = true;
+    }
+  }, { passive: true });
+
+  update();
+})();
+</script>
+{{ end }}
