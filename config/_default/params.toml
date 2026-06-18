@@ -48,6 +48,7 @@ fingerprintAlgorithm = "sha512"
   showTags = true
   showWordCount = true
   showComments = true
+  showZenMode = true
 
 [list]
   showBreadcrumbs = false
