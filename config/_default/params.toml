@@ -10,6 +10,7 @@ enableCodeCopy = true
 enableA11y = true
 
 mainSections = ["ai", "investment", "thoughts"]
+smartTOC = true
 
 fingerprintAlgorithm = "sha512"
 
