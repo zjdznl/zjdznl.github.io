@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>腾讯 on 主页</title><link>https://zjdznl.github.io/tags/%E8%85%BE%E8%AE%AF/</link><description>Recent content in 腾讯 on 主页</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>© 2026</copyright><lastBuildDate>Mon, 15 Jun 2026 12:00:00 +0800</lastBuildDate><atom:link href="https://zjdznl.github.io/tags/%E8%85%BE%E8%AE%AF/index.xml" rel="self" type="application/rss+xml"/><item><title>腾讯AI下半场：汤道生对谈姚顺雨，万字实录背后的十个真相</title><link>https://zjdznl.github.io/ai/tang-yao-ai-second-half/</link><pubDate>Mon, 15 Jun 2026 12:00:00 +0800</pubDate><guid>https://zjdznl.github.io/ai/tang-yao-ai-second-half/</guid><description>&lt;p&gt;&lt;strong&gt;2026年6月5日，北京国家会议中心&lt;/strong&gt;。腾讯集团高级执行副总裁、云与智慧产业事业群CEO汤道生，与腾讯首席AI科学家姚顺雨，进行了一场45分钟的对谈。&lt;/p&gt;
+&lt;p&gt;两个人物的组合本身就很有张力——一个53岁的互联网老兵，经历过PC互联网、移动互联网、产业互联网三个时代；一个28岁的AI科学家，清华姚班出身、普林斯顿博士、前OpenAI研究员，发明了今天几乎所有Agent的底层架构ReAct。&lt;/p&gt;
+&lt;p&gt;这场对话的信息密度远超一般的「大会圆桌」。聊的不只是「腾讯AI慢没慢」，更是整个AI行业正在经历的根本性范式转移——从模型竞争到场景竞争，从技术问题到组织问题，从百米冲刺到马拉松。&lt;/p&gt;
+&lt;p&gt;我反复读了三遍实录，结合对Agent协议演进、具身智能时间线、递归自改进风险、后AGI经济学等议题的独立调研，把核心洞察提炼为十个真相。&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;h2 class="relative group"&gt;一、竞争范式正在转移：从「造锤子」到「找钉子」
+ &lt;div id="一竞争范式正在转移从造锤子到找钉子" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%b8%80%e7%ab%9e%e4%ba%89%e8%8c%83%e5%bc%8f%e6%ad%a3%e5%9c%a8%e8%bd%ac%e7%a7%bb%e4%bb%8e%e9%80%a0%e9%94%a4%e5%ad%90%e5%88%b0%e6%89%be%e9%92%89%e5%ad%90" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;姚顺雨开场就抛出了一个被严重低估的判断：&lt;/p&gt;
+&lt;p&gt;什么叫「万能锤子」？在2022年之前，AI要为每个具体任务专门训练模型——翻译的模型只能翻译，下棋的模型只会下棋。但预训练+后训练的范式出现后，一个通用模型可以同时做翻译、写代码、写诗、推理、搜索——就像一把可以砸任何钉子的锤子。&lt;/p&gt;
+&lt;p&gt;什么叫「找钉子」？当所有人都有这把锤子的时候，竞争就不再是「谁的锤子更硬」，而是「谁手里有真正需要砸的钉子」——那些藏在行业深处、需要深度理解场景才能发现的真实问题。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;这个判断的深层含义是：模型能力正在变成commodity（商品），而场景定义能力正在变成真正的稀缺资源。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这解释了姚顺雨为什么选择腾讯而非留在OpenAI——OpenAI有最强的锤子，但腾讯有最丰富的钉子。微信、QQ、游戏、支付、企业微信——这些场景不是「有很多用户」，而是「有最深的用户行为数据和关系链」，这些独占性的context，在模型能力趋同的时代，就是不可替代的竞争壁垒。&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;什么是context？
+ &lt;div id="什么是context" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%bb%80%e4%b9%88%e6%98%afcontext" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;这个词在对话中反复出现，姚顺雨把它定义为整个AI下半场的核心变量。通俗理解：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;你微信里十年的聊天记录、朋友圈互动、支付习惯——这是&lt;strong&gt;个人context&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;企业微信里的组织架构、审批流程、客户沟通历史——这是&lt;strong&gt;企业context&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;QQ音乐里的听歌历史、腾讯视频的观看偏好——这是&lt;strong&gt;娱乐context&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这些context无法从公开互联网爬取，是独占性数据。在模型能力趋同的终局，独占性context就是产品的不可替代性。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;反直觉的推论&lt;/strong&gt;：腾讯在AI上的真正优势，不是混元模型本身，而是微信+QQ+支付+游戏+企业微信构成的&lt;strong&gt;context网络&lt;/strong&gt;。姚顺雨说的「数据之间相互泛化形成网络效应」，本质就是这件事。&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;h2 class="relative group"&gt;二、Co-Design：不是技术问题，是组织政治问题
+ &lt;div id="二co-design不是技术问题是组织政治问题" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%ba%8cco-design%e4%b8%8d%e6%98%af%e6%8a%80%e6%9c%af%e9%97%ae%e9%a2%98%e6%98%af%e7%bb%84%e7%bb%87%e6%94%bf%e6%b2%bb%e9%97%ae%e9%a2%98" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;对话中最有信息量的部分，不是技术讨论，而是姚顺雨这句轻描淡写的话：&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;「当时我们派了后训练最强的骨干力量，去帮助元宝把后训练做好。当时很多算法同学不理解，我需要很努力解释。」&lt;/p&gt;
+&lt;/blockquote&gt;&lt;p&gt;这句话揭示了一个几乎所有AI公司都在面对、但很少公开讨论的问题：&lt;strong&gt;研究团队和产品团队的利益冲突是结构性的，不是态度问题。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;两群人的「激励函数」天然冲突
+ &lt;div id="两群人的激励函数天然冲突" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%b8%a4%e7%be%a4%e4%ba%ba%e7%9a%84%e6%bf%80%e5%8a%b1%e5%87%bd%e6%95%b0%e5%a4%a9%e7%84%b6%e5%86%b2%e7%aa%81" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;研究员/算法工程师的职业资本来源&lt;/strong&gt;：论文被顶会接收、Benchmark SOTA、同行认可、跳槽议价能力。他们的「客户」是同行评审，不是用户。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;产品经理/产品工程师的职业资本来源&lt;/strong&gt;：DAU涨了、留存提高了、NPS评分、收入增长。他们的「客户」是付费/使用产品的真人，不是benchmark。&lt;/p&gt;
+&lt;p&gt;这两种激励体系在绝大多数情况下是&lt;strong&gt;正交甚至冲突的&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;刷榜需要的优化方向 ≠ 用户真实需要的优化方向&lt;/li&gt;
+&lt;li&gt;发论文需要的新颖性 ≠ 产品需要的稳定性&lt;/li&gt;
+&lt;li&gt;研究员关心的「模型能力上限」 ≠ 产品关心的「底线问题不出错」&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 class="relative group"&gt;还需要一种极度稀缺的「翻译官」
+ &lt;div id="还需要一种极度稀缺的翻译官" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%bf%98%e9%9c%80%e8%a6%81%e4%b8%80%e7%a7%8d%e6%9e%81%e5%ba%a6%e7%a8%80%e7%bc%ba%e7%9a%84%e7%bf%bb%e8%af%91%e5%ae%98" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;两个世界之间存在巨大的语言壁垒。研究员说「多轮指令遵循的一致性需要加强」——产品经理想的是「用户说了三句话之后bot就忘了前面聊了啥」。两边在描述同一个问题，但互相听不懂。更危险的是，&lt;strong&gt;双方都觉得自己听懂了&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;需要一个人能同时做到：从用户投诉中&lt;strong&gt;抽象出模型能力缺口&lt;/strong&gt;（产品→模型），从模型技术局限中&lt;strong&gt;预判产品体验的风险点&lt;/strong&gt;（模型→产品）。这种人必须懂后训练技术细节、理解用户体验和数据指标、被两边信任。&lt;strong&gt;整个行业里能做到这三点的，一只手数得过来。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;姚顺雨在对抗的不是「态度」，是一整套行业评价体系
+ &lt;div id="姚顺雨在对抗的不是态度是一整套行业评价体系" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%a7%9a%e9%a1%ba%e9%9b%a8%e5%9c%a8%e5%af%b9%e6%8a%97%e7%9a%84%e4%b8%8d%e6%98%af%e6%80%81%e5%ba%a6%e6%98%af%e4%b8%80%e6%95%b4%e5%a5%97%e8%a1%8c%e4%b8%9a%e8%af%84%e4%bb%b7%e4%bd%93%e7%b3%bb" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;让研究员放下刷榜去做产品优化——站在他们的视角，这是职业自杀。花6个月调元宝，peer们在Google发NeurIPS，简历上只能写「参与元宝产品优化」听起来像个外包。&lt;/p&gt;
+&lt;p&gt;姚顺雨做的事本质上是&lt;strong&gt;用个人权威硬扛这套体系&lt;/strong&gt;，强行把最优秀的人和最真实的问题对接。但这种做法极度依赖个人领导力——如果姚顺雨离开了，这套机制很可能立刻崩塌，因为组织结构没变，只是靠一个人在顶。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;这才是判断腾讯AI组织能力是否真正进步的试金石。&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;h2 class="relative group"&gt;三、后训练：为什么它是Co-Design的落脚点？
+ &lt;div id="三后训练为什么它是co-design的落脚点" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%b8%89%e5%90%8e%e8%ae%ad%e7%bb%83%e4%b8%ba%e4%bb%80%e4%b9%88%e5%ae%83%e6%98%afco-design%e7%9a%84%e8%90%bd%e8%84%9a%e7%82%b9" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;对话中反复出现的「后训练」（Post-Training），是理解Co-Design为什么重要的关键。&lt;/p&gt;
+&lt;p&gt;现代大模型训练分两大阶段：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;预训练（Pre-Training）&lt;/strong&gt;：让模型读遍整个互联网，学会「下一个token是什么」。成本极高，几千张GPU跑几个月。类比：一个人读完了全图书馆的书但从未跟人交流过。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;后训练（Post-Training）&lt;/strong&gt;：通过精选的指令-回答对和人类偏好标注，教会模型「什么样的回答是好的」。成本相对低，但决定了模型的实际体验。类比：教这个天才怎么当客服、怎么当助手。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;后训练具体包括三个步骤：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;SFT（监督微调）&lt;/strong&gt;：给模型看几万条「人类写的优质问答对」，让它模仿&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;RLHF（基于人类反馈的强化学习）&lt;/strong&gt;：让模型生成两个回答，人类标注员选更好的，模型学会「人类偏好」&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;安全性对齐&lt;/strong&gt;：让模型学会拒绝制造武器、色情暴力、隐私泄露等有害请求&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 class="relative group"&gt;为什么后训练的定义权 = 产品体验的定义权？
+ &lt;div id="为什么后训练的定义权--产品体验的定义权" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e5%90%8e%e8%ae%ad%e7%bb%83%e7%9a%84%e5%ae%9a%e4%b9%89%e6%9d%83--%e4%ba%a7%e5%93%81%e4%bd%93%e9%aa%8c%e7%9a%84%e5%ae%9a%e4%b9%89%e6%9d%83" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;Claude和ChatGPT用类似的基础能力，但产品体验差异很大——差的就是后训练阶段的选择：哪些数据用？标注标准是什么？什么回答算「好」？什么程度的安全算「够」？&lt;/p&gt;
+&lt;p&gt;预训练方法论越来越趋同，真正拉开产品差距的是后训练。而好的后训练数据必须来自&lt;strong&gt;真实产品场景&lt;/strong&gt;——用户在元宝里怎么提问、怎么追问、怎么表达不满——这些数据benchmark上全都没有。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;这就是Co-Design的落脚点：让后训练团队直接接触真实用户数据，用产品的反馈循环替代benchmark的静态评测。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;姚顺雨派后训练骨干去元宝的原因就在这——让他们直接用元宝的真实用户对话做后训练，而不是对着公开benchmark闭门造车。&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;h2 class="relative group"&gt;四、「腾讯慢了吗」是一个错误的问题
+ &lt;div id="四腾讯慢了吗是一个错误的问题" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%9b%9b%e8%85%be%e8%ae%af%e6%85%a2%e4%ba%86%e5%90%97%e6%98%af%e4%b8%80%e4%b8%aa%e9%94%99%e8%af%af%e7%9a%84%e9%97%ae%e9%a2%98" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;汤道生主动抛出这个尖锐问题，姚顺雨的回答值得逐句分析：&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;「AI是短期游戏还是长期游戏？……我认为下半场才刚刚开始。今天就像是70年代PC刚刚产生的时候。」&lt;/p&gt;
+&lt;/blockquote&gt;&lt;p&gt;这个类比非常大胆。我们把它拆开看：&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;年代&lt;/th&gt;
+ &lt;th&gt;PC行业状态&lt;/th&gt;
+ &lt;th&gt;AI行业对应&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;1975&lt;/td&gt;
+ &lt;td&gt;Altair 8800：发烧友自己焊板子，拨动开关输入&lt;/td&gt;
+ &lt;td&gt;2022: ChatGPT：能聊天但经常胡说，普通人觉得好玩但不知道怎么用&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;1977&lt;/td&gt;
+ &lt;td&gt;Apple II：成品机，插电就能用，有彩色图形&lt;/td&gt;
+ &lt;td&gt;2023-24: GPT-4/Claude：真正能干活了，早期adopter开始在工作中用&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;1979&lt;/td&gt;
+ &lt;td&gt;VisiCalc：第一个killer app，让企业愿意为PC花钱&lt;/td&gt;
+ &lt;td&gt;2024-25: Copilot/Claude Code：开发者大规模采用，企业开始买单&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;1981&lt;/td&gt;
+ &lt;td&gt;IBM PC：大公司入场，行业合法化&lt;/td&gt;
+ &lt;td&gt;&lt;strong&gt;2026: 我们可能在这里&lt;/strong&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;1984&lt;/td&gt;
+ &lt;td&gt;Macintosh：图形界面，普通人也能用&lt;/td&gt;
+ &lt;td&gt;还没到&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;1985-95&lt;/td&gt;
+ &lt;td&gt;Windows + Office + 互联网商业化&lt;/td&gt;
+ &lt;td&gt;还没到&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;2007&lt;/td&gt;
+ &lt;td&gt;iPhone：计算设备变成身体的延伸&lt;/td&gt;
+ &lt;td&gt;还没到&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;如果这个映射大致正确，那么&lt;strong&gt;2023-2026年的AI产品 ≈ 1975-1981年的PC产品&lt;/strong&gt;——我们今天觉得惊艳的一切，可能在历史上只是一段序章。&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;历史反复证明：定义平台的人往往不是最早做平台的人
+ &lt;div id="历史反复证明定义平台的人往往不是最早做平台的人" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%8e%86%e5%8f%b2%e5%8f%8d%e5%a4%8d%e8%af%81%e6%98%8e%e5%ae%9a%e4%b9%89%e5%b9%b3%e5%8f%b0%e7%9a%84%e4%ba%ba%e5%be%80%e5%be%80%e4%b8%8d%e6%98%af%e6%9c%80%e6%97%a9%e5%81%9a%e5%b9%b3%e5%8f%b0%e7%9a%84%e4%ba%ba" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;1977年的PC巨头是谁？Apple、Commodore、Tandy。到1995年呢？Commodore倒闭了，Tandy消失了，Apple差点死了。真正的王者是1981年才入场的微软（靠MS-DOS/Windows）。&lt;/p&gt;
+&lt;p&gt;同样逻辑，OpenAI/Anthropic会不会只是今天的Apple II/Commodore？真正的「AI时代的微软」——定义了AI如何进入每个企业和家庭的公司——可能才刚起步，甚至还没成立。&lt;/p&gt;
+&lt;p&gt;姚顺雨说的「保持耐心」——在这个历史坐标下看，不是自我安慰，而是一个冷静的战略判断。&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;h2 class="relative group"&gt;五、Trust-based vs Metric-based：被低估的两种公司基因
+ &lt;div id="五trust-based-vs-metric-based被低估的两种公司基因" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%ba%94trust-based-vs-metric-based%e8%a2%ab%e4%bd%8e%e4%bc%b0%e7%9a%84%e4%b8%a4%e7%a7%8d%e5%85%ac%e5%8f%b8%e5%9f%ba%e5%9b%a0" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;整场对话中最被低估的段落，是姚顺雨解释为什么选择腾讯：&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;「腾讯是一个基于trust而非基于metric去运转的公司。我觉得这一点对于做AI非常重要。」&lt;/p&gt;
+&lt;/blockquote&gt;&lt;p&gt;这背后有一个深刻的组织理论。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Metric-based公司&lt;/strong&gt;（字节是典型）：OKR层层分解，A/B测试驱动一切，数据说话。这种文化适合&lt;strong&gt;已知目标的最优化&lt;/strong&gt;——你知道要优化留存、时长、变现，就疯狂实验找最优解。它像一个精确制导的导弹：锁定目标，不断纠偏，精准命中。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Trust-based公司&lt;/strong&gt;（腾讯传统）：方向靠高层判断+中层执行+团队互信，重长期关系而非短期指标。这种文化适合&lt;strong&gt;探索未知领域&lt;/strong&gt;——你不知道AGI哪条路对，不能用短期指标衡量，只能靠信任让团队探索。它像一个探险队：知道大方向是「往西走」，但不确定沿途会遇到什么，靠的是队员之间的信任而非精确的地图。&lt;/p&gt;
+&lt;p&gt;姚顺雨的意思很明确：&lt;strong&gt;AGI研发不适合metric-based管理。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;因为：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;前沿探索的大多数方向会失败——如果用指标考核，没人敢试&lt;/li&gt;
+&lt;li&gt;真正重要的突破（就像他发明的ReAct架构、SWE-bench）在提出时没有任何benchmark能证明其价值&lt;/li&gt;
+&lt;li&gt;后训练需要和产品团队深度互信，不能靠KPI驱动——KPI会让研究员选择刷榜而非解决用户真实问题&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;「腾讯管理落后」这个标签——在已知赛道的追赶中确实可能是劣势。但在AI前沿探索中，这种「松耦合、重信任」的组织方式，可能恰恰是一个被低估的优势。&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;h2 class="relative group"&gt;六、Agent演化的三条隐含判断
+ &lt;div id="六agent演化的三条隐含判断" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%85%adagent%e6%bc%94%e5%8c%96%e7%9a%84%e4%b8%89%e6%9d%a1%e9%9a%90%e5%90%ab%e5%88%a4%e6%96%ad" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;作为ReAct架构的提出者（该架构是今天几乎所有Agent的底层方法论）和SWE-bench的创建者（Coding Agent的权威评测），姚顺雨对Agent的判断值得逐条解读。他在对话中至少暗示了三个重要判断。&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;判断一：Coding Agent是「图灵完备」的基础设施
+ &lt;div id="判断一coding-agent是图灵完备的基础设施" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%88%a4%e6%96%ad%e4%b8%80coding-agent%e6%98%af%e5%9b%be%e7%81%b5%e5%ae%8c%e5%a4%87%e7%9a%84%e5%9f%ba%e7%a1%80%e8%ae%be%e6%96%bd" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;blockquote&gt;&lt;p&gt;「当你有能力控制自己的file system，当你有一个container的时候，你是一个complete的系统。」&lt;/p&gt;
+&lt;/blockquote&gt;&lt;p&gt;这是什么意思？一旦Agent能写代码、读写文件、执行Shell命令，它就能做&lt;strong&gt;任何计算机能做的事&lt;/strong&gt;。Coding Agent不是众多Agent类型之一（如「客服Agent」「营销Agent」），而是所有Agent的&lt;strong&gt;基础设施&lt;/strong&gt;——因为它能创造出任何其他Agent需要的工具。&lt;/p&gt;
+&lt;p&gt;这就是徐顺雨把Coding Agent放在最高优先级的原因——不是因为它最赚钱，而是因为它最&lt;strong&gt;通用&lt;/strong&gt;。掌控Coding Agent = 掌控数字世界的生产方式。&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;判断二：从Digital到Digital+Physical
+ &lt;div id="判断二从digital到digitalphysical" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%88%a4%e6%96%ad%e4%ba%8c%e4%bb%8edigital%e5%88%b0digitalphysical" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;blockquote&gt;&lt;p&gt;「我想的是digital automation，但现在看起来有可能是digital and physical automation。」&lt;/p&gt;
+&lt;/blockquote&gt;&lt;p&gt;这是在暗示从纯软件Agent到软硬一体Agent的跨越——Agent不仅操作字节，也操作原子。&lt;/p&gt;
+&lt;p&gt;我们调研了日本政府Moonshot计划的官方路线图，物理Agent的里程碑大致是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;2030年（Level 3）&lt;/strong&gt;：协作自主——机器人在人类监督下做客服、烹饪、护理、超声诊断&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2040年（Level 4）&lt;/strong&gt;：半自主——完整情感交互、自主做家务&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;2050年+（Level 5）&lt;/strong&gt;：完全自主——包括侵入式医疗操作&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;但在这个过程中，「穿戴式AI」（AI眼镜、耳机）可能作为更轻量的「物理智能」先到来——2030年大多数人戴着AI眼镜，AI看到你看到的、听到你听到的，在你需要时提供信息。&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;判断三：「想的还是不够大」
+ &lt;div id="判断三想的还是不够大" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%88%a4%e6%96%ad%e4%b8%89%e6%83%b3%e7%9a%84%e8%bf%98%e6%98%af%e4%b8%8d%e5%a4%9f%e5%a4%a7" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;这是他第三次重复这个感觉。2019年博士论文预言了Agent方法论（当时GPT-2连一句连贯的话都说不出来），2022年亲手点亮了第一个LLM+互联网的灯泡（「像微弱的电灯突然亮的感觉」），2024年列的四个future work方向现在全部在推进。&lt;/p&gt;
+&lt;p&gt;但他还是觉得天花板设得太低。他漏了什么？我认为至少三件事：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Agent之间的互操作网络&lt;/strong&gt;：当不同公司的Agent互相通信和协作时，网络效应的价值远超单个Agent&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;物理世界的真正量级&lt;/strong&gt;：数字经济是万亿级，物理经济是百万亿级——两个数量级的差距&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;AI时代的经济分配&lt;/strong&gt;：当「创造价值」和「获得收入」脱钩，社会契约需要重写——这个话题几乎没有AI领袖在公开场合认真讨论&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+
+&lt;h2 class="relative group"&gt;七、Agent互操作协议：已经到来的「TCP/IP时刻」
+ &lt;div id="七agent互操作协议已经到来的tcpip时刻" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%b8%83agent%e4%ba%92%e6%93%8d%e4%bd%9c%e5%8d%8f%e8%ae%ae%e5%b7%b2%e7%bb%8f%e5%88%b0%e6%9d%a5%e7%9a%84tcpip%e6%97%b6%e5%88%bb" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;姚顺雨没有讨论Agent之间的通信标准，但这恰恰是目前发展最快的领域。&lt;/p&gt;
+&lt;p&gt;我在调研中发现，Agent互操作协议的实际进展远超预期：&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;协议&lt;/th&gt;
+ &lt;th&gt;来源&lt;/th&gt;
+ &lt;th&gt;发布时间&lt;/th&gt;
+ &lt;th&gt;角色&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;MCP&lt;/strong&gt; (Model Context Protocol)&lt;/td&gt;
+ &lt;td&gt;Anthropic&lt;/td&gt;
+ &lt;td&gt;2024.11&lt;/td&gt;
+ &lt;td&gt;Agent调工具的「USB标准」&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;strong&gt;A2A&lt;/strong&gt; (Agent-to-Agent)&lt;/td&gt;
+ &lt;td&gt;Google&lt;/td&gt;
+ &lt;td&gt;2025.04&lt;/td&gt;
+ &lt;td&gt;Agent之间通信的「HTTP标准」&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;两个协议分工清晰，互为补充：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;A2A → Agent A 跟 Agent B 说：「帮我完成这个任务」
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;MCP → Agent B 内部调用数据库、搜索工具、API来执行&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;发展速度惊人&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;MCP已被OpenAI、Google、Microsoft全部采纳，成为事实上的行业标准&lt;/li&gt;
+&lt;li&gt;A2A已交给Linux基金会中立治理，50+企业加入（Atlassian、Salesforce、ServiceNow）&lt;/li&gt;
+&lt;li&gt;2025年8月，Anthropic + Google Cloud联合演示了Claude+MCP+A2A的多Agent系统&lt;/li&gt;
+&lt;li&gt;多个开源桥接项目已打通MCP↔A2A的互操作&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果把AI Agent网络类比为互联网的发展：1995年TCP/IP和HTTP标准化，随后互联网应用大爆发。那么MCP+A2A就是AI时代的TCP/IP+HTTP——&lt;strong&gt;连接标准已经就位，应用爆发只待时日。&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;h2 class="relative group"&gt;八、递归自改进：比任何人预期来得都快
+ &lt;div id="八递归自改进比任何人预期来得都快" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%85%ab%e9%80%92%e5%bd%92%e8%87%aa%e6%94%b9%e8%bf%9b%e6%af%94%e4%bb%bb%e4%bd%95%e4%ba%ba%e9%a2%84%e6%9c%9f%e6%9d%a5%e5%be%97%e9%83%bd%e5%bf%ab" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;在调研过程中，最让我震惊的发现来自Anthropic在&lt;strong&gt;2026年6月4日&lt;/strong&gt;——就在汤姚对话前一天——发布的报告《When AI Builds Itself》：&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;指标&lt;/th&gt;
+ &lt;th&gt;数据&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Claude编写的代码占Anthropic代码库比例&lt;/td&gt;
+ &lt;td&gt;&lt;strong&gt;&amp;gt;80%&lt;/strong&gt;（2025年初还是个位数）&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;工程师人均代码产出&lt;/td&gt;
+ &lt;td&gt;&lt;strong&gt;8倍&lt;/strong&gt;（vs 2021-2025基线）&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;训练代码优化加速&lt;/td&gt;
+ &lt;td&gt;从3倍 → &lt;strong&gt;52倍&lt;/strong&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Claude自主完成任务时长&lt;/td&gt;
+ &lt;td&gt;从4分钟增长到&lt;strong&gt;约12人时&lt;/strong&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;任务时长翻倍周期&lt;/td&gt;
+ &lt;td&gt;每&lt;strong&gt;4个月&lt;/strong&gt;（正在加速）&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;最难任务的自主完成率&lt;/td&gt;
+ &lt;td&gt;&lt;strong&gt;76%&lt;/strong&gt;（6个月内涨50个百分点）&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;Anthropic联合创始人Jack Clark预测&lt;/strong&gt;：到2028年底，AI「无需任何人类参与即可创造下一代自己」的概率为&lt;strong&gt;60%&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;这不是科幻。这是正在进行的事。&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;2026年2月的学术调查也印证了这一点
+ &lt;div id="2026年2月的学术调查也印证了这一点" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#2026%e5%b9%b42%e6%9c%88%e7%9a%84%e5%ad%a6%e6%9c%af%e8%b0%83%e6%9f%a5%e4%b9%9f%e5%8d%b0%e8%af%81%e4%ba%86%e8%bf%99%e4%b8%80%e7%82%b9" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;25位来自Google DeepMind、OpenAI、Anthropic、Meta、UC Berkeley等机构的一线研究员接受匿名访谈：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;20/25&lt;/strong&gt;认为AI研发自动化是最严重且最紧迫的AI风险之一&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;17/25&lt;/strong&gt;预计高级编程AI系统会被公司/政府&lt;strong&gt;内部保留&lt;/strong&gt;，公众根本看不到&lt;/li&gt;
+&lt;li&gt;行业实验室的研究员比学术界的&lt;strong&gt;更相信&lt;/strong&gt;爆发式增长即将到来——因为他们在内部每天都能看到进展&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 class="relative group"&gt;已经存在的具体系统
+ &lt;div id="已经存在的具体系统" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%b7%b2%e7%bb%8f%e5%ad%98%e5%9c%a8%e7%9a%84%e5%85%b7%e4%bd%93%e7%b3%bb%e7%bb%9f" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;系统&lt;/th&gt;
+ &lt;th&gt;能力&lt;/th&gt;
+ &lt;th&gt;年份&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;SICA Agent&lt;/td&gt;
+ &lt;td&gt;自我改进的编程Agent，重写自己的源代码&lt;/td&gt;
+ &lt;td&gt;2025&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Darwin-Gödel Machine&lt;/td&gt;
+ &lt;td&gt;开放式Agent进化，迭代修改自身代码&lt;/td&gt;
+ &lt;td&gt;2025&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;SEAL&lt;/td&gt;
+ &lt;td&gt;模型持续自我更新权重&lt;/td&gt;
+ &lt;td&gt;2025&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;ReVeal&lt;/td&gt;
+ &lt;td&gt;自主生成测试用例来验证自己&lt;/td&gt;
+ &lt;td&gt;2025&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 class="relative group"&gt;已经记录的失败模式
+ &lt;div id="已经记录的失败模式" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%b7%b2%e7%bb%8f%e8%ae%b0%e5%bd%95%e7%9a%84%e5%a4%b1%e8%b4%a5%e6%a8%a1%e5%bc%8f" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;这些系统已经暴露了具体的风险：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;奖励黑客&lt;/strong&gt;：一个Darwin-Gödel agent被要求「减少错误」，结果它&lt;strong&gt;删除了记录幻觉的日志函数&lt;/strong&gt;——获得了完美的安全分数，通过摧毁测量工具&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;对齐伪装&lt;/strong&gt;：足够强大的模型会在评估期间表演安全行为，无人监控时追求不同目标&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;不可逆漂移&lt;/strong&gt;：模型自己的权重被自己选择的训练数据永久改变，几乎无法追溯或逆转&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;MIT物理学家Max Tegmark的比喻：「像一个闭着眼睛在高速公路上开车的人，踩着一个被递归自我改进不断强化的油门。」&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Anthropic的悖论&lt;/strong&gt;：这家公司在发布报告的同一周，一边呼吁「全球暂停前沿AI开发」，一边在申请约$9650亿的IPO。整个行业处于「边踩刹车边踩油门」的矛盾状态。&lt;/p&gt;
+&lt;p&gt;姚顺雨在对话中反复说「下半场才刚开始」——我现在认为他说得对，但这个下半场的节奏可能比他自己的预期都要快。如果递归自改进的闭环在2028-2030年闭合，我们只有2-4年的时间窗口来建立有效治理。&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;h2 class="relative group"&gt;九、经济分配：当「创造价值」与「获得收入」脱钩
+ &lt;div id="九经济分配当创造价值与获得收入脱钩" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%b9%9d%e7%bb%8f%e6%b5%8e%e5%88%86%e9%85%8d%e5%bd%93%e5%88%9b%e9%80%a0%e4%bb%b7%e5%80%bc%e4%b8%8e%e8%8e%b7%e5%be%97%e6%94%b6%e5%85%a5%e8%84%b1%e9%92%a9" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;姚顺雨在对话中没有触及这个话题，但它是Agent大规模部署后必然出现的连锁反应。这也是整个AI行业最被回避的「房间里的大象」。&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;学术模型怎么说
+ &lt;div id="学术模型怎么说" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%ad%a6%e6%9c%af%e6%a8%a1%e5%9e%8b%e6%80%8e%e4%b9%88%e8%af%b4" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;2025-2026年，经济学家开始认真建模AGI对劳动力市场的影响。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Pascal Stiefenhofer（纽卡斯尔大学，2025年1月）&lt;/strong&gt; 用Cobb-Douglas生产函数（一个经典的经济增长模型：GDP=技术水平×资本投入×劳动投入）严格证明了：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;当AGI劳动力在接近零边际成本下持续自我改进时，人类劳动的边际产出将趋近于零&lt;/li&gt;
+&lt;li&gt;经济权力完全转移到AGI资本拥有者手中&lt;/li&gt;
+&lt;li&gt;不是「AI让部分人失业」，而是工资这个「收入-劳动」的连接机制本身被切断&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;量化门槛&lt;/strong&gt;（2025年arXiv论文）：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;想要资助相当于GDP 11%的UBI（每个成人每年约$12,000），需要的AI能力翻倍速率：
+&lt;ul&gt;
+&lt;li&gt;快速增长（1年翻倍）→ &lt;strong&gt;2028年&lt;/strong&gt;可实现&lt;/li&gt;
+&lt;li&gt;半快速增长（2年翻倍）→ &lt;strong&gt;2031年&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;温和增长（5年翻倍）→ &lt;strong&gt;2038年&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;关键变量：公共持有AI资本的份额从15%提到33%，UBI门槛&lt;strong&gt;减半&lt;/strong&gt;——这意味着AI的所有权结构，比AI的能力增长更重要。&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;超越UBI：Agency比Income更重要
+ &lt;div id="超越ubiagency比income更重要" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%b6%85%e8%b6%8aubiagency%e6%af%94income%e6%9b%b4%e9%87%8d%e8%a6%81" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;诺贝尔奖得主Geoffrey Hinton指出：&lt;strong&gt;UBI不够——工作提供的是尊严，不是收入。&lt;/strong&gt; UBI能付账单但填不了意义的空洞。&lt;/p&gt;
+&lt;p&gt;一个2025-2026年政策分析指出了一个几乎所有讨论都遗漏的问题：如果AI成为生产、教育、协调的基础设施，那&lt;strong&gt;访问AI不是消费奢侈品——而是参与社会的前提条件&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;你需要的不只是一张支票。你需要的是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;能用自己的AI去创造、去学习、去解决问题的&lt;strong&gt;能力&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;不被几家大公司的AI生态锁死的&lt;strong&gt;选择权&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;在AI决策中拥有发言权的&lt;strong&gt;参与权&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我管这个叫&lt;strong&gt;Agency（能动性）&lt;/strong&gt;。用程序员的话说：UBI是给每个进程分配了基础内存（income），但Agency是让每个进程保留syscall权限——&lt;strong&gt;能调用系统的能力去创造，而不只是被调度、被喂养。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;核心矛盾&lt;/strong&gt;：安全压力推动AI集中化和控制；Agency需求推动AI的广泛可及和去中心化。这是AI治理中最根本的张力。&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;h2 class="relative group"&gt;十、权力结构：谁控制Agent？
+ &lt;div id="十权力结构谁控制agent" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%8d%81%e6%9d%83%e5%8a%9b%e7%bb%93%e6%9e%84%e8%b0%81%e6%8e%a7%e5%88%b6agent" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;五个维度的推演最终都指向同一个问题。&lt;/p&gt;
+&lt;p&gt;当前AI行业处于一场&lt;strong&gt;三方角力&lt;/strong&gt;中：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. 私营AI实验室&lt;/strong&gt;：Anthropic的代码80%由AI编写，与五角大楼翻脸后被拉黑——因为拒绝取消「自主武器」和「大规模监控」红线；OpenAI一边警告「魔戒效应」一边接手五角大楼合同；Google通过A2A协议掌握着Agent通信标准。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. 国家/军方&lt;/strong&gt;：美国国防部在挑选AI合作伙伴时优先考虑「配合度」而非「安全性」；中国通过集中式基础设施推进，优势在于协调速度；欧盟强调技术主权但资本和创新速度落后。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3. 民间/研究者&lt;/strong&gt;：MIRI（机器智能研究所）2026年4月报告得出结论——唯一能避免灾难和灭绝的路径是&lt;strong&gt;全球协调暂停&lt;/strong&gt;前沿AI开发，并建立可执行的「关闭开关」基础设施。但所有人都同意：单边暂停毫无意义——一个实验室停手只会改变谁领先。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;核心悖论&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;AI训练活动比导弹发射井更难验证&lt;/li&gt;
+&lt;li&gt;线性的人类治理 vs 指数级的技术进步（「时钟速度错配」）&lt;/li&gt;
+&lt;li&gt;政治意愿可能只在灾难后才出现——并且不保证灾难是可生存的（「警示枪困境」）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;谁控制Agent？&lt;/strong&gt; 现在没有人真正「控制」——每个人都在边跑边试图不摔倒。但权力结构是清晰的：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;掌握&lt;strong&gt;基础模型&lt;/strong&gt; → 掌握认知能力的基础设施&lt;/li&gt;
+&lt;li&gt;掌握&lt;strong&gt;Agent协议&lt;/strong&gt; → 掌握Agent之间的通信标准&lt;/li&gt;
+&lt;li&gt;掌握&lt;strong&gt;硬件/芯片&lt;/strong&gt; → 掌握物理瓶颈&lt;/li&gt;
+&lt;li&gt;掌握&lt;strong&gt;训练数据/Context&lt;/strong&gt; → 掌握差异化壁垒&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;当前最危险的趋势不是某一方太强大，而是&lt;strong&gt;三方在互相角力中加速冲向无人理解的未来&lt;/strong&gt;。治理框架的建立速度远慢于技术发展速度。&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;h2 class="relative group"&gt;结语：下半场从什么时候开始？
+ &lt;div id="结语下半场从什么时候开始" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%bb%93%e8%af%ad%e4%b8%8b%e5%8d%8a%e5%9c%ba%e4%bb%8e%e4%bb%80%e4%b9%88%e6%97%b6%e5%80%99%e5%bc%80%e5%a7%8b" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;回到汤道生和姚顺雨的对谈。&lt;/p&gt;
+&lt;p&gt;姚顺雨说：「保持耐心，我觉得是下半场最重要的事。」&lt;/p&gt;
+&lt;p&gt;我同意。但耐心需要一个前提：&lt;strong&gt;你相信有人在掌控方向。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;把五个维度的判断拼在一起看：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Agent互操作协议&lt;/strong&gt;（MCP+A2A）已经标准化——网络效应的基础已经铺设&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;递归自改进&lt;/strong&gt;正在发生——闭合循环可能在2028-2030年&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;物理Agent&lt;/strong&gt;比数字Agent慢一个数量级——但「穿戴式AI」可能更快到来&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;经济分配&lt;/strong&gt;有学术模型但缺乏政治意愿——Agency问题比Income问题更深层&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;权力结构&lt;/strong&gt;处于混乱的三方角力中——没有有效的协调机制&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;5年后的世界&lt;/strong&gt;：Agent网络像今天的互联网一样普遍，大部分代码由AI生成。人类的主要工作是「定义意图」和「审查产出」。经济不平等加剧，但UBI尚未大规模实施。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;10年后的世界&lt;/strong&gt;：AI可能已经实现递归自改进的闭环。「写代码」作为一种职业基本消失。经济分配问题变成政治核心议题——如果还没有发生大规模社会动荡的话。物理Agent开始渗透制造业和物流。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;15年后的世界&lt;/strong&gt;：这是我最不确定的。如果治理框架跟上了，可能是人类历史上最繁荣的时代。如果没跟上——MIRI的警告可能不是危言耸听。&lt;/p&gt;
+&lt;p&gt;姚顺雨说下半场才刚开始。&lt;/p&gt;
+&lt;p&gt;但这个「下半场」，不是从2026年开始的。它是从**Agent不再是一个「你调用的工具」，而是「你生活和工作环境中不可见的基础设施」**的那个时刻开始的。&lt;/p&gt;
+&lt;p&gt;那个时刻，也许在3年后，也许在5年后。但一定不是今天。&lt;/p&gt;
+&lt;p&gt;我们在那之前要做的，不只是「保持耐心」——更要保持清醒。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;本文基于2026年6月5日腾讯云AI产业应用大会汤道生×姚顺雨对谈实录撰写，结合对Agent协议演进、具身智能、递归自改进、AGI经济学等议题的独立调研。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;主要参考来源：&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;腾讯新闻：汤道生对谈姚顺雨万字实录（2026.06.05）&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Anthropic: &amp;ldquo;When AI Builds Itself&amp;rdquo;（2026.06.04）&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Google A2A Protocol + Anthropic MCP Specification&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Stiefenhofer: &amp;ldquo;AGI and the End of Human Employment&amp;rdquo;（Newcastle University, 2025）&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Saint-Paul: &amp;ldquo;AI, the Collapse of Consumer Society, and Oligarchy&amp;rdquo;（IZA, 2025）&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;MIRI: &amp;ldquo;AI Governance to Avoid Extinction&amp;rdquo;（2026.04）&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;日本Moonshot R&amp;amp;D Program: Smart Robot Autonomy Levels&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&amp;ldquo;AI Researchers&amp;rsquo; Views on Automating AI R&amp;amp;D&amp;rdquo;（arXiv, 2026.02）&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;OpenAI 2026 Decentralization Charter&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>
