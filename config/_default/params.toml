@@ -27,7 +27,7 @@ fingerprintAlgorithm = "sha512"
   layout = "profile"
   showRecent = true
   showRecentItems = 5
-  showMoreLink = true
+  showMoreLink = false
   showMoreLinkDest = "/blog/"
   cardView = false
 
