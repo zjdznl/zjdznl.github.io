@@ -2822,7 +2822,7 @@
 &lt;/h2&gt;
 &lt;p&gt;对外输出信号的地方。三个栏目：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;博客&lt;/strong&gt;：技术文章，主要关于 AI/LLM、工程架构、搜索系统&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;AI&lt;/strong&gt;：技术文章，主要关于 LLM、工程架构、搜索系统&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;投资&lt;/strong&gt;：A 股市场分析、交易复盘、投资框架迭代&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;思考&lt;/strong&gt;：不那么正式的随笔和观点&lt;/li&gt;
 &lt;/ul&gt;
@@ -2838,4 +2838,5 @@
 &lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;GitHub：&lt;a href="https://github.com/zjdznl" target="_blank" rel="noreferrer"&gt;zjdznl&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;微信：&lt;code&gt;zjadixx&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;</description></item></channel></rss>
