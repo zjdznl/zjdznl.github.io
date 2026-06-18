@@ -2,7 +2,7 @@
 title: "飞书 + Claude Code：我把 AI 变成了一个会记事的幕僚团队"
 date: 2026-06-15T01:37:11+08:00
 draft: false
-tags: ["AI", "飞书", "Agent"]
+tags: ["飞书", "Agent"]
 categories: ["AI"]
 ---
 ---
