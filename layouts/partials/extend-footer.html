@@ -1,0 +1,20 @@
+<script>
+// Auto-scroll TOC sidebar to keep active item visible
+(function() {
+  const container = document.getElementById('TOCView');
+  if (!container) return;
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      const active = container.querySelector('#TableOfContents a.active');
+      if (active) {
+        active.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+      }
+      ticking = false;
+    });
+  }, { passive: true });
+})();
+</script>
