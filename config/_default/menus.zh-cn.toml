@@ -1,6 +1,6 @@
 [[main]]
   name = "AI"
-  pageRef = "/blog"
+  pageRef = "/ai"
   weight = 10
 
 [[main]]

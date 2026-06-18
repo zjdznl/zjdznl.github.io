@@ -9,7 +9,7 @@ enableSearch = true
 enableCodeCopy = true
 enableA11y = true
 
-mainSections = ["blog", "investment", "thoughts"]
+mainSections = ["ai", "investment", "thoughts"]
 
 fingerprintAlgorithm = "sha512"
 
