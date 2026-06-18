@@ -55,6 +55,7 @@ fingerprintAlgorithm = "sha512"
   showBreadcrumbs = false
   showSummary = false
   showTableOfContents = false
+  showViews = false
   groupByYear = true
   cardView = false
 
