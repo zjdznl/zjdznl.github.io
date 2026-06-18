@@ -72,6 +72,15 @@ fingerprintAlgorithm = "sha512"
   cardView = false
 
 
+[firebase]
+  apiKey = "AIzaSyDocuqfgyLq9ZRNlkbwCMp-Qn0GwP3DvX8"
+  authDomain = "fir-viewcount-githubio.firebaseapp.com"
+  projectId = "fir-viewcount-githubio"
+  storageBucket = "fir-viewcount-githubio.firebasestorage.app"
+  messagingSenderId = "747929086322"
+  appId = "1:747929086322:web:c54d90b0a009250eed15eb"
+  measurementId = "G-F9VJ449N95"
+
 [umamiAnalytics]
   websiteid = "0d44dcab-f20d-44e5-bdcc-8e7c46791f51"
   domain = "zjdznl.github.io"
