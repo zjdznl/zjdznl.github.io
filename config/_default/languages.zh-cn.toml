@@ -15,7 +15,7 @@ title = "主页"
   [params.author]
     name = "郑甲第"
     headline = "AI · 投资 · 思考"
-    bio = "三个栏目：AI 技术（LLM/工程架构/搜索系统）、A 股投资（市场分析/交易复盘/框架迭代）、不那么正式的随笔和观点。"
+    bio = "三个栏目：AI 技术（LLM/工程架构/搜索系统）、A 股投资（市场分析/交易复盘/框架迭代）、不那么正式的随笔和观点。微信：zjadixx"
     links = [
       { github = "https://github.com/zjdznl" },
     ]
