@@ -5,7 +5,16 @@
 &lt;p&gt;这些标准共享一个隐藏假设：产出能力，等于个人能力。&lt;/p&gt;
 &lt;p&gt;当 AI 可以替你产出之后，这个假设塌了。&lt;/p&gt;
 &lt;p&gt;那问题来了：如果旧标准在失效，新标准应该是什么？&lt;/p&gt;
-&lt;hr&gt;
+
+&lt;h2 class="relative group"&gt;新操作层
+ &lt;div id="新操作层" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%96%b0%e6%93%8d%e4%bd%9c%e5%b1%82" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
 &lt;p&gt;今年四月，前特斯拉 AI 总监、OpenAI 联合创始人 Andrej Karpathy 在红杉 Ascent 峰会上做了一个多小时的演讲。大多数人的注意力被结尾那句「你可以外包思考，但不能外包理解」抓走了。但整场演讲真正的 thesis 埋在更前面——他说，2025 年 12 月是一个拐点。&lt;/p&gt;
 &lt;p&gt;「我从来没有像现在这样感觉自己落后了。」不是因为编程变难了。是因为工作的默认方式变了。&lt;/p&gt;
 &lt;p&gt;以前编程的单位是「写一行代码」。现在变成了他说的「宏观动作」——实现这个功能、重构这个模块、调研这个库、搭这个服务、写测试跑通再修 bug、比较两个方案给一个建议。&lt;/p&gt;
@@ -15,7 +24,16 @@
 &lt;p&gt;什么是 Agent？一种能自己拆任务、自己调工具、自己多步执行的 AI 程序。它不止聊天——它会动手。&lt;/p&gt;
 &lt;p&gt;Karpathy 把这种新工作提炼成了六个步骤：定义上下文 → 定义工具 → 定义反馈循环 → 定义护栏 → 让 Agent 运行 → 保留人类理解。&lt;/p&gt;
 &lt;p&gt;这六步不是操作手册。是六种正在重新定价的能力。&lt;/p&gt;
-&lt;hr&gt;
+
+&lt;h2 class="relative group"&gt;什么东西在变贵
+ &lt;div id="什么东西在变贵" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%bb%80%e4%b9%88%e4%b8%9c%e8%a5%bf%e5%9c%a8%e5%8f%98%e8%b4%b5" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
 &lt;p&gt;先看什么东西在变。&lt;/p&gt;
 &lt;p&gt;他列了两组清单。一组在变便宜：代码生成、初稿撰写、重复性配置、简单格式转换。一组在变贵：理解力、品味、评估体系设计、安全性判断、系统边界、Agent 编排、领域特定的反馈循环设计——以及知道模型什么时候在跑偏。&lt;/p&gt;
 &lt;p&gt;很多人读到这的反应是：「哦，软技能又重要了。」&lt;/p&gt;
@@ -23,7 +41,16 @@
 &lt;p&gt;当代码生成变得接近免费，组织突然不缺「能写代码的人」了。缺的是「能在 Agent 写出一万行代码之后，说出哪三百行该删的人」。缺的是「能设计一套验证标准，让 Agent 的每次输出都被自动判定好坏的人」。缺的是「能在 Agent 跑偏之前画出边界的人」。&lt;/p&gt;
 &lt;p&gt;反过来想更清楚：以前「写代码」这个动作本身就值钱。以后，写代码是空气——到处都是，不要钱。值钱的是「知道该让 AI 写什么、怎么判断它写得好不好、写完了怎么验证它没埋雷」。&lt;/p&gt;
 &lt;p&gt;一句话：&lt;strong&gt;定义权在从执行层向判断层转移。&lt;/strong&gt; 谁能定义上下文、谁能定义什么叫「对」、谁能定义边界——谁就在给所有人的工作定价。&lt;/p&gt;
-&lt;hr&gt;
+
+&lt;h2 class="relative group"&gt;定义什么叫「对」
+ &lt;div id="定义什么叫对" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%ae%9a%e4%b9%89%e4%bb%80%e4%b9%88%e5%8f%ab%e5%af%b9" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
 &lt;p&gt;这六种能力里，最被低估的是第三种：定义反馈循环。&lt;/p&gt;
 &lt;p&gt;Karpathy 讲了一个我反复读了好几遍的洞察。他说传统软件能自动化的，是你能精确描述的东西。LLM 和强化学习能自动化的，是你能验证的东西。&lt;/p&gt;
 &lt;p&gt;以前你的工作是「把事做对」。以后你的工作是「定义什么叫对」。&lt;/p&gt;
@@ -38,7 +65,16 @@
 &lt;p&gt;更进一步讲——AI 在某个领域的表现好，不一定是因为「通用智能」在全面进步。也可能只是因为实验室在那个领域投了更多训练数据、更多 RL 环境、更多 benchmark 压力。Karpathy 管这叫「模型的轨道」——Are you on the model&amp;rsquo;s rails?&lt;/p&gt;
 &lt;p&gt;你的任务如果在轨道上，模型飞。不在，它可能在最基本的地方翻车。&lt;/p&gt;
 &lt;p&gt;这对个人的启发比听起来更大：不要假设 AI 的能力是均匀的。它有强项，也有盲区。而你的价值，不在它的强项上——强项是模型的领地。你在它的盲区里。&lt;/p&gt;
-&lt;hr&gt;
+
+&lt;h2 class="relative group"&gt;认知债务
+ &lt;div id="认知债务" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%ae%a4%e7%9f%a5%e5%80%ba%e5%8a%a1" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
 &lt;p&gt;但 AI 还有一个更危险的维度。&lt;/p&gt;
 &lt;p&gt;当 AI 替你写代码、做初稿、处理重复性工作——你的理解力在发生什么？&lt;/p&gt;
 &lt;p&gt;Anthropic 今年做了一个实验。AI 辅助学编程的人，理解力测试得分 50%。手写代码学的人，67%。那些直接复制粘贴 AI 代码的人——不到 40%。&lt;/p&gt;
@@ -51,7 +87,16 @@
 &lt;p&gt;Karpathy 用一个比喻收了这件事：LLM 是 &lt;strong&gt;ghosts, not animals&lt;/strong&gt;——幽灵，不是动物。&lt;/p&gt;
 &lt;p&gt;它们没有生物驱动力，没有生存压力，没有好奇心。它们是对人类产物的统计模拟，被预训练、后训练、RL、产品反馈和经济激励一层层塑形。它们可以在某个瞬间惊艳你，在下一个瞬间犯一个三岁小孩都不会犯的错。&lt;/p&gt;
 &lt;p&gt;你用来理解人的直觉——信任、动机推断、底线假设——用在 AI 上全会把你带偏。你只能用经验，反复测试、反复观察、反复踩坑，自己亲手摸出它在哪里飞、在哪里摔。Karpathy 管这叫 empirical familiarity——经验性熟悉。我换一种说法：&lt;strong&gt;你亲手拆过、修过、搞砸过、救回来过。&lt;/strong&gt;&lt;/p&gt;
-&lt;hr&gt;
+
+&lt;h2 class="relative group"&gt;脚手架
+ &lt;div id="脚手架" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%84%9a%e6%89%8b%e6%9e%b6" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
 &lt;p&gt;现在讲一个故事。Karpathy 在演讲里讲过它，但它是整场演讲最极端的例子——&lt;/p&gt;
 &lt;p&gt;他做了一个 App，叫 MenuGen。功能是这样的：拍一张餐厅菜单的照片，OCR 识别菜名，AI 生成每道菜的图片，全部渲染到一个网页上。这件事需要前端、后端、OCR 服务、翻译服务、图片生成 API、部署、认证、支付、密钥管理、域名配置……全套。&lt;/p&gt;
 &lt;p&gt;然后他发现了 Software 3.0 版本：把菜单照片丢给 Gemini，说一句话——「把菜品图片覆盖到菜单对应位置」——就行了。&lt;/p&gt;
@@ -64,7 +109,16 @@
 &lt;p&gt;脚手架在过去是有价值的。因为那个转换没有脚手架就完成不了。但当模型可以直接完成转换——OCR 识别菜单、生成菜品图、覆盖到原图上——一步完成的时候，整个脚手架体系就变成了可以被拆掉的东西。&lt;/p&gt;
 &lt;p&gt;这件事最残酷的地方在于：脚手架被拆的时候，搭脚手架的人不会提前收到通知。&lt;/p&gt;
 &lt;p&gt;这就是为什么「定义权」这么重要。搭脚手架的人，定义不了自己的工作。定义工作的人，才不会被拆掉。&lt;/p&gt;
-&lt;hr&gt;
+
+&lt;h2 class="relative group"&gt;品味
+ &lt;div id="品味" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%93%81%e5%91%b3" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
 &lt;p&gt;脚手架消失了。那什么东西在变贵？&lt;/p&gt;
 &lt;p&gt;Stephanie Zhan 在对话里问了一个所有人都在想的问题：Agent 做得越多，什么样的人反而更值钱？&lt;/p&gt;
 &lt;p&gt;Karpathy 的答案只有一句话：&lt;strong&gt;Agent 现在是实习生。你得负责审美、判断、品味和监管。&lt;/strong&gt;&lt;/p&gt;
@@ -86,7 +140,16 @@
 &lt;p&gt;「直觉」听起来虚。但它的培养路径一点都不虚：是你在几百次「这么做不对」之后形成的肌肉记忆。是你亲手拆过足够多的烂代码之后，一闻到味道就知道哪里有问题。是你被足够多的错误设计坑过之后，看一个新方案时本能地往后推三步。&lt;/p&gt;
 &lt;p&gt;这些东西 Agent 替你踩不了坑。坑不是知识，坑是体验。AI 可以告诉你「不要把两种邮箱混用」，但它不能让你&lt;strong&gt;感觉到&lt;/strong&gt;为什么不能——那个感觉，只有你被这个问题坑过一次之后才会有。而有了感觉之后，你再看到类似的问题，不需要推理，不需要检查清单，你会直接皱眉。&lt;/p&gt;
 &lt;p&gt;皱眉，就是品味在起作用。&lt;/p&gt;
-&lt;hr&gt;
+
+&lt;h2 class="relative group"&gt;定价错配
+ &lt;div id="定价错配" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%ae%9a%e4%bb%b7%e9%94%99%e9%85%8d" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
 &lt;p&gt;现在回到开头那个面试官。&lt;/p&gt;
 &lt;p&gt;他不是因为自己变笨了才不知道该问什么。他是因为看清了一件事：现在的面试——笔试、算法、系统设计——全程在测一个已经被 AI 吃掉的能力：「你能不能亲手把东西做出来」。&lt;/p&gt;
 &lt;p&gt;而真正在变稀缺的能力——定义上下文、设计验证标准、判断风险边界、在系统运行后保持理解——全都没被测试。&lt;/p&gt;
@@ -100,7 +163,16 @@
 &lt;p&gt;Vibe coding 拉高了地板——任何人都能通过描述自己想要的来做出软件。Agentic engineering 拉高了天花板——这是一套专业的工程纪律：在协调一群会出错的 Agent 的同时，保持正确性、安全性、品味和可维护性。&lt;/p&gt;
 &lt;p&gt;Vibe coding 够做原型和个人工具。Agentic engineering 是严肃团队需要的东西。不做 Vibe coding 的工程师会被替代。只做 Vibe coding 的工程师也会被替代——因为人人都能做。只有能做 Agentic engineering 的人，才能定义系统而不是被系统定义。&lt;/p&gt;
 &lt;p&gt;而现在的面试，还在测 Vibe coding 就能覆盖的能力。&lt;/p&gt;
-&lt;hr&gt;
+
+&lt;h2 class="relative group"&gt;五个问题
+ &lt;div id="五个问题" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%ba%94%e4%b8%aa%e9%97%ae%e9%a2%98" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
 &lt;p&gt;那怎么办？&lt;/p&gt;
 &lt;p&gt;我不打算给你一个清单。清单是你的，不是我的。但我可以告诉你我在问自己什么。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;第一，你的工作里，哪部分是核心转换，哪部分是脚手架？&lt;/strong&gt;&lt;/p&gt;
