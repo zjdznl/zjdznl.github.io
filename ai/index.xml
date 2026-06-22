@@ -575,9 +575,7 @@
 &lt;li&gt;后端即配置：所有模型、prompt 都在 &lt;code&gt;config.yaml&lt;/code&gt;，改一行 provider 切换千问/豆包/MiniMax&lt;/li&gt;
 &lt;li&gt;核心代码不到 500 行（&lt;code&gt;lib/&lt;/code&gt; + &lt;code&gt;app/api/parseMenu/route.ts&lt;/code&gt;）&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;欢迎 Star，也欢迎拍砖。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;em&gt;本文由人类撰写初版框架，Claude 协助补充技术细节和润色。产品开发和代码由 Claude 完成 90%+，人类负责需求定义、配置调整、最终决策。&lt;/em&gt;&lt;/p&gt;</description></item><item><title>新稀缺</title><link>https://zjdznl.github.io/ai/new-scarcity-ai-era/</link><pubDate>Fri, 19 Jun 2026 12:00:00 +0800</pubDate><guid>https://zjdznl.github.io/ai/new-scarcity-ai-era/</guid><description>&lt;p&gt;上个月，一个做了八年技术面试的朋友跟我说，他最近面试的时候不知道该问什么了。&lt;/p&gt;
+&lt;p&gt;欢迎 Star，也欢迎拍砖。&lt;/p&gt;</description></item><item><title>新稀缺</title><link>https://zjdznl.github.io/ai/new-scarcity-ai-era/</link><pubDate>Fri, 19 Jun 2026 12:00:00 +0800</pubDate><guid>https://zjdznl.github.io/ai/new-scarcity-ai-era/</guid><description>&lt;p&gt;上个月，一个做了八年技术面试的朋友跟我说，他最近面试的时候不知道该问什么了。&lt;/p&gt;
 &lt;p&gt;考算法？AI 写得比他快。考系统设计？AI 能给一个 90 分的方案。考代码调试？AI 一眼就能找到 bug。他突然意识到：他测了八年的那些能力，正在一台一台地被 AI 吃掉。&lt;/p&gt;
 &lt;p&gt;不是面试题变难了。是面试这件事的前提变了。&lt;/p&gt;
 &lt;p&gt;我们用来评价一个人的大多数标准，都是在「人必须亲手产出」的时代建立的。闭卷考试，测的是你脑子里存了多少东西。白板编程，测的是你离开搜索引擎能写出什么。绩效打分，数的是你完成了多少任务。&lt;/p&gt;

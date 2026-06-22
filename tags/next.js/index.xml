@@ -575,6 +575,4 @@
 &lt;li&gt;后端即配置：所有模型、prompt 都在 &lt;code&gt;config.yaml&lt;/code&gt;，改一行 provider 切换千问/豆包/MiniMax&lt;/li&gt;
 &lt;li&gt;核心代码不到 500 行（&lt;code&gt;lib/&lt;/code&gt; + &lt;code&gt;app/api/parseMenu/route.ts&lt;/code&gt;）&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;欢迎 Star，也欢迎拍砖。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;em&gt;本文由人类撰写初版框架，Claude 协助补充技术细节和润色。产品开发和代码由 Claude 完成 90%+，人类负责需求定义、配置调整、最终决策。&lt;/em&gt;&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;欢迎 Star，也欢迎拍砖。&lt;/p&gt;</description></item></channel></rss>
