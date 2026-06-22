@@ -558,12 +558,6 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;input disabled="" type="checkbox"&gt; 作为独立产品继续做，还是作为一个功能 demo 嵌入更大的叙事中？前者需要获客和运营，后者只需要把这个故事讲好&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;不做的事情&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;❌ 不做用户登录系统——出境游点餐是低频场景，没人愿意为用一次而注册&lt;/li&gt;
-&lt;li&gt;❌ 不做微信小程序——审核周期长、迭代慢，MVP 阶段网页就够了。真有需求再评估&lt;/li&gt;
-&lt;li&gt;❌ 不自己训练 OCR 模型——多模态模型已经搞定的事，不要重新发明轮子&lt;/li&gt;
-&lt;/ul&gt;
 &lt;hr&gt;
 
 &lt;h2 class="relative group"&gt;后记

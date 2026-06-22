@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AI on 主页</title><link>https://zjdznl.github.io/categories/ai/</link><description>Recent content in AI on 主页</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>© 2026</copyright><lastBuildDate>Sun, 21 Jun 2026 12:00:00 +0800</lastBuildDate><atom:link href="https://zjdznl.github.io/categories/ai/index.xml" rel="self" type="application/rss+xml"/><item><title>AI 时代，一个人如何从零到一打造一款完整 Web 应用——以「啥菜」为例</title><link>https://zjdznl.github.io/ai/2026-06-21-whatdish-solo-dev/</link><pubDate>Sun, 21 Jun 2026 12:00:00 +0800</pubDate><guid>https://zjdznl.github.io/ai/2026-06-21-whatdish-solo-dev/</guid><description>&lt;blockquote&gt;&lt;p&gt;一个周末 + 一个大模型 + 一张俄罗斯菜单 = 一个能用的出境游点餐助手。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ai on 主页</title><link>https://zjdznl.github.io/categories/ai/</link><description>Recent content in Ai on 主页</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>© 2026</copyright><lastBuildDate>Sun, 21 Jun 2026 12:00:00 +0800</lastBuildDate><atom:link href="https://zjdznl.github.io/categories/ai/index.xml" rel="self" type="application/rss+xml"/><item><title>AI 时代，一个人如何从零到一打造一款完整 Web 应用——以「啥菜」为例</title><link>https://zjdznl.github.io/ai/2026-06-21-whatdish-solo-dev/</link><pubDate>Sun, 21 Jun 2026 12:00:00 +0800</pubDate><guid>https://zjdznl.github.io/ai/2026-06-21-whatdish-solo-dev/</guid><description>&lt;blockquote&gt;&lt;p&gt;一个周末 + 一个大模型 + 一张俄罗斯菜单 = 一个能用的出境游点餐助手。&lt;/p&gt;
 &lt;/blockquote&gt;&lt;p&gt;项目地址：https://github.com/zjdznl/whatdish&lt;/p&gt;
 &lt;hr&gt;
 
@@ -557,12 +557,6 @@
 &lt;p&gt;&lt;strong&gt;产品方向思考&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;input disabled="" type="checkbox"&gt; 作为独立产品继续做，还是作为一个功能 demo 嵌入更大的叙事中？前者需要获客和运营，后者只需要把这个故事讲好&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;不做的事情&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;❌ 不做用户登录系统——出境游点餐是低频场景，没人愿意为用一次而注册&lt;/li&gt;
-&lt;li&gt;❌ 不做微信小程序——审核周期长、迭代慢，MVP 阶段网页就够了。真有需求再评估&lt;/li&gt;
-&lt;li&gt;❌ 不自己训练 OCR 模型——多模态模型已经搞定的事，不要重新发明轮子&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 
