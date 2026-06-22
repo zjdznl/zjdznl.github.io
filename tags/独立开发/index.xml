@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>独立开发 on 主页</title><link>https://zjdznl.github.io/tags/%E7%8B%AC%E7%AB%8B%E5%BC%80%E5%8F%91/</link><description>Recent content in 独立开发 on 主页</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>© 2026</copyright><lastBuildDate>Sun, 21 Jun 2026 12:00:00 +0800</lastBuildDate><atom:link href="https://zjdznl.github.io/tags/%E7%8B%AC%E7%AB%8B%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml"/><item><title>AI 时代，一个人如何从零到一打造一款完整 Web 应用——以「啥菜」为例</title><link>https://zjdznl.github.io/ai/2026-06-21-whatdish-solo-dev/</link><pubDate>Sun, 21 Jun 2026 12:00:00 +0800</pubDate><guid>https://zjdznl.github.io/ai/2026-06-21-whatdish-solo-dev/</guid><description>&lt;blockquote&gt;&lt;p&gt;一个周末 + 一个大模型 + 一张俄罗斯菜单 = 一个能用的出境游点餐助手。&lt;/p&gt;
+&lt;/blockquote&gt;&lt;p&gt;项目地址：https://github.com/zjdznl/whatdish&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;h2 class="relative group"&gt;一、从一张菜单说起
+ &lt;div id="一从一张菜单说起" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%b8%80%e4%bb%8e%e4%b8%80%e5%bc%a0%e8%8f%9c%e5%8d%95%e8%af%b4%e8%b5%b7" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;2024 年十一，我和朋友在莫斯科阿尔巴特大街的一家格鲁吉亚餐厅，盯着一张全是西里尔字母的菜单，陷入了每个中国游客都经历过的困境：&lt;/p&gt;
+&lt;p&gt;我们点了羊肉大包子（Khinkali，音译「辛卡利」），这是俄罗斯及东欧地区非常普遍的菜。结果端上来发现——皮是死面做的，馅料香料味极重，和我们想象中的包子完全是两回事。整顿饭吃得很难受。&lt;/p&gt;
+&lt;p&gt;但问题不在于「点错了」——问题在于我们点之前根本不知道它是什么样的。&lt;/p&gt;
+&lt;p&gt;打开 Google 翻译，拍照，翻译是翻译了。但「Khinkali」翻译成「辛卡利」之后呢？它到底长什么样？皮是发面还是死面？味道接近中餐的什么？中国人吃得惯吗？&lt;/p&gt;
+&lt;p&gt;这是一个真实的、反复出现的痛点：&lt;strong&gt;中国游客在海外餐厅，面对外文菜单时，缺少的不是翻译本身，而是对「这道菜到底是什么」的具象认知。&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;h2 class="relative group"&gt;二、产品思路：不是翻译菜单，是「看懂」菜单
+ &lt;div id="二产品思路不是翻译菜单是看懂菜单" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%ba%8c%e4%ba%a7%e5%93%81%e6%80%9d%e8%b7%af%e4%b8%8d%e6%98%af%e7%bf%bb%e8%af%91%e8%8f%9c%e5%8d%95%e6%98%af%e7%9c%8b%e6%87%82%e8%8f%9c%e5%8d%95" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;blockquote&gt;&lt;p&gt;这个创意的起点来自 Andrej Karpathy 的 &lt;a href="https://karpathy.bearblog.dev/vibe-coding-menugen/" target="_blank" rel="noreferrer"&gt;vibe-coding menugen&lt;/a&gt;。他提出了一个概念——拍菜单，用多模态模型直接把菜品图片渲染到菜单上。但我的痛点和他不完全一样：我不只是想看图，我想知道「这东西中国人吃得惯吗」。&lt;/p&gt;
+&lt;/blockquote&gt;&lt;p&gt;已有的竞品（Google 翻译、各种 OCR 翻译 App）解决的是「语言转换」问题。但它们跳过了最关键的一步——&lt;strong&gt;帮助用户做点餐决策&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;「啥菜」（WhatDish）的核心设计思路只有一句话：&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;拍一张外文菜单 → 输出一道「中国人看得懂的视觉菜单」——每道菜都有真实图片、中文介绍、口味标签、以及一个「中国胃适配评分」。&lt;/p&gt;
+&lt;/blockquote&gt;&lt;p&gt;具体来说，输出需要包含：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;中文菜名 + 原文对照&lt;/strong&gt;：知道点的是什么，也能给服务员看原菜名&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;菜品图片&lt;/strong&gt;：没吃过也能看到长什么样。优先搜真实照片，搜不到用 AI 生成&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;口味标签&lt;/strong&gt;：甜/酸/辣/咸/鲜/奶香/烟熏，一目了然&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;中国胃评分&lt;/strong&gt;（1-5 分）：这道菜合不合中国人口味？类似国内的什么菜？&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;价格 + 分类&lt;/strong&gt;：按前菜/主食/甜点分组，方便浏览&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;产品层面最大的取舍是：&lt;strong&gt;不做用户系统、不做历史记录、不做小程序。&lt;/strong&gt; MVP 就是一个网页，即开即用，用完即走。这是「出国点餐」这个场景的本质——低频、即兴、不需要沉淀。&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;h2 class="relative group"&gt;三、技术选型：Software 3.0 的思路
+ &lt;div id="三技术选型software-30-的思路" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%b8%89%e6%8a%80%e6%9c%af%e9%80%89%e5%9e%8bsoftware-30-%e7%9a%84%e6%80%9d%e8%b7%af" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;在动手之前，我和 Claude（我用的 AI 编程助手）花了不少时间讨论一个关键问题：&lt;strong&gt;到底该怎么搭技术架构？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;传统的思路是把问题拆成多步 pipeline：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;OCR 引擎 → 翻译 API → 搜索引擎 → 图片聚合 → 前端渲染&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;每一步都要选型、对接、处理格式。这是传统软件架构的思维——AI 模型只是 pipeline 中的一环，外面包着厚厚的应用层。&lt;/p&gt;
+&lt;p&gt;然后 Karpathy 的文章给了我们一个重要启发——他称之为「Software 3.0」，意思是有一些应用应该被模型直接替代：&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;有些应用应该停止作为应用存在。直接把输入交给多模态模型，让它端到端地完成转换。&lt;/p&gt;
+&lt;/blockquote&gt;&lt;p&gt;一个足够强的视觉模型，理论上可以一次性完成「识别菜名 + 翻译 + 理解口味 + 判断中国胃适配度」——不需要把 OCR、翻译、理解拆成三个步骤。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;最终我们选择了一个折中方案：&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;层&lt;/th&gt;
+ &lt;th&gt;做什么&lt;/th&gt;
+ &lt;th&gt;选型&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;视觉理解&lt;/td&gt;
+ &lt;td&gt;菜单 OCR + 结构化提取&lt;/td&gt;
+ &lt;td&gt;MiniMax-M3（默认）/ Qwen3.7-Plus / 豆包 Seed-2.0-Pro / 任意兼容 OpenAI 的视觉模型&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;图片搜索&lt;/td&gt;
+ &lt;td&gt;搜真实菜品照片&lt;/td&gt;
+ &lt;td&gt;OpenSERP（开源、Docker 部署、免费无限次）&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;图片生成兜底&lt;/td&gt;
+ &lt;td&gt;搜不到时 AI 生图&lt;/td&gt;
+ &lt;td&gt;MiniMax image-01（默认）/ 通义万相 Wan2.7 / 豆包 Seedream&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;前端&lt;/td&gt;
+ &lt;td&gt;渲染 + 导出&lt;/td&gt;
+ &lt;td&gt;Next.js + Shadcn/UI + html2canvas&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;关键设计决策：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;视觉理解一步到位&lt;/strong&gt;：一个 prompt 让模型同时完成 OCR、翻译、口味分析、结构化输出——不需要两步或三步&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;图片搜不到就画&lt;/strong&gt;：OpenSERP 搜百度+必应，搜不到就用生图模型画一张&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;所有配置外置&lt;/strong&gt;：YAML 配置文件，切换模型只改一个 provider 字段，不改代码&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 class="relative group"&gt;3.1 模型选型：可插拔比选哪个更重要
+ &lt;div id="31-模型选型可插拔比选哪个更重要" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#31-%e6%a8%a1%e5%9e%8b%e9%80%89%e5%9e%8b%e5%8f%af%e6%8f%92%e6%8b%94%e6%af%94%e9%80%89%e5%93%aa%e4%b8%aa%e6%9b%b4%e9%87%8d%e8%a6%81" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;视觉模型这块我没有做严格的横向评测。目前默认用的 MiniMax M3，选它是因为兼容 OpenAI SDK、视觉理解能力够用、价格便宜。但说实话，千问和豆包的表现也差不多——这个场景下，&lt;strong&gt;模型之间的差异远小于 prompt 质量带来的差异&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;核心决策不是「选哪个模型」，而是「模型随时可换」。实现方式很简单：所有模型配置集中在 YAML 里，切换 provider 只改一行：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;vision&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;provider&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="l"&gt;minimax &lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c"&gt;# 改成 qwen 或 doubao 即可切换&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;代码层用 OpenAI 兼容 SDK（&lt;code&gt;base_url&lt;/code&gt; + &lt;code&gt;api_key&lt;/code&gt; + &lt;code&gt;model&lt;/code&gt; 三个参数覆盖了千问/豆包/MiniMax/DeepSeek），不加任何 provider 专属逻辑。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;一个实操经验&lt;/strong&gt;：与其花时间看 benchmark 选模型，不如拿一张你真正遇到过的海外菜单照片，花 2 毛钱把候选模型各跑一次，看输出能不能直接用。模型能力变化太快，三个月前的结论可能已经过时了。&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;3.2 图片搜索 vs AI 生图：一个被低估的产品决策
+ &lt;div id="32-图片搜索-vs-ai-生图一个被低估的产品决策" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#32-%e5%9b%be%e7%89%87%e6%90%9c%e7%b4%a2-vs-ai-%e7%94%9f%e5%9b%be%e4%b8%80%e4%b8%aa%e8%a2%ab%e4%bd%8e%e4%bc%b0%e7%9a%84%e4%ba%a7%e5%93%81%e5%86%b3%e7%ad%96" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;为什么图片搜索这么重要？因为 &lt;strong&gt;AI 生成的菜品图对点餐决策是负资产&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;测试中发现一个关键问题：让 Flux 或万相画「俄国杂拌汤」，画出来的是「一锅红汤里面有些看不清是什么的东西」。用户看了这张图，产生的不是「我要点这个」而是「这到底是什么」。&lt;/p&gt;
+&lt;p&gt;而用 OpenSERP 搜百度图片搜出来的，是真实餐厅出品的杂拌汤实拍——用户一眼就能判断「这个卖相我能不能接受」。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;所以我的策略是：搜索优先、生图兜底。&lt;/strong&gt; 搜索成本为零（OpenSERP 本地跑），生图每张约 ¥0.1-0.3。一场 12 道菜的菜单，如果全部靠 AI 画，约 ¥2-4 且可信度打折；如果大部分能搜到，成本趋近于零且可信度更高。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;目前搜不到的情况主要是&lt;/strong&gt;：小语种菜名 + 地域限定菜品（如格鲁吉亚的 Khachapuri 在百度上搜不到高质量结果）。这恰好是后续可以靠用户 UGC 填补的数据飞轮——用户上传真实菜品照片 → 数据库积累 → 后来的人直接匹配。&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;h2 class="relative group"&gt;四、开发过程：一个下午 + 一个 AI 助手
+ &lt;div id="四开发过程一个下午--一个-ai-助手" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%9b%9b%e5%bc%80%e5%8f%91%e8%bf%87%e7%a8%8b%e4%b8%80%e4%b8%aa%e4%b8%8b%e5%8d%88--%e4%b8%80%e4%b8%aa-ai-%e5%8a%a9%e6%89%8b" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;起点：fork 开源项目&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;我们找到了一个叫 &lt;a href="https://github.com/Nutlope/picMenu" target="_blank" rel="noreferrer"&gt;picMenu&lt;/a&gt; 的开源项目（433 stars），它做的事情类似——拍菜单、生成菜品图片。但它有几个问题：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;只支持英文菜单，中文识别很差&lt;/li&gt;
+&lt;li&gt;强依赖 Together AI + AWS S3，国内访问不稳定&lt;/li&gt;
+&lt;li&gt;生成的图片是 AI 画的（Flux），不够真实&lt;/li&gt;
+&lt;li&gt;没有「中国胃」这个视角&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;所以策略是「基于它改造，而非从头写」：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;砍掉 S3 存储——图片在内存中以 base64 传递，用完即弃&lt;/li&gt;
+&lt;li&gt;砍掉 Together AI——换用 OpenAI 兼容 SDK，支持千问/豆包/DeepSeek/自定义&lt;/li&gt;
+&lt;li&gt;AI 生图换成图片搜索——用 OpenSERP（百度+必应）搜真实照片&lt;/li&gt;
+&lt;li&gt;加「中国胃评分」层——在 prompt 里让模型给每道菜打出 1-5 分的适配评分&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;踩过的坑&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;webp 图片不触发上传&lt;/strong&gt;：最初的 accept 列表只写了 jpg/png，忘了 webp。而且 react-dropzone 组件在 macOS 下点击不触发文件选择器。最终换成原生 &lt;code&gt;&amp;lt;input type=&amp;quot;file&amp;quot;&amp;gt;&lt;/code&gt;，问题解决。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;生图 API 返回 400&lt;/strong&gt;：Qwen-Image 和万相 2.7 的参数格式不一样（size 字段一个用 &lt;code&gt;&amp;quot;1024*1024&amp;quot;&lt;/code&gt; 一个用 &lt;code&gt;&amp;quot;2K&amp;quot;&lt;/code&gt;），返回格式也不一样（一个返回 OSS URL 需要下载转 base64，一个直接返回 base64）。解法：根据模型名自动判断格式。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;12 张图并行调用全部 429 限流&lt;/strong&gt;：最初的实现是 Promise.all 并发 12 个生图请求，API 直接限流。改成串行调用 + 500ms 间隔 + &lt;code&gt;IMAGE_GEN_MAX_COUNT&lt;/code&gt; 控制数量，测试时设 1 只生成一张。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;实际花费&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;项目&lt;/th&gt;
+ &lt;th&gt;费用&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;OpenSERP 图片搜索&lt;/td&gt;
+ &lt;td&gt;免费（Docker 自部署）&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;千问视觉模型（12 道菜识别）&lt;/td&gt;
+ &lt;td&gt;约 ¥0.02&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;千问生图（12 张）&lt;/td&gt;
+ &lt;td&gt;约 ¥1.5&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;部署（本地）&lt;/td&gt;
+ &lt;td&gt;免费&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;总成本：不到 2 块钱，跑通了一整张俄语菜单。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;4.1 Prompt 工程深度拆解：这 135 行才是真正的护城河
+ &lt;div id="41-prompt-工程深度拆解这-135-行才是真正的护城河" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#41-prompt-%e5%b7%a5%e7%a8%8b%e6%b7%b1%e5%ba%a6%e6%8b%86%e8%a7%a3%e8%bf%99-135-%e8%a1%8c%e6%89%8d%e6%98%af%e7%9c%9f%e6%ad%a3%e7%9a%84%e6%8a%a4%e5%9f%8e%e6%b2%b3" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;很多人看这个项目会说「不就是调个多模态 API 嘛，一个周末就能抄」。但如果真的抄过，会发现核心难题不是 API 调用，而是&lt;strong&gt;让模型稳定输出你想要的 JSON&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;以下是我写完、调试完、持续改进的 vision prompt 的关键设计决策，每一个决策背后都有踩过的坑：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;① 强制「是否为菜单」判断——防止模型胡说八道&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;用户的相册里可能有风景照、自拍、小票。如果不做判断，模型会硬生生把所有图片都「解析」成菜单。解决方案是在 prompt 开头加一段：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;先判断图片内容是否是一份餐厅菜单。
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;如果不是菜单，直接返回 {&amp;#34;is_menu&amp;#34;: false, ...}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;这个看似 trivial 的判断救了无数次——用户在测试时各种图片往上传，没有这个分支判断，后端会输出各种鬼畜结果。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;② 输出字段与前端 UI 同步设计——不只是「让模型输出 JSON」&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;每个 JSON 字段不是随便加的，背后是前端 UI 上的具体展示位置：&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;字段&lt;/th&gt;
+ &lt;th&gt;前端展示&lt;/th&gt;
+ &lt;th&gt;为什么需要&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;menu_number&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;菜品卡片左上角编号&lt;/td&gt;
+ &lt;td&gt;用户拿着手机和纸质菜单对照，编号是关键锚点&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;name_orig&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;卡片副标题&lt;/td&gt;
+ &lt;td&gt;万一想给服务员看原菜名&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;name_zh_orig&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;对比展示区&lt;/td&gt;
+ &lt;td&gt;有些菜单自带中文翻译，标出来让用户判断可信度&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;name_zh&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;卡片主标题&lt;/td&gt;
+ &lt;td&gt;核心信息，大字号&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;flavor_profile[]&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;口味标签云&lt;/td&gt;
+ &lt;td&gt;一眼判断口味偏好&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;chinese_palate_score&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;星级评分&lt;/td&gt;
+ &lt;td&gt;决策核心——要不要点&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;chinese_palate_note&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;评分下方的类比&lt;/td&gt;
+ &lt;td&gt;「类似红烧牛肉」「接近酸辣汤」比数字更有用&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;tags[]&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;筛选标签&lt;/td&gt;
+ &lt;td&gt;素食者/不吃猪肉/过敏原快速过滤&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;code&gt;_source_image&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;多图菜单来源标注&lt;/td&gt;
+ &lt;td&gt;用户可能拍了两页菜单，要标出来自哪张&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;设计原则：模型能输出的信息一次全要，前端按需展示。&lt;/strong&gt; 不要让模型少输出（你要了 5 个字段结果发现少了第 4 个——调 prompt 再重跑），也不要让前端做二次加工（前端只能渲染，不能补知识）。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;③ tags 和 flavor_profile 用封闭枚举——逼模型做选择题而非作文&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这是最关键的一个决定。如果不给封闭标签列表，模型会自由发挥：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;好模型写出「口感绵密」「酱香浓郁」「酥脆可口」——好的但不可控&lt;/li&gt;
+&lt;li&gt;差模型写出「好吃」「不错」「还行」——完全没用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;封闭枚举的代价是你需要提前想清楚标签体系，但收益是&lt;strong&gt;前端可以直接映射到图标、颜色、筛选器&lt;/strong&gt;，零后处理。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;④ chinese_palate_score 1-5 的锚定——不能只说「打分」&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;如果只写「给每道菜打 1-5 分表示中国人口味适配度」，不同模型的理解差异巨大——有的模型几乎全 5 分，有的全是 3 分。&lt;/p&gt;
+&lt;p&gt;解决方案是在 prompt 中给每个分数的锚定点：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;5=非常适合中国人口味，4=比较适合，3=一般可接受，2=需要适应，1=难以接受&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;更进一步，要求输出 &lt;code&gt;chinese_palate_note&lt;/code&gt;（类比）——「类似红烧牛肉」这种锚定比分数更能让用户做决策。一个人看到「4 分」和看到「类似红烧牛肉」，后者的信息量大一个数量级。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;⑤ 最后一行「只返回纯 JSON」——看似废话，实则救命&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;不加这一行，模型有 ~20% 的概率在 JSON 外面包 ```json &amp;hellip; ``` 或加一句「好的，以下是解析结果」。虽然可以用 &lt;code&gt;parseJSON()&lt;/code&gt; 函数兜底清洗，但&lt;strong&gt;让模型少犯错比让代码多容错更节约——prompt 改一行成本为零，代码加容错逻辑成本递增。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Prompt 设计的核心经验&lt;/strong&gt;：把 prompt 当成产品说明书来写，不是当成对话来写。你是在定义 API 的 contract，不是在和 AI 聊天。每一条约束都来自于一个真实踩过的坑。&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;4.2 迭代方法论：如何高效调试视觉模型输出？
+ &lt;div id="42-迭代方法论如何高效调试视觉模型输出" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#42-%e8%bf%ad%e4%bb%a3%e6%96%b9%e6%b3%95%e8%ae%ba%e5%a6%82%e4%bd%95%e9%ab%98%e6%95%88%e8%b0%83%e8%af%95%e8%a7%86%e8%a7%89%e6%a8%a1%e5%9e%8b%e8%be%93%e5%87%ba" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;这是我自创的调试循环，至少省了我 3 小时的无效调试：&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;① 准备一张固定测试图 → ② 调 prompt → ③ 跑一次看输出 → ④ 对照菜单原文逐字段检查
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ↑ |
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; └──────────────────────────────────┘
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; 如果某个字段不对：回到②，只改相关行&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;关键规则：一次只改 prompt 的一个维度。&lt;/strong&gt; 如果你同时改了「格式要求」和「口味判断逻辑」，出错了无法归因。我改 prompt 的顺序是：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;先确保 &lt;code&gt;is_menu&lt;/code&gt; 判断正确（3 轮迭代）&lt;/li&gt;
+&lt;li&gt;再确保格式遵守（JSON 纯净输出，2 轮）&lt;/li&gt;
+&lt;li&gt;再调 OCR 准确率（命令模型对西里尔字母特殊关注，2 轮）&lt;/li&gt;
+&lt;li&gt;再调中文翻译质量（要求不少于 15 字的描述，1 轮）&lt;/li&gt;
+&lt;li&gt;最后调口味判断和评分（主观维度，3 轮）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;总迭代次数：~11 轮，总耗时约 40 分钟。&lt;/strong&gt; 这个时间远少于「上线后发现 bug → 修 bug → 部署 → 再测」的循环。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;封版标准——什么算是「prompt 好了」？&lt;/strong&gt;
+连续 3 张不同语言/不同排版/不同菜系的菜单照片，输出全部符合以下条件：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;JSON 解析零错误&lt;/li&gt;
+&lt;li&gt;菜名 OCR 零遗漏&lt;/li&gt;
+&lt;li&gt;中国胃评分在 ±1 分内合理（人工判断）&lt;/li&gt;
+&lt;li&gt;无幻觉（不编造不存在的菜）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;达到这个标准后，prompt 冻结。后续的改进走 feature branch，不在生产 prompt 上实验。&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;h2 class="relative group"&gt;五、实际成果
+ &lt;div id="五实际成果" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%ba%94%e5%ae%9e%e9%99%85%e6%88%90%e6%9e%9c" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;用一张真实的俄罗斯披萨店菜单（webp 格式，西里尔字母）测试：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;输入&lt;/strong&gt;：俄罗斯菜单照片，12 道菜，全俄语&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;输出&lt;/strong&gt;：&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;菜品&lt;/th&gt;
+ &lt;th&gt;原文&lt;/th&gt;
+ &lt;th&gt;价格&lt;/th&gt;
+ &lt;th&gt;中国胃评分&lt;/th&gt;
+ &lt;th&gt;评价&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;玛格丽特披萨&lt;/td&gt;
+ &lt;td&gt;МАРГАРИТА&lt;/td&gt;
+ &lt;td&gt;510₽&lt;/td&gt;
+ &lt;td&gt;⭐⭐⭐⭐⭐&lt;/td&gt;
+ &lt;td&gt;番茄芝士，大众接受度极高&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;海鲜披萨&lt;/td&gt;
+ &lt;td&gt;С МОРЕПРОДУКТАМИ&lt;/td&gt;
+ &lt;td&gt;680₽&lt;/td&gt;
+ &lt;td&gt;⭐⭐⭐⭐&lt;/td&gt;
+ &lt;td&gt;类似国内常见海鲜披萨&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;辣味香肠红洋葱披萨&lt;/td&gt;
+ &lt;td&gt;ПЕППЕРОНИ С КРАСНЫМ ЛУКОМ&lt;/td&gt;
+ &lt;td&gt;630₽&lt;/td&gt;
+ &lt;td&gt;⭐⭐⭐⭐&lt;/td&gt;
+ &lt;td&gt;类似辣味香肠披萨&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;四种奶酪披萨&lt;/td&gt;
+ &lt;td&gt;4 СЫРА&lt;/td&gt;
+ &lt;td&gt;610₽&lt;/td&gt;
+ &lt;td&gt;⭐⭐⭐&lt;/td&gt;
+ &lt;td&gt;奶香极重，吃多可能略腻&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;火腿蘑菇披萨&lt;/td&gt;
+ &lt;td&gt;С ВЕТЧИНОЙ И ГРИБАМИ&lt;/td&gt;
+ &lt;td&gt;650₽&lt;/td&gt;
+ &lt;td&gt;⭐⭐⭐⭐⭐&lt;/td&gt;
+ &lt;td&gt;非常符合中国人口味&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&amp;hellip;&lt;/td&gt;
+ &lt;td&gt;&amp;hellip;&lt;/td&gt;
+ &lt;td&gt;&amp;hellip;&lt;/td&gt;
+ &lt;td&gt;&amp;hellip;&lt;/td&gt;
+ &lt;td&gt;&amp;hellip;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;每道菜都配了 AI 生成的实物图，按分类（披萨/佛卡夏）分组展示，支持关键词搜索和一键导出 PNG。&lt;/p&gt;
+&lt;p&gt;识别准确，翻译到位，口味判断合理。12 道菜从拍照到出结果约 60 秒（含 12 张 AI 生图，如果配了图片搜索会更快）。&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;h2 class="relative group"&gt;六、方法论：AI 时代个人开发者的新规则
+ &lt;div id="六方法论ai-时代个人开发者的新规则" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%85%ad%e6%96%b9%e6%b3%95%e8%ae%baai-%e6%97%b6%e4%bb%a3%e4%b8%aa%e4%ba%ba%e5%bc%80%e5%8f%91%e8%80%85%e7%9a%84%e6%96%b0%e8%a7%84%e5%88%99" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;这次开发经历让我意识到几件事：&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;1. 不要从头写，从 fork 开始
+ &lt;div id="1-不要从头写从-fork-开始" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-%e4%b8%8d%e8%a6%81%e4%bb%8e%e5%a4%b4%e5%86%99%e4%bb%8e-fork-%e5%bc%80%e5%a7%8b" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;picMenu 已经有完整的 Next.js 前端、Shadcn UI 组件、文件上传交互。我们改的是后端逻辑——模型切换、图片搜索、prompt 设计。&lt;strong&gt;一个人的精力有限，UI 细节不值得从头造轮子。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;2. 架构做减法
+ &lt;div id="2-架构做减法" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#2-%e6%9e%b6%e6%9e%84%e5%81%9a%e5%87%8f%e6%b3%95" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;picMenu 原有：Together AI + AWS S3 + Helicone + Next.js。我们砍到只剩 Next.js + YAML 配置。每砍掉一个外部依赖，出 bug 的概率就少一成。&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;3. 模型不绑死，Prompt 不硬编码
+ &lt;div id="3-模型不绑死prompt-不硬编码" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#3-%e6%a8%a1%e5%9e%8b%e4%b8%8d%e7%bb%91%e6%ad%bbprompt-%e4%b8%8d%e7%a1%ac%e7%bc%96%e7%a0%81" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;所有模型配置（base_url、api_key、model）都在 YAML 里，prompt 也在 YAML 里。切换千问 → 豆包改一行 provider，调整识别效果改 prompt 不动代码。&lt;strong&gt;配置灵活性 = 迭代速度。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;4. AI 助手不是「写代码的工具」，是「产品搭档」
+ &lt;div id="4-ai-助手不是写代码的工具是产品搭档" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#4-ai-%e5%8a%a9%e6%89%8b%e4%b8%8d%e6%98%af%e5%86%99%e4%bb%a3%e7%a0%81%e7%9a%84%e5%b7%a5%e5%85%b7%e6%98%af%e4%ba%a7%e5%93%81%e6%90%ad%e6%a1%a3" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;Claude 在这次项目中做的不仅是写代码——它还做了竞品调研（搜了 8 款同类 App）、架构讨论（Software 2.0 vs 3.0）、产品定位（中国胃评分这个差异化点是讨论出来的）、需求收敛（阻止我在对齐之前就写代码）。&lt;strong&gt;一个好的 AI 助手，应该能在你过度设计时打断你，在你遗漏时提醒你。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;5. 一个人能做的事情，边界在快速移动
+ &lt;div id="5-一个人能做的事情边界在快速移动" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#5-%e4%b8%80%e4%b8%aa%e4%ba%ba%e8%83%bd%e5%81%9a%e7%9a%84%e4%ba%8b%e6%83%85%e8%be%b9%e7%95%8c%e5%9c%a8%e5%bf%ab%e9%80%9f%e7%a7%bb%e5%8a%a8" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;一个周末、不到 2 块钱的 API 费用、一个开源项目作为起点、一个 AI 助手作为搭档——上线了一个能处理任意语言菜单的完整 Web 应用。这在两年前至少需要一个 3 人团队 + 2 周开发 + 数千元云服务费用。&lt;/p&gt;
+&lt;p&gt;当然，我的项目还远不完美——图片搜索还没配置、导出功能待优化、移动端适配需要调整。但 &lt;strong&gt;80 分的执行远好过 100 分的计划。&lt;/strong&gt; 先上线，让真实用户告诉你哪里需要改。&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;6. 竞争壁垒：护城河基本没有，但创意是好的
+ &lt;div id="6-竞争壁垒护城河基本没有但创意是好的" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#6-%e7%ab%9e%e4%ba%89%e5%a3%81%e5%9e%92%e6%8a%a4%e5%9f%8e%e6%b2%b3%e5%9f%ba%e6%9c%ac%e6%b2%a1%e6%9c%89%e4%bd%86%e5%88%9b%e6%84%8f%e6%98%af%e5%a5%bd%e7%9a%84" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;诚实地说，&lt;strong&gt;这个产品几乎没有护城河。&lt;/strong&gt; 技术上，任何开发者花一个周末 + Claude/ChatGPT 都能搭一个功能近似的 wrapper——源码 MIT 协议，改一行 API key 就能部署。数据上，冷启动阶段菜品覆盖为零，不存在数据飞轮。&lt;/p&gt;
+&lt;p&gt;但这个创意的价值不在于「能不能做成一个独立产品」，而在于&lt;strong&gt;它解决了一个真实痛点，可以成为一个更大平台的产品能力。&lt;/strong&gt; 换个角度想：大众点评海外版、携程、飞猪——这些平台天然有出境游场景和海量用户。在它们的 App 里加一个「拍菜单翻译 + 中国胃评分」功能，是一个高杠杆的体验升级，比作为独立 App 获客要容易 100 倍。&lt;/p&gt;
+&lt;p&gt;所以与其纠结「怎么建护城河」，不如想清楚两件事：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;这个创意的 MVP 证明，做不做得出来&lt;/li&gt;
+&lt;li&gt;如果做出来了，是作为独立产品运营，还是作为一个案例/能力展示，融入更大的职业叙事&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;对我个人而言，这个项目的真正价值不一定是做成一个赚钱的产品——它是一个&lt;strong&gt;完整的 AI 产品从零到一的案例&lt;/strong&gt;，方向恰好和我目前的搜索方向技术工作有交集。把这个故事讲好，本身就是一张技术名片。&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;7. 从 Side Project 到赚钱：三条可行路径
+ &lt;div id="7-从-side-project-到赚钱三条可行路径" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#7-%e4%bb%8e-side-project-%e5%88%b0%e8%b5%9a%e9%92%b1%e4%b8%89%e6%9d%a1%e5%8f%af%e8%a1%8c%e8%b7%af%e5%be%84" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;我按可行性和与能力圈的匹配度排序：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;路径 A：广告 + 流量变现（低门槛、低天花板）&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;网页端接入 Google AdSense&lt;/li&gt;
+&lt;li&gt;需要日均 UV &amp;gt; 1000 才能产生有意义收入（约 ¥30-100/天）&lt;/li&gt;
+&lt;li&gt;挑战：出境游点餐是低频场景，流量天花板低。一个用户一年出国 1-2 次，每次用 3-5 次&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;收入潜力&lt;/strong&gt;：乐观估计 ¥1000-3000/月（需要 DAU ~5000）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;匹配度&lt;/strong&gt;：❌ 你能力圈不在这里，且流量生意和你「搜索方向运营平台」的经验不协同&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;路径 B：餐厅端 SaaS 收费（中门槛、中天花板）&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;海外中餐馆/热门旅游城市餐厅付费入驻，上传真实菜单和菜品图片&lt;/li&gt;
+&lt;li&gt;收费模式：¥100-500/年/餐厅，获得「认证菜单」标签（搜索结果优先展示）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;为什么餐厅会付费&lt;/strong&gt;：中国游客是很多海外城市的核心消费群体。一家普吉岛的海鲜餐厅，如果能在中国游客的「啥菜」上显示认证菜单和真实菜品图，转化率远超门口拉客&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;收入潜力&lt;/strong&gt;：1000 家餐厅 × ¥300/年 = ¥30 万/年&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;挑战&lt;/strong&gt;：你需要 BD 能力——一家一家谈餐厅。或者走平台合作（携程/大众点评海外版/飞猪）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;匹配度&lt;/strong&gt;：⚠️ BD 不是你的能力圈，但你的字节背景可以帮你接触到旅游平台的合作方&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;路径 C：被收购/并入大平台（低概率、高天花板）&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;大众点评海外版、携程、飞猪旅行、甚至美团——都可能有出境游场景的内容需求&lt;/li&gt;
+&lt;li&gt;「啥菜」的菜品数据库 + 中国胃评分体系，对这些平台有内容资产价值&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;什么时候可能会被看上&lt;/strong&gt;：菜品覆盖 &amp;gt;10 万道、MAU &amp;gt;10 万、或者有独特的数据资产（比如 100 个热门旅游城市的完整菜品映射）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;匹配度&lt;/strong&gt;：⚠️ 不可控，不能作为主策略。但可以作为「先做着，数据积累到某个量级再考虑」的备选&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;我的建议&lt;/strong&gt;：不要太早想变现。先把这个东西做出来、让真实用户用上。如果数据验证了需求，更可能的方向不是独立产品，而是作为大众点评/携程/飞猪等平台的一个功能模块——这些平台天然有出境游场景和海量用户，缺的只是这个创意和实现。路径 C（并入平台）看起来最不靠谱，反而是概率最高的终点。&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;8. 部署实操指南：从 localhost 到公网
+ &lt;div id="8-部署实操指南从-localhost-到公网" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#8-%e9%83%a8%e7%bd%b2%e5%ae%9e%e6%93%8d%e6%8c%87%e5%8d%97%e4%bb%8e-localhost-%e5%88%b0%e5%85%ac%e7%bd%91" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;很多人卡在这一步——本地跑通了，不知道怎么让真实用户用上。以下是最快的路径：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;推荐方案：Vercel 一键部署&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;直接把 GitHub repo 导入 Vercel，自动识别 Next.js 项目，自动配置 HTTPS。免费额度（100GB 带宽/月、1000 次函数调用/天）对 MVP 阶段绰绰有余。3 分钟上线。&lt;/p&gt;
+&lt;p&gt;如果需要国内访问加速，后续可以迁移到阿里云轻量服务器 + nginx 反代，但 MVP 阶段不需要。&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;h2 class="relative group"&gt;八、后续可优化项
+ &lt;div id="八后续可优化项" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%85%ab%e5%90%8e%e7%bb%ad%e5%8f%af%e4%bc%98%e5%8c%96%e9%a1%b9" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;这些不是承诺要做的事，只是目前能看到的改进方向，供后续迭代时参考：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;功能层面&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; 配置 OpenSERP 图片搜索（Docker 已装好，config.yaml 解注释即可）——搜真实图片比 AI 画图可信度高一个量级&lt;/li&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; 移动端适配优化——目前 PC 优先布局，手机上字体偏小、按钮偏密&lt;/li&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; 多图菜单支持完善——用户拍了正反面两张菜单时，合并去重逻辑偶有遗漏&lt;/li&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; 导出 PNG 时样式对齐——html2canvas 在部分机型上截出的图偏移几个像素&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;模型层面&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; 试一下不同视觉模型在同一套 prompt 下的表现差异，找到当前最优性价比组合&lt;/li&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; 探索图片搜索 → AI 生图的智能切换策略（比如搜索结果的相似度低于阈值时自动走生图，而非一刀切「有图就用」）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;体验层面&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; 支持用户对单一菜品打分/纠错——既是体验优化，也是数据积累的起点&lt;/li&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; 加 loading 骨架屏。目前等待 60 秒期间页面空白，体验不好&lt;/li&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; 支持语音播报菜名（给服务员看的场景——直接播放原文发音）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;产品方向思考&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled="" type="checkbox"&gt; 作为独立产品继续做，还是作为一个功能 demo 嵌入更大的叙事中？前者需要获客和运营，后者只需要把这个故事讲好&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;不做的事情&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;❌ 不做用户登录系统——出境游点餐是低频场景，没人愿意为用一次而注册&lt;/li&gt;
+&lt;li&gt;❌ 不做微信小程序——审核周期长、迭代慢，MVP 阶段网页就够了。真有需求再评估&lt;/li&gt;
+&lt;li&gt;❌ 不自己训练 OCR 模型——多模态模型已经搞定的事，不要重新发明轮子&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+
+&lt;h2 class="relative group"&gt;后记
+ &lt;div id="后记" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%90%8e%e8%ae%b0" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;如果你也对这个方向感兴趣，或者想自己 fork 一个试试：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;项目源码：&lt;strong&gt;&lt;a href="https://github.com/zjdznl/whatdish" target="_blank" rel="noreferrer"&gt;zjdznl/whatdish&lt;/a&gt;&lt;/strong&gt;（基于 &lt;a href="https://github.com/Nutlope/picMenu" target="_blank" rel="noreferrer"&gt;picMenu&lt;/a&gt; 改造）&lt;/li&gt;
+&lt;li&gt;后端即配置：所有模型、prompt 都在 &lt;code&gt;config.yaml&lt;/code&gt;，改一行 provider 切换千问/豆包/MiniMax&lt;/li&gt;
+&lt;li&gt;核心代码不到 500 行（&lt;code&gt;lib/&lt;/code&gt; + &lt;code&gt;app/api/parseMenu/route.ts&lt;/code&gt;）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;欢迎 Star，也欢迎拍砖。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;本文由人类撰写初版框架，Claude 协助补充技术细节和润色。产品开发和代码由 Claude 完成 90%+，人类负责需求定义、配置调整、最终决策。&lt;/em&gt;&lt;/p&gt;</description></item></channel></rss>
