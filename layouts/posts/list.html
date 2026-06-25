@@ -10,11 +10,11 @@
     {{ end }}
   </header>
 
-  {{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" site.Params.mainSections) }}
+  {{ $allPages := where .Site.RegularPages "Type" "in" site.Params.mainSections }}
 
   <section class="space-y-10 w-full mt-8">
     {{ if $groupByYear }}
-      {{ range $paginator.PageGroups }}
+      {{ range (.Paginate ($allPages.GroupByDate "2006")).PageGroups }}
         <h2 class="mt-12 text-2xl font-bold text-neutral-700 first:mt-8 dark:text-neutral-300">
           {{ .Key }}
         </h2>
@@ -23,7 +23,7 @@
         {{ end }}
       {{ end }}
     {{ else }}
-      {{ range $paginator.Pages }}
+      {{ range (.Paginate $allPages).Pages }}
         {{ partial "article-link/simple.html" . }}
       {{ end }}
     {{ end }}
