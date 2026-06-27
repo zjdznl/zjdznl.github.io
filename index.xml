@@ -1,4 +1,204 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>主页</title><link>https://zjdznl.github.io/</link><description>Recent content on 主页</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>© 2026</copyright><lastBuildDate>Thu, 25 Jun 2026 12:00:00 +0800</lastBuildDate><atom:link href="https://zjdznl.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>黄金的价格与价值</title><link>https://zjdznl.github.io/investment/gold-price-and-value/</link><pubDate>Thu, 25 Jun 2026 12:00:00 +0800</pubDate><guid>https://zjdznl.github.io/investment/gold-price-and-value/</guid><description>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>主页</title><link>https://zjdznl.github.io/</link><description>Recent content on 主页</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>© 2026</copyright><lastBuildDate>Sun, 28 Jun 2026 12:00:00 +0800</lastBuildDate><atom:link href="https://zjdznl.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>先偷后解：量子破解门槛 4 年降了 99%，而被囤的加密数据已经堆到 EB 级</title><link>https://zjdznl.github.io/investment/2026-06-28-quantum-countdown-pqc/</link><pubDate>Sun, 28 Jun 2026 12:00:00 +0800</pubDate><guid>https://zjdznl.github.io/investment/2026-06-28-quantum-countdown-pqc/</guid><description>&lt;p&gt;两件事在同时发生。把它们放在一起看，结论让人不安。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第一件事&lt;/strong&gt;：量子计算机破解公钥加密的门槛在暴跌。2022 年学界估计破解比特币椭圆曲线签名（ECDSA）需要 3.17 亿个物理量子比特；到 2026 年 3 月，Oratomic 和 Caltech 的联合论文把这个数字压到了约 2.6 万——四年降了 99.99%。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第二件事&lt;/strong&gt;：五眼联盟国家已经在全球海缆登陆站大规模囤积加密流量。英国 GCHQ 的 Tempora 项目接入 200 多条跨洋光缆，单日抓取 21PB 数据。美国 NSA 在犹他州建了 20 亿美元的矩阵数据中心，规划 EB 级磁带库，设计目标就是&lt;strong&gt;把今天解不开的加密数据存到量子计算机到位的那一天&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;这两条线正在加速交汇。一边是破解门槛在自由落体，另一边是被囤的数据保质期以十年计。交汇点上的问题是：谁先穿上防弹衣？&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;h2 class="relative group"&gt;一、量子怎么破密码：不是撞墙，是拆锁
+ &lt;div id="一量子怎么破密码不是撞墙是拆锁" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%b8%80%e9%87%8f%e5%ad%90%e6%80%8e%e4%b9%88%e7%a0%b4%e5%af%86%e7%a0%81%e4%b8%8d%e6%98%af%e6%92%9e%e5%a2%99%e6%98%af%e6%8b%86%e9%94%81" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;要理解这个问题的紧迫性，先要分清两种攻击。&lt;/p&gt;
+&lt;p&gt;量子计算机对 &lt;strong&gt;SHA-256&lt;/strong&gt;（哈希）的攻击效果有限。Grover 算法最多把暴力搜索复杂度从 2²⁵⁶ 降到 2¹²⁸——仍然大到不可行。用最简单的话说：量子不是万能钥匙，撞哈希这堵墙对它也太厚。&lt;/p&gt;
+&lt;p&gt;真正的软肋是&lt;strong&gt;椭圆曲线数字签名算法（ECDSA）&lt;/strong&gt;。你的 HTTPS 连接、SSH 登录、网银交易，乃至比特币转账，都在用 ECDSA 做身份认证。它的安全性依赖于一个数学事实：从公钥反推私钥，经典计算机算不出来。&lt;/p&gt;
+&lt;p&gt;但 1994 年数学家 Peter Shor 提出了一种量子算法，能在多项式时间内完成这个反推。&lt;strong&gt;一台足够大的量子计算机运行 Shor 算法，可以从你的公钥直接算出你的私钥。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;那&amp;quot;足够大&amp;quot;是多大？看这张表：&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;时间&lt;/th&gt;
+ &lt;th&gt;研究方&lt;/th&gt;
+ &lt;th&gt;物理量子比特需求&lt;/th&gt;
+ &lt;th&gt;攻击时长&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;2022&lt;/td&gt;
+ &lt;td&gt;Webber 等&lt;/td&gt;
+ &lt;td&gt;3.17 亿&lt;/td&gt;
+ &lt;td&gt;~1 小时&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;2024&lt;/td&gt;
+ &lt;td&gt;Alice &amp;amp; Bob&lt;/td&gt;
+ &lt;td&gt;~10 万&lt;/td&gt;
+ &lt;td&gt;~9 小时&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;2026.03&lt;/td&gt;
+ &lt;td&gt;Google Quantum AI&lt;/td&gt;
+ &lt;td&gt;&amp;lt;50 万&lt;/td&gt;
+ &lt;td&gt;~9 分钟&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;2026.03&lt;/td&gt;
+ &lt;td&gt;Oratomic/Caltech&lt;/td&gt;
+ &lt;td&gt;&lt;strong&gt;~2.6 万&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;~10 天&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;2026.03&lt;/td&gt;
+ &lt;td&gt;Oratomic/Caltech&lt;/td&gt;
+ &lt;td&gt;&lt;strong&gt;~1 万&lt;/strong&gt;&lt;/td&gt;
+ &lt;td&gt;~264 天&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;从 3.17 亿降到 1 万，只用了四年。不是量子硬件在突飞猛进——目前最强的量子处理器（IBM Nighthawk 120 量子比特、IonQ 256 量子比特）和攻击所需的最低门槛之间还有 40 到 200 倍的差距。门槛暴跌的真正驱动力是&lt;strong&gt;算法和架构创新&lt;/strong&gt;——更好的纠错编码、更优的量子电路设计。这意味着对&amp;quot;量子计算机还要多久&amp;quot;的预测，随时可能被一篇新论文推翻。&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;h2 class="relative group"&gt;二、囤数据的不是黑客，是国家
+ &lt;div id="二囤数据的不是黑客是国家" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%ba%8c%e5%9b%a4%e6%95%b0%e6%8d%ae%e7%9a%84%e4%b8%8d%e6%98%af%e9%bb%91%e5%ae%a2%e6%98%af%e5%9b%bd%e5%ae%b6" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;如果说量子破解是&amp;quot;锁还没造好但钥匙在逼近&amp;quot;，那一批国家级机构已经在全球互联网的咽喉位置架好了录音机。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Tempora（英国 GCHQ）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;斯诺登文件证实，英国政府通信总部（GCHQ）运行的 Tempora 项目接入全球 200 多条跨洋光纤，单日原始流量 21PB。他们的做法不是全量抓取，而是精准过滤：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;明文静态资源（图片、短视频、公开网页）&lt;strong&gt;直接丢弃&lt;/strong&gt;，不占存储；&lt;/li&gt;
+&lt;li&gt;只保留 TLS 加密会话的完整数据包——那些真正用 RSA/ECDSA 加密的载荷；&lt;/li&gt;
+&lt;li&gt;加密内容在高速硬盘上滚动缓存 3 天，随后转入 LTO 磁带做长期归档。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;犹他矩阵数据中心（美国 NSA）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;NSA 在犹他州布拉夫戴尔建了一个专用数据中心，基建 20 亿美元，配专属电厂。核心设施是&lt;strong&gt;EB 级磁带库集群&lt;/strong&gt;——设计目标就是存储数十年全球拦截加密数据，等着量子计算机成熟的那一天一次性批量解密。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;怎么存得下&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;EB 级听着恐怖，但靠四层技术，存储成本远没有想象中高：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;先筛再存&lt;/strong&gt;：前端硬件分流器实时过滤，明文垃圾直接丢弃，加密载荷才入库存。等于砍掉 70% 以上无价值流量。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;无损压缩 + 全局数据重删&lt;/strong&gt;：网络流量有极强的重复性——重复握手包、相同证书、重复 HTTP 头部。专业设备压缩比 5:1 到 10:1，10PB 原始流量落地只占 1-2PB 物理空间。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;冷热分层存储&lt;/strong&gt;：3 天内数据在 SSD（热层），3-90 天在 HDD 阵列（温层），90 天以上全部转 LTO 自动化磁带库（冷层）。LTO-10 单盘磁带原生 36TB，压缩后可达 90TB，单 TB 成本仅为 SSD 的 1/40，而且离线存放几乎不耗电。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;生命周期淘汰&lt;/strong&gt;：普通民用加密流量 5-8 年自动擦除；外交、军工、企业涉密通信&lt;strong&gt;永久异地多副本留存&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这一整套流水线的年运营成本对一个中等国家的信号情报预算来说完全可控。边际成本还在逐年下降——磁带单 TB 价格过去十年持续走低。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;关键是，他们在囤什么&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这里要澄清一个容易引起恐慌的误解：五眼联盟盯的&lt;strong&gt;不是普通人的聊天记录&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;Tempora 接入的是跨洋光缆——国际数据交换的咽喉节点。明文娱乐流量（短视频、直播、公开网页）直接丢弃。真正被长期归档的是跨国政企通信、外交密电、军工链路中那些用 RSA/ECDSA 加密的会话。目标是&lt;strong&gt;国家级机密&lt;/strong&gt;，不是消费级隐私。&lt;/p&gt;
+&lt;p&gt;但这对任何需要跨境通信的企业和机构来说，后果是同一个：你今天用 RSA 发出的每一封加密邮件，可能已经躺在犹他州的磁带上，等着被未来的量子计算机一次性解开。&lt;/p&gt;
+&lt;p&gt;这就是&amp;quot;先偷后解&amp;quot;（HNDL, Harvest Now, Decrypt Later）的核心不对称优势：采集存储成本极低，未来解密收益极高，而防御方一旦被囤，时间不可逆。你现在不切 PQC，过去和未来的所有加密通信，在那个量子机启动的时刻全部归零。&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;h2 class="relative group"&gt;三、中美怎么应对：两条路线，一个目标
+ &lt;div id="三中美怎么应对两条路线一个目标" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%b8%89%e4%b8%ad%e7%be%8e%e6%80%8e%e4%b9%88%e5%ba%94%e5%af%b9%e4%b8%a4%e6%9d%a1%e8%b7%af%e7%ba%bf%e4%b8%80%e4%b8%aa%e7%9b%ae%e6%a0%87" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;理解了 HNDL 的逻辑，就能理解为什么美国如此激进地推动后量子密码迁移。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;美国：标准先行，行政令硬推&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;美国走的是最直接的路：用标准化+行政令，强制整个供应链升级。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;2024 年 8 月&lt;/strong&gt;：NIST 发布全球首批后量子密码标准——FIPS 203（ML-KEM，替代 RSA 密钥交换）、FIPS 204（ML-DSA，替代 ECDSA 签名）、FIPS 205（SLH-DSA，备选方案）。&amp;ldquo;用什么替代 RSA&amp;quot;这个最关键的问题有了官方答案。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CNSA 2.0&lt;/strong&gt;：美国国家安全局商用密码算法套件 2.0 规定，2027 年 1 月 1 日起，&lt;strong&gt;所有新采购的国家安全系统必须使用 PQC 算法&lt;/strong&gt;。不是建议，是硬性合规要求。距离生效只剩半年。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;EO 14412&lt;/strong&gt;（2026 年 6 月 22 日，特朗普签署）：给联邦机构设了具体期限——2030 年 12 月 31 日前所有高价值资产的密钥建立必须用 PQC，2031 年 12 月 31 日前数字签名也必须切换。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;NIST 弃用时间表&lt;/strong&gt;：2030 年起弃用 RSA-2048 和 ECC P-256，2035 年全面移除所有量子脆弱算法。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;逻辑链条清晰：标准先行（2024）→ 加密资产清点（2025-2027）→ 强制合规（2027-2035）。不给自愿空间，直接用法令推。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;中国：慢一步，但走并行路线&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;中国在 PQC 标准上的节奏明显更慢。2025 年 2 月，中国商用密码标准研究院才启动新一代商用密码算法全球征集——比美国 NIST 的征集（2016 年启动）晚了整整九年。PQC 国标预计 2026-2027 年出台，目前格尔软件、三未信安等企业的 PQC 产品仍处于试点阶段。&lt;/p&gt;
+&lt;p&gt;但中国有另一条腿：&lt;strong&gt;量子密钥分发（QKD）&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;QKD 和 PQC 是解决同一问题的两条不同路径：&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;维度&lt;/th&gt;
+ &lt;th&gt;PQC（后量子密码）&lt;/th&gt;
+ &lt;th&gt;QKD（量子密钥分发）&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;原理&lt;/td&gt;
+ &lt;td&gt;数学算法（格密码等）&lt;/td&gt;
+ &lt;td&gt;物理原理（量子态不可克隆）&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;部署方式&lt;/td&gt;
+ &lt;td&gt;纯软件升级&lt;/td&gt;
+ &lt;td&gt;需要专用光纤/卫星硬件&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;覆盖范围&lt;/td&gt;
+ &lt;td&gt;互联网全场景&lt;/td&gt;
+ &lt;td&gt;点对点链路，需要物理基础设施&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;优势&lt;/td&gt;
+ &lt;td&gt;零硬件成本，可规模化&lt;/td&gt;
+ &lt;td&gt;安全性不依赖数学假设&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;劣势&lt;/td&gt;
+ &lt;td&gt;可能存在未被发现的数学弱点&lt;/td&gt;
+ &lt;td&gt;硬件成本高，无法覆盖终端用户&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;国盾量子（688027）支撑中国电信在全国 40 个重点城市建设了量子密钥分发网络，量子密话、密信用户超 600 万。&amp;ldquo;十五五&amp;quot;规划将量子科技列为未来产业布局首位。&lt;/p&gt;
+&lt;p&gt;两条路线不是竞争，是互补。QKD 解决物理层安全——骨干网、数据中心互联、政府专线这类高价值链路的密钥分发；PQC 解决应用层安全——浏览器、App、邮件、交易签名这类亿级终端的加密升级。中国走并行策略，短期在 PQC 标准上落后，但长期的 QKD+PQC 融合方案可能在全球标准体系中占据一个美国没有的位置。&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;h2 class="relative group"&gt;四、2035 倒计时：迁移本身需要十年
+ &lt;div id="四2035-倒计时迁移本身需要十年" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%9b%9b2035-%e5%80%92%e8%ae%a1%e6%97%b6%e8%bf%81%e7%a7%bb%e6%9c%ac%e8%ba%ab%e9%9c%80%e8%a6%81%e5%8d%81%e5%b9%b4" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;不管是美国走 PQC 单线，还是中国走 PQC+QKD 并行，都面临同一个物理约束：&lt;strong&gt;加密迁移本身就是一个十年工程。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这不是装个安全补丁。大型机构的加密系统迁移大致分六步：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;清点加密资产&lt;/strong&gt;（12-18 个月）——你不知道自己系统里哪些地方用了 RSA、哪些地方用了 ECDSA，就不知道哪些地方要换&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;标注数据敏感度与保质期&lt;/strong&gt;——哪些数据的保密期超过 10 年？哪些已经被&amp;quot;先偷后解&amp;quot;盯上了？&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;建立加密敏捷性&lt;/strong&gt;——把加密算法从硬编码中解耦，让未来切换 PQC 不用重写系统&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;供应商审查&lt;/strong&gt;——每个硬件和软件供应商都必须提供 PQC 路线图，否则采购合同不能续&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;试点混合 PQC&lt;/strong&gt;——先在内部 TLS/VPN 上用经典+PQC 混合模式跑起来&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;规划弃用时间表&lt;/strong&gt;——锚定 NIST 的 2030/2035 里程碑，倒推部署节奏&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;美国给的期限是 2035 年完成全面切换——从 2024 年标准发布算起，一共给你 11 年。不谈理想情况，只谈一个典型金融机构的平均迁移速度：&lt;strong&gt;从开始清点到混合部署完成，3-4 年是正常的。从混合部署到全面切换，再来 3-5 年。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;换句话说：&lt;strong&gt;如果你等到 2028 年才开始，到 2035 年你跑不完。&lt;/strong&gt; 这不是预测，是工期倒推。&lt;/p&gt;
+&lt;p&gt;这也解释了为什么 NIST、NSA、CISA 口径高度一致地在喊&amp;quot;现在就开始&amp;rdquo;。不是因为恐慌，是因为他们算过工期。&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;h2 class="relative group"&gt;五、谁在买单
+ &lt;div id="五谁在买单" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%ba%94%e8%b0%81%e5%9c%a8%e4%b9%b0%e5%8d%95" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;最后说钱。&lt;/p&gt;
+&lt;p&gt;PQC 是目前量子计算产业链中&lt;strong&gt;唯一靠合规驱动、现在就产生真实采购需求的赛道&lt;/strong&gt;。与量子计算整机（IonQ/D-Wave 还在烧钱）不同，PQC 的客户是明确的（政府、银行、关键基础设施），时间是确定的（法规要求），预算是已经批了的。&lt;/p&gt;
+&lt;p&gt;市场预测 2030 年全球 PQC 市场规模约 28 亿美元，年复合增长率 46%。但这个数字不如另一件事重要：&lt;strong&gt;这是被法令逼出来的需求，不依赖技术突破。&lt;/strong&gt; 量子计算机哪怕 2040 年才造出来，PQC 采购已经在发生了——因为 HNDL 的时钟在走，合规日历不会等你。&lt;/p&gt;
+&lt;p&gt;在国际市场，PQC 的最大受益者不是 PQC 初创公司，而是 Microchip、STMicro、Lattice 这类已有数十亿安全产品线的半导体巨头——PQC 是现有业务的自然升级，不需要赌技术路线，吃的是合规红利。在中国市场，格尔软件、三未信安等中小密码公司寄望于国产替代逻辑——中国 PQC 标准一旦出台，国内市场的份额几乎锁死给本土企业。&lt;/p&gt;
+&lt;p&gt;但不管是国际巨头还是国内专精，一个事实是确定的：全世界正在经历自 RSA 发明以来最大规模的加密基础设施重建。这笔钱已经在花了。&lt;/p&gt;</description></item><item><title>黄金的价格与价值</title><link>https://zjdznl.github.io/investment/gold-price-and-value/</link><pubDate>Thu, 25 Jun 2026 12:00:00 +0800</pubDate><guid>https://zjdznl.github.io/investment/gold-price-and-value/</guid><description>
 &lt;h2 class="relative group"&gt;一、你所有的钱，都是别人的欠条
  &lt;div id="一你所有的钱都是别人的欠条" class="anchor"&gt;&lt;/div&gt;
  
