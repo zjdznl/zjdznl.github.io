@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>认知 on 主页</title><link>https://zjdznl.github.io/tags/%E8%AE%A4%E7%9F%A5/</link><description>Recent content in 认知 on 主页</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>© 2026</copyright><lastBuildDate>Wed, 01 Jul 2026 12:00:00 +0800</lastBuildDate><atom:link href="https://zjdznl.github.io/tags/%E8%AE%A4%E7%9F%A5/index.xml" rel="self" type="application/rss+xml"/><item><title>芒格100个思维模型里，程序员最该偷走的5个</title><link>https://zjdznl.github.io/thoughts/2026-07-01-munger-models-for-programmers/</link><pubDate>Wed, 01 Jul 2026 12:00:00 +0800</pubDate><guid>https://zjdznl.github.io/thoughts/2026-07-01-munger-models-for-programmers/</guid><description>&lt;p&gt;查理·芒格说他靠大约 100 个思维模型做决策。他没列过清单，但他的追随者们整理了出来。&lt;/p&gt;
+&lt;p&gt;我不打算列 100 个。你也不会看。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;我从里面挑了 5 个。标准不是「最著名的」，是「程序员日常就能用的」。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;你会发现一个规律：这些模型都不是用来「知道」的，是用来「出手」的。它们不是知识，是扳机——在关键时候提醒你换个角度看问题。&lt;/p&gt;
+
+&lt;h2 class="relative group"&gt;第一个：乘法为零效应——你的系统里有没有「归零」bug？
+ &lt;div id="第一个乘法为零效应你的系统里有没有归零bug" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%ac%ac%e4%b8%80%e4%b8%aa%e4%b9%98%e6%b3%95%e4%b8%ba%e9%9b%b6%e6%95%88%e5%ba%94%e4%bd%a0%e7%9a%84%e7%b3%bb%e7%bb%9f%e9%87%8c%e6%9c%89%e6%b2%a1%e6%9c%89%e5%bd%92%e9%9b%b6bug" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;数学上，任何数乘以零等于零。翻译成人话：一个系统里如果某个关键环节完全失效，其他部分再强也没用。&lt;/p&gt;
+&lt;p&gt;你写的代码里有没有这种 bug？你设计的架构里有没有这种单点？你的职业生涯里有没有这种致命弱点？&lt;/p&gt;
+&lt;p&gt;很多程序员花大量时间优化非关键路径——把某个接口的响应时间从 200ms 降到 50ms，把代码写得无比优雅——但数据库没有备份。优化 99 个环节，最后一个环节是零，整体结果还是零。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;「会让我归零的东西，优先级永远高于能让我变好的东西。」&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;下次排需求优先级的时候，不要只按「做了能提升多少」排。也按「不做会死多惨」排。前者让你更好，后者让你活着。&lt;/p&gt;
+
+&lt;h2 class="relative group"&gt;第二个：反向思考——别只想怎么成功，先想怎么失败
+ &lt;div id="第二个反向思考别只想怎么成功先想怎么失败" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%ac%ac%e4%ba%8c%e4%b8%aa%e5%8f%8d%e5%90%91%e6%80%9d%e8%80%83%e5%88%ab%e5%8f%aa%e6%83%b3%e6%80%8e%e4%b9%88%e6%88%90%e5%8a%9f%e5%85%88%e6%83%b3%e6%80%8e%e4%b9%88%e5%a4%b1%e8%b4%a5" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;芒格最爱引用的原则：「倒过来想，总是倒过来想。」&lt;/p&gt;
+&lt;p&gt;做技术方案的时候，你的第一反应是什么？「怎么把这个需求做出来」。正常的。但芒格会问你：「怎么做这个方案一定会失败？」&lt;/p&gt;
+&lt;p&gt;把所有可能搞砸的点列出来——依赖方挂了怎么办？数据不一致怎么办？流量突然飙十倍怎么办？——然后一个一个堵上。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;这跟写代码的 defensive programming 是一个道理。&lt;/strong&gt; 你不是在预测未来，你是在给自己留后路。好代码不是「能跑」，是「跑不坏」。&lt;/p&gt;
+&lt;p&gt;反向思考最狠的地方在于：它绕过了你的确认偏误。你天然倾向于找支持自己方案的理由。但「怎么一定会失败」这个问题，逼你站在自己的对立面。&lt;/p&gt;
+
+&lt;h2 class="relative group"&gt;第三个：安全边际——别把系统推到极限
+ &lt;div id="第三个安全边际别把系统推到极限" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%ac%ac%e4%b8%89%e4%b8%aa%e5%ae%89%e5%85%a8%e8%be%b9%e9%99%85%e5%88%ab%e6%8a%8a%e7%b3%bb%e7%bb%9f%e6%8e%a8%e5%88%b0%e6%9e%81%e9%99%90" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;桥梁设计的承重是预计最大荷载的三到五倍。芒格买股票也是这个思路——只在价格远低于内在价值时才出手。两者底层逻辑一样：&lt;strong&gt;现实会比你预估的更糟。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;你的服务能撑多少 QPS？你说 10000。实际测过吗？测过。但真实流量分布跟压测不一样——有突发尖峰、有慢请求、有上游重试风暴。你说撑 10000，可能 8000 就挂了。&lt;/p&gt;
+&lt;p&gt;这不是悲观主义，是工程常识。给自己留至少 30% 的 buffer。不只是系统容量，汇报工期也一样——你说两周，但突发事件、依赖方延期、需求变更，随便来一个就超期。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;任何一个没有留余量的承诺，都是在赌一切都按照你的预期发生。而一切永远不会按照你的预期发生。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 class="relative group"&gt;第四个：能力圈——知道「这不该我搞」比知道「怎么搞」更值钱
+ &lt;div id="第四个能力圈知道这不该我搞比知道怎么搞更值钱" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%ac%ac%e5%9b%9b%e4%b8%aa%e8%83%bd%e5%8a%9b%e5%9c%88%e7%9f%a5%e9%81%93%e8%bf%99%e4%b8%8d%e8%af%a5%e6%88%91%e6%90%9e%e6%af%94%e7%9f%a5%e9%81%93%e6%80%8e%e4%b9%88%e6%90%9e%e6%9b%b4%e5%80%bc%e9%92%b1" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;巴菲特和芒格一辈子不投高科技公司，因为他们承认自己不懂。互联网泡沫的时候别人都在嘲笑他们落伍，泡沫破了之后别人都在后悔没学他们。&lt;/p&gt;
+&lt;p&gt;程序员这个圈子里，承认「我不懂」是一件非常难的事。因为你的工作就是「搞定问题」，你习惯了什么都能学、什么都能搞。但「什么都能搞」和「什么都该我搞」是两码事。&lt;/p&gt;
+&lt;p&gt;你的能力圈是什么？不是你「学过」的东西，是你「能独立做决策」的东西。&lt;/p&gt;
+&lt;p&gt;学过两天 Rust 不叫 Rust 在你的能力圈里。能用 Rust 独立上线一个生产系统、能判断一个 Rust 项目的架构对不对——这才叫进入了能力圈。&lt;/p&gt;
+&lt;p&gt;能力圈外面的事，只有两种处理方式：&lt;strong&gt;要么不进，要么先学到能用再进。&lt;/strong&gt; 最危险的是第三种——没进强进，凭感觉拍板。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;你不需要成为什么都会的人。你需要知道你会什么、不会什么，并且诚实地按这个边界做事。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 class="relative group"&gt;第五个：贝叶斯更新——把「我错了」从灾难变成流程
+ &lt;div id="第五个贝叶斯更新把我错了从灾难变成流程" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%ac%ac%e4%ba%94%e4%b8%aa%e8%b4%9d%e5%8f%b6%e6%96%af%e6%9b%b4%e6%96%b0%e6%8a%8a%e6%88%91%e9%94%99%e4%ba%86%e4%bb%8e%e7%81%be%e9%9a%be%e5%8f%98%e6%88%90%e6%b5%81%e7%a8%8b" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;贝叶斯定理的公式你不用记。记住一个逻辑就行：&lt;strong&gt;先有一个初始判断，拿到新信息后，更新判断。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;程序员对「更新」这个词有天然的亲切感。你的代码每天在更新，你的认知也应该每天在更新。&lt;/p&gt;
+&lt;p&gt;但大多数人做不到。因为更新判断意味着承认之前的判断不准。承认自己错了这件事，在心理上比改 bug 难一百倍。&lt;/p&gt;
+&lt;p&gt;换个角度看就不一样了。&lt;strong&gt;把「更新判断」当成一个技术动作，而不是道德审判。&lt;/strong&gt; 你改代码的时候不会觉得「我之前写的代码真丢人」，你知道代码就是需要不断改的。判断也是一样——不是因为之前的你蠢，是因为现在的你有更多信息。&lt;/p&gt;
+&lt;p&gt;你今年年初对 AI programming 的判断，跟现在对 AI programming 的判断一模一样——这不是一致性，这是僵化。这不是立场坚定，这是没有学习。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;好的程序员不是一次写对代码的人，是发现错了马上改的人。好的决策者同理。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 class="relative group"&gt;这些模型怎么用
+ &lt;div id="这些模型怎么用" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%bf%99%e4%ba%9b%e6%a8%a1%e5%9e%8b%e6%80%8e%e4%b9%88%e7%94%a8" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;不是背下来。是遇到事的时候，脑子里自动弹一个扳机：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;做方案的时候，弹「反向思考」：怎么做会失败？&lt;/li&gt;
+&lt;li&gt;评估风险的时候，弹「乘法为零」：有什么环节能让我归零？&lt;/li&gt;
+&lt;li&gt;给承诺的时候，弹「安全边际」：留够 buffer 了吗？&lt;/li&gt;
+&lt;li&gt;被要求做决定的时候，弹「能力圈」：这在我的圈内吗？&lt;/li&gt;
+&lt;li&gt;发现判断错了的时候，弹「贝叶斯更新」：新的输入来了，输出该变了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;思维模型不是知识，是习惯。&lt;/strong&gt; 第一次用会觉得刻意，第一百次就成了本能。&lt;/p&gt;
+&lt;p&gt;芒格说过一句话：「拿着一把锤子的人，看什么都像钉子。」他要你做的不是扔掉锤子，是在工具箱里多放几把工具。&lt;/p&gt;
+&lt;p&gt;下一次你做技术决策的时候，试试从这五个里抽一个出来用。用一次，你就知道它比任何「最佳实践」都好使。&lt;/p&gt;
+&lt;hr&gt;</description></item><item><title>那枚比特币教会我的，比暴富重要得多</title><link>https://zjdznl.github.io/thoughts/2026-07-01-bitcoin-story-lessons/</link><pubDate>Wed, 01 Jul 2026 12:00:00 +0800</pubDate><guid>https://zjdznl.github.io/thoughts/2026-07-01-bitcoin-story-lessons/</guid><description>&lt;p&gt;有个人为了写小说搜集素材，在一个论坛上偶然看到比特币的讨论。&lt;/p&gt;
+&lt;p&gt;他没有扫一眼就划走。他因为好奇，开始深入研究。越看越觉得有意思，越看越觉得这不是一个普通的「网络货币」。&lt;/p&gt;
+&lt;p&gt;他去微博关注了一个比特币早期布道者，多次私信请教技术问题。对方耐心解答。为了表示感谢，他送了那个人一枚比特币——当时价值大概几十块钱。在那个时候，这在社区里算重礼了。&lt;/p&gt;
+&lt;p&gt;对方被打动了。带他参与比特币生态最早期的一些投资。后来，整个行业爆发。&lt;/p&gt;
+&lt;p&gt;几年后回头看，那枚他送出去的比特币和几十块钱的成本相比，回报是多少倍？算不过来。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;但这个故事最有价值的不是结局，是过程。&lt;/strong&gt; 如果只看结局——「送了一枚比特币，换来了超额回报」——你会得出完全错误的结论。你会以为这是一次精明的投资。不是的。&lt;/p&gt;
+
+&lt;h2 class="relative group"&gt;好奇心：机遇的雷达，不是搜索引擎
+ &lt;div id="好奇心机遇的雷达不是搜索引擎" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%a5%bd%e5%a5%87%e5%bf%83%e6%9c%ba%e9%81%87%e7%9a%84%e9%9b%b7%e8%be%be%e4%b8%8d%e6%98%af%e6%90%9c%e7%b4%a2%e5%bc%95%e6%93%8e" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;故事里第一个关键动作：他研究比特币的出发点不是为了赚钱，是为了写小说。&lt;/p&gt;
+&lt;p&gt;「非功利的好奇心」——这是我最羡慕的特质。因为它无法被计划出来。&lt;/p&gt;
+&lt;p&gt;你没法在日程表上写「本周三下午 3 点到 5 点，保持好奇心」。好奇心是散养的，不是圈养的。它是你在没有明确目的的时候，对一个东西产生了「这到底是什么」的追问。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;大部分人错过了机会，不是因为没有能力抓住，是因为根本没有注意到。&lt;/strong&gt; 而注意不到的根因是——他们在看一个东西之前先问「对我有什么用」。如果答案不明确，就不看。&lt;/p&gt;
+&lt;p&gt;问题在于：真正的好机会在早期阶段，回答不了「有什么用」这个问题。比特币刚出来的时候，谁能说清楚它有什么用？AI 刚出来的时候，谁能说清楚它有什么用？&lt;/p&gt;
+&lt;p&gt;你需要一个「不管有没有用，先看清楚再说」的开关。这个开关就是好奇心。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;好奇心跟搜索引擎的区别：搜索引擎是你知道自己在找什么才去搜。好奇心的雷达是你根本不知道那边有什么，但因为想看，就去看了。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 class="relative group"&gt;真诚：别人不是傻子
+ &lt;div id="真诚别人不是傻子" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%9c%9f%e8%af%9a%e5%88%ab%e4%ba%ba%e4%b8%8d%e6%98%af%e5%82%bb%e5%ad%90" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;故事里第二个关键动作：他没有用客套话感谢那个大佬，而是送了真金白银。&lt;/p&gt;
+&lt;p&gt;当时比特币一枚几十块钱。看起来不多，但对一个素未谋面的网友来说，已经是实实在在的诚意。&lt;/p&gt;
+&lt;p&gt;这个动作最妙的地方在于：&lt;strong&gt;他不是在计算回报之后做的，是在计算回报之前做的。&lt;/strong&gt; 他不知道对方会因为这一枚币带他进圈子。他只是在表达真正的感谢。&lt;/p&gt;
+&lt;p&gt;这里有一个很微妙的点：你是不是真的在感谢对方，对方是知道的。&lt;/p&gt;
+&lt;p&gt;酒桌上「改天请你吃饭」谁都会说。深夜帮了忙之后发一个红包——做的人很少。做的人少，所以做了的人被记住了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;真诚不是修辞。真诚是行为。是你愿意为一段关系付出真实的成本，而不是指望用话术换取信任。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这件故事放到今天看尤其有意思。现在各种「人脉攻略」「向上社交」教程满天飞，教你怎么加微信、怎么破冰、怎么让大佬记住你。但如果你的底层出发点是功利计算，你的每一个动作都会散发出那种味道——你自己闻不到，对方一清二楚。&lt;/p&gt;
+&lt;p&gt;一枚比特币几十块。十几万倍的回报。不是因为他算到了这个回报，是因为他没在算。&lt;/p&gt;
+
+&lt;h2 class="relative group"&gt;长期主义：愿意放弃眼前涟漪的人，才能看到真正的浪潮
+ &lt;div id="长期主义愿意放弃眼前涟漪的人才能看到真正的浪潮" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e9%95%bf%e6%9c%9f%e4%b8%bb%e4%b9%89%e6%84%bf%e6%84%8f%e6%94%be%e5%bc%83%e7%9c%bc%e5%89%8d%e6%b6%9f%e6%bc%aa%e7%9a%84%e4%ba%ba%e6%89%8d%e8%83%bd%e7%9c%8b%e5%88%b0%e7%9c%9f%e6%ad%a3%e7%9a%84%e6%b5%aa%e6%bd%ae" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;故事里的后续：他经历了比特币矿机时代、加密货币的多次牛熊，见过「无数人追逐短期暴涨而血本无归」，也见过「真正深耕生态者穿越牛熊」。&lt;/p&gt;
+&lt;p&gt;这句话的重点在「见过」。不是听说，是亲眼见过。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;长期主义不是一种信仰，是亲眼见过短期主义的下场之后做出的选择。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;你见过身边谁炒短线赚到了大钱？我没有。那些追涨杀跌的人，大部分亏了。少数赚到的，后面又亏回去了。因为短期交易的数学期望就是零和的，加上手续费是负的——除非你是交易所。&lt;/p&gt;
+&lt;p&gt;真正赚到钱的人，做的是同一件事：&lt;strong&gt;在别人不看好、不关注的时候进入，然后什么都不做，等了很久。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这不是「拿着不动」。这是「在大多数人看不清楚的时候看清楚了，然后坚持自己的判断直到验证」。中间会有无数次怀疑、无数次市场波动、无数次别人说「你还不跑」。能扛住的，就是长期主义者。&lt;/p&gt;
+&lt;p&gt;程序员对这个应该不陌生。你开一个大的重构，第一天写完不会觉得值。但你扛过了中间那段「看起来比原来更乱」的阶段，最后出来的代码比原来简洁两个数量级。这个过程没人鼓掌，因为你重构的时候别人根本不知道你在干嘛。但你知道你在干嘛。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;长期主义不需要别人的掌声。它只需要你自己的判断，和等待的耐心。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 class="relative group"&gt;这三件事跟运气的关系
+ &lt;div id="这三件事跟运气的关系" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%bf%99%e4%b8%89%e4%bb%b6%e4%ba%8b%e8%b7%9f%e8%bf%90%e6%b0%94%e7%9a%84%e5%85%b3%e7%b3%bb" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;你可能会说：这不就是运气好吗？他刚好碰到比特币，刚好碰到那个大佬，刚好赶上了行业爆发。&lt;/p&gt;
+&lt;p&gt;运气确实是这个故事的组成部分。但运气不是均匀分布的。&lt;/p&gt;
+&lt;p&gt;好奇心让他的运气面变大了——他关注的东西比别人多，碰到机会的概率就比别人高。真诚让他的运气面变大了——他经营的关系质量比别人高，别人愿意带他的概率就比别人高。长期主义让他的运气面变大了——他拿得住，不在黎明前下车。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;运气是你控制不了的。但运气发生的面积，是你能控制的。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这就像你在一片草地上找东西。你不知道东西在哪儿，但如果你走得更远、看得更细、待得更久——你找到的概率就是比站在原地的更高。&lt;/p&gt;
+&lt;p&gt;这不是玄学。这是概率。&lt;/p&gt;
+
+&lt;h2 class="relative group"&gt;最后一句话
+ &lt;div id="最后一句话" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%9c%80%e5%90%8e%e4%b8%80%e5%8f%a5%e8%af%9d" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;故事的作者在最后写了一段话，我直接抄过来：&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;财富会随着时代变迁改换形态，但有些道理永恒不变：保持对世界的天真追问，珍视人与人之间的真诚温度，在给予时多一份不计较的洒脱。这些看似「过时」的品质，或许正是未来世界最稀缺的宝藏。&lt;/p&gt;
+&lt;/blockquote&gt;&lt;p&gt;最稀缺的东西，往往是大家觉得最简单的——简单到没人愿意当真。&lt;/p&gt;
+&lt;p&gt;好奇心。真诚。长期主义。三个词你都认识。但你做不做？是不是真的在做？不是偶尔做一次，是把它变成你的默认设置。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;你是什么样的人，比你有什么样的策略，更能决定你遇到什么样的机会。&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;</description></item></channel></rss>
