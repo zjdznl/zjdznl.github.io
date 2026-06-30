@@ -1,4 +1,64 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AI on 主页</title><link>https://zjdznl.github.io/categories/ai/</link><description>Recent content in AI on 主页</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>© 2026</copyright><lastBuildDate>Wed, 24 Jun 2026 12:00:00 +0800</lastBuildDate><atom:link href="https://zjdznl.github.io/categories/ai/index.xml" rel="self" type="application/rss+xml"/><item><title>当我们在讨论 Agent 的时候，我们到底在讨论什么</title><link>https://zjdznl.github.io/ai/2026-06-24-what-are-we-talking-about-when-we-talk-about-agent/</link><pubDate>Wed, 24 Jun 2026 12:00:00 +0800</pubDate><guid>https://zjdznl.github.io/ai/2026-06-24-what-are-we-talking-about-when-we-talk-about-agent/</guid><description>&lt;p&gt;2026 年，一个人说「我在做 Agent」，他可能在干这些事中的任何一件：&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AI on 主页</title><link>https://zjdznl.github.io/categories/ai/</link><description>Recent content in AI on 主页</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>© 2026</copyright><lastBuildDate>Wed, 01 Jul 2026 12:00:00 +0800</lastBuildDate><atom:link href="https://zjdznl.github.io/categories/ai/index.xml" rel="self" type="application/rss+xml"/><item><title>你跟AI，谁更不讲道理？</title><link>https://zjdznl.github.io/ai/2026-06-30-ai-logical-fallacies/</link><pubDate>Wed, 01 Jul 2026 12:00:00 +0800</pubDate><guid>https://zjdznl.github.io/ai/2026-06-30-ai-logical-fallacies/</guid><description>&lt;p&gt;凌晨一点，你还在跟 ChatGPT 较劲。&lt;/p&gt;
+&lt;p&gt;你问它 Python 是不是最好的编程语言。它说 Python 生态好但速度不如 Rust。你换了个问法：「那做 AI 开发呢？」它说 Python 是主流，但 Julia 和 Mojo 也在追。你又问了一遍，换了个角度。终于，它说了你想听的——「综合来看，Python 是 AI 开发的最佳选择。」&lt;/p&gt;
+&lt;p&gt;你截图，发朋友圈：「看，AI 也这么说。」&lt;/p&gt;
+&lt;p&gt;这个场景眼熟吗？但你可能从来没反过来想过一件事——刚才那段对话，&lt;strong&gt;一直在犯错的是你，不是它。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;你不是在让 AI 帮你思考。你在让 AI 帮你证明你已经想好的结论。&lt;/p&gt;
+&lt;p&gt;这种事不止发生在你主动去引导 AI 的时候。即使你什么都没做，只是看了一段 AI 的回答，你的判断也可能已经不自觉地偏了。&lt;/p&gt;
+
+&lt;h2 class="relative group"&gt;你戴着一副自己看不见的有色眼镜
+ &lt;div id="你戴着一副自己看不见的有色眼镜" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%bd%a0%e6%88%b4%e7%9d%80%e4%b8%80%e5%89%af%e8%87%aa%e5%b7%b1%e7%9c%8b%e4%b8%8d%e8%a7%81%e7%9a%84%e6%9c%89%e8%89%b2%e7%9c%bc%e9%95%9c" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;我先讲个故事。不是段子，是真有人做过实验。&lt;/p&gt;
+&lt;p&gt;研究者拿了一段逻辑上有问题的文字，给一群人看。但他们耍了个花招——给不同的人标注了不同的「作者」。有人看到的是「这段文字由某某专家撰写」，有人看到的是「这段文字由 AI 生成」。&lt;/p&gt;
+&lt;p&gt;内容一模一样。结论天差地别。&lt;/p&gt;
+&lt;p&gt;看到「专家」版本的人觉得这段文字更有道理、更可信。看到「AI」版本的人觉得不靠谱，扫两眼就放下了。&lt;/p&gt;
+&lt;p&gt;同样的内容，换个标签，你的判断就完全变了。而你根本没意识到自己在这么做。&lt;/p&gt;
+&lt;p&gt;这还没完。另一个实验发现，如果 AI 输出的文字带点情绪——比如让你感到焦虑、愤怒、兴奋——你发现其中逻辑错误的概率还会再降一大截。&lt;/p&gt;
+&lt;p&gt;还有一个让人不太舒服的发现：在按规则做判断这类任务里，AI 抵抗情绪干扰的能力比人类强得多。不是强一点，是强好几个量级。&lt;/p&gt;
+&lt;p&gt;什么意思？在严格按规则做判断这类任务里——&lt;strong&gt;你跟 AI 比谁更讲道理，你大概率会输。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 class="relative group"&gt;你对 AI 和对人，用的根本不是同一套标准
+ &lt;div id="你对-ai-和对人用的根本不是同一套标准" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%bd%a0%e5%af%b9-ai-%e5%92%8c%e5%af%b9%e4%ba%ba%e7%94%a8%e7%9a%84%e6%a0%b9%e6%9c%ac%e4%b8%8d%e6%98%af%e5%90%8c%e4%b8%80%e5%a5%97%e6%a0%87%e5%87%86" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;我不是在说你要对 AI 更好一点。我是说，你给 AI 设了一个永远赢不了的游戏规则。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第一种：要么完美，要么垃圾。&lt;/strong&gt; AI 一次没给出满分答案，你的结论是「没用」。你会这样对同事吗？同事交了一个 80% 能用的方案，你说的是「剩下 20% 我改」。但 AI 做不到 100%，你就直接归零。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第二种：只记翻车，不记帮忙。&lt;/strong&gt; 那些 AI 数不对字母、算错加减法、画出六根手指的截图传得到处都是，每一条都是「AI 不靠谱」的铁证。但你有没有截过 AI 帮你查资料、帮你理思路、帮你省掉一小时重复劳动的屏？没有。因为那些太正常了，不值得发。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第三种：标准永远往后挪。&lt;/strong&gt; 你让 AI 写个方案，它写了。你说没考虑风险，它加了。你说成本没算细，它算了。你说排版不够好——然后下了结论：「AI 做方案不行。」你从一开始就不是在测试它的能力，你是在验证你的判断。&lt;/p&gt;
+&lt;p&gt;这些事拆开来看不一样，但骨子里是同一件事：&lt;strong&gt;你没有用对人的标准来对 AI。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;你不一定要对 AI 更宽容。但你至少应该用同一把尺——不是说情感上要把 AI 当人，而是对推理和证据的要求应该一致。同事说了一句没头没尾的话你会追问「依据呢？」，AI 说同样的话你也会追问吗？&lt;/p&gt;
+
+&lt;h2 class="relative group"&gt;这跟你的工作有什么关系
+ &lt;div id="这跟你的工作有什么关系" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%bf%99%e8%b7%9f%e4%bd%a0%e7%9a%84%e5%b7%a5%e4%bd%9c%e6%9c%89%e4%bb%80%e4%b9%88%e5%85%b3%e7%b3%bb" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;你可能会想：「知道了，我下次注意。」&lt;/p&gt;
+&lt;p&gt;但这事不是你想注意就能注意的。你习惯了在 AI 面前走捷径——看标签不看内容、一次翻车全盘否定、听起来顺就觉得对——这些习惯不会因为你关掉对话框就自动消失。你怎么练的，就会怎么用。&lt;/p&gt;
+&lt;p&gt;而且 AI 越来越会说话了。它写出来的东西越来越流畅、越来越自信、越来越像一个「有道理的人」。如果你分不清「听起来对」和「确实对」，这个差距会越来越大。&lt;/p&gt;
+&lt;p&gt;你不需要变成一个逻辑学家。你需要的是一个习惯，一个每次跟 AI 对话之前都可以做的习惯。&lt;/p&gt;
+&lt;p&gt;问自己一句话：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;「如果这话是我同事说的，我还会这么想吗？」&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;同事说了同样的观点，你觉得「有点道理，我验证一下」——那 AI 说了，你也应该验证。同事说了同样的观点，你觉得「这不胡扯吗」——那 AI 说了，你也应该有同样的警觉。&lt;/p&gt;
+&lt;p&gt;反过来也一样。你不会因为同事犯了一次错就说他整个人不行。你也不会把同事的一句话当成真理到处转述。&lt;/p&gt;
+&lt;p&gt;你用对人的方式对 AI 就行。不更高，不更低。&lt;strong&gt;一样就行。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;跟 AI 的关系不是考官和考生。你们是一起干活的两个人。你定方向、做判断、做验证。它负责算、搜、整理。&lt;/p&gt;
+&lt;p&gt;每次问自己一句话：&lt;strong&gt;这话换成同事说的，我还信吗？&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>当我们在讨论 Agent 的时候，我们到底在讨论什么</title><link>https://zjdznl.github.io/ai/2026-06-24-what-are-we-talking-about-when-we-talk-about-agent/</link><pubDate>Wed, 24 Jun 2026 12:00:00 +0800</pubDate><guid>https://zjdznl.github.io/ai/2026-06-24-what-are-we-talking-about-when-we-talk-about-agent/</guid><description>&lt;p&gt;2026 年，一个人说「我在做 Agent」，他可能在干这些事中的任何一件：&lt;/p&gt;
 &lt;p&gt;打开 Claude Code，写一段 prompt，看着它自动读代码、改文件、跑测试、修 bug。另一个人在用 LangGraph 画状态图，配置工具节点和条件跳转，调试为什么 Agent 卡在了第三步。第三个人用 Agno 的几行代码接上内部 API，十分钟跑通了一个 demo。第四个人手写了一个 while 循环——调 LLM、解析 tool call、执行、把结果喂回去。&lt;/p&gt;
 &lt;p&gt;他们都把这叫做「做 Agent」。&lt;/p&gt;
 &lt;p&gt;但他们做的事情差异巨大。一个在用一个&lt;strong&gt;开箱即用的运行系统&lt;/strong&gt;（Harness），一个在&lt;strong&gt;搭建&lt;/strong&gt;这个运行系统，一个在&lt;strong&gt;快速验证&lt;/strong&gt;想法，一个在&lt;strong&gt;从零手写&lt;/strong&gt;核心循环。&lt;/p&gt;
