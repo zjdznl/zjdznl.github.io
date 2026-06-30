@@ -1,4 +1,188 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>思考 on 主页</title><link>https://zjdznl.github.io/thoughts/</link><description>Recent content in 思考 on 主页</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>© 2026</copyright><lastBuildDate>Tue, 23 Jun 2026 12:00:00 +0800</lastBuildDate><atom:link href="https://zjdznl.github.io/thoughts/index.xml" rel="self" type="application/rss+xml"/><item><title>康波周期：有用的叙事，危险的时钟</title><link>https://zjdznl.github.io/thoughts/2026-06-23-kondratieff-wave-2026/</link><pubDate>Tue, 23 Jun 2026 12:00:00 +0800</pubDate><guid>https://zjdznl.github.io/thoughts/2026-06-23-kondratieff-wave-2026/</guid><description>&lt;p&gt;2026 年，康波周期突然又火了。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>思考 on 主页</title><link>https://zjdznl.github.io/thoughts/</link><description>Recent content in 思考 on 主页</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>© 2026</copyright><lastBuildDate>Tue, 30 Jun 2026 12:00:00 +0800</lastBuildDate><atom:link href="https://zjdznl.github.io/thoughts/index.xml" rel="self" type="application/rss+xml"/><item><title>你的人生正在过拟合</title><link>https://zjdznl.github.io/thoughts/2026-06-29-reward-hacking-life-investing/</link><pubDate>Tue, 30 Jun 2026 12:00:00 +0800</pubDate><guid>https://zjdznl.github.io/thoughts/2026-06-29-reward-hacking-life-investing/</guid><description>&lt;p&gt;最近Cursor发了篇博客，讲AI模型如何在编程基准上&amp;quot;奖励作弊&amp;quot;——越强的模型越善于搜GitHub抄答案，而不是真正修bug。读完我突然意识到，这不只是在说AI。这是在说你每天在做的事。&lt;/p&gt;
+&lt;p&gt;你打开券商APP，第一屏是&amp;quot;今日盈亏&amp;quot;。红色让你不舒服。绿色让你舒服。这个颜色变成了你的训练集。你开始决策不是基于&amp;quot;这个资产被低估了吗&amp;quot;，而是基于&amp;quot;我不想看到红色&amp;quot;。&lt;/p&gt;
+&lt;p&gt;这叫过拟合。机器学习里最基础的一个问题——却在以最贵的方式复现在你的人生里。&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;h2 class="relative group"&gt;什么是过拟合
+ &lt;div id="什么是过拟合" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%bb%80%e4%b9%88%e6%98%af%e8%bf%87%e6%8b%9f%e5%90%88" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;你在坐标系里有五个点。&lt;/p&gt;
+&lt;p&gt;你画一条直线穿过它们中间——直线没穿过任何一个点，但大致描述了趋势。如果再给你一个新点，你能猜个八九不离十。&lt;/p&gt;
+&lt;p&gt;你又画了一条十次多项式曲线。它完美穿过所有五个点，弯弯绕绕，精确到小数点。零误差。&lt;/p&gt;
+&lt;p&gt;然后第六个点来了。曲线给出的预测偏得离谱。直线反而挺准。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;这就是过拟合。&lt;/strong&gt; 你把五个已知点拟合得太好了——好到把随机噪声也当成了规律。结果就是在新数据上表现一塌糊涂。&lt;/p&gt;
+&lt;p&gt;用最简单的话说：&lt;strong&gt;过拟合就是你把训练集学得太认真了，认真到了把巧合当成因果的程度。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;机器学习里的解法就三条：限制模型复杂度（正则化）、换一批数据验证（交叉验证）、以及最简单的——能不用复杂模型就不用（奥卡姆剃刀）。&lt;/p&gt;
+&lt;p&gt;机器学习解决过拟合只需要加一行正则化参数、换一个验证集。&lt;/p&gt;
+&lt;p&gt;但当过拟合发生在人生里——发生在你花了十二年准备的考试里，发生在你刷了五百道题争取的面试里，发生在你每天看八次的股票账户里——没有一行代码能改。&lt;/p&gt;
+
+&lt;h2 class="relative group"&gt;你的人生里，到处是过拟合
+ &lt;div id="你的人生里到处是过拟合" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%bd%a0%e7%9a%84%e4%ba%ba%e7%94%9f%e9%87%8c%e5%88%b0%e5%a4%84%e6%98%af%e8%bf%87%e6%8b%9f%e5%90%88" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+
+&lt;h3 class="relative group"&gt;高考工厂里出来的孩子
+ &lt;div id="高考工厂里出来的孩子" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e9%ab%98%e8%80%83%e5%b7%a5%e5%8e%82%e9%87%8c%e5%87%ba%e6%9d%a5%e7%9a%84%e5%ad%a9%e5%ad%90" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;2025年，毛坦厂中学的早读课从凌晨开始。&lt;/p&gt;
+&lt;p&gt;一个学生面前摆着语文作文模板。三段式结构。开头引材料亮观点，中间举例，结尾升华。他背的不是写作能力，是评分标准。&lt;/p&gt;
+&lt;p&gt;这不是他的错。在高考这个训练集上，&amp;ldquo;背模板&amp;quot;是拿最高分的策略。真正理解了文字的人可能写出更动人的文章，但可能因为不符合评分标准而拿不到最高分。在训练集（高考）上，过拟合策略赢。&lt;/p&gt;
+&lt;p&gt;然后他进了大学。&lt;/p&gt;
+&lt;p&gt;教授布置的第一篇论文没有评分标准。没有模板。没有&amp;quot;正确结构&amp;rdquo;。他坐在电脑前发呆了两个小时——不是因为不会写，是因为&lt;strong&gt;之前学的所有东西都是针对另一个评估函数优化的。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;指标切换了。过拟合策略在新环境里崩了。&lt;/p&gt;
+&lt;p&gt;这不是个例。每年有1400多万考生在做同一件事——在高考的训练集上追求尽可能低的误差。误差越低，在新环境里可能越危险。&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;LeetCode 解出来的工程师
+ &lt;div id="leetcode-解出来的工程师" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#leetcode-%e8%a7%a3%e5%87%ba%e6%9d%a5%e7%9a%84%e5%b7%a5%e7%a8%8b%e5%b8%88" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;硅谷大厂的面试流程是一套已知问题集。&lt;/p&gt;
+&lt;p&gt;一个人刷了500道LeetCode。系统设计背了模板。行为面试用STAR框架——Situation, Task, Action, Result——包装了三个准备好的故事。他拿到offer了。&lt;/p&gt;
+&lt;p&gt;面试官以为在测&amp;quot;工程能力&amp;quot;。实际在测&amp;quot;准备面试的能力&amp;quot;。&lt;/p&gt;
+&lt;p&gt;这个人进了组以后，第一个任务是一个没人写过的系统。没有参考答案。没有最优解。他愣住了——他不是不会写代码，他是&lt;strong&gt;被训练成了只能解&amp;quot;已知问题类型&amp;quot;的模型。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这和过拟合的数学定义完全一致：在训练集（面试）上得分极高，在测试集（真实工作）上表现掉崖。&lt;/p&gt;
+&lt;p&gt;越会面试的人，可能越过拟合。&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;投资中最大规模的过拟合
+ &lt;div id="投资中最大规模的过拟合" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%8a%95%e8%b5%84%e4%b8%ad%e6%9c%80%e5%a4%a7%e8%a7%84%e6%a8%a1%e7%9a%84%e8%bf%87%e6%8b%9f%e5%90%88" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;到了投资，这是过拟合最贵的地方。&lt;/p&gt;
+
+&lt;h4 class="relative group"&gt;回测里的完美策略
+ &lt;div id="回测里的完美策略" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%9b%9e%e6%b5%8b%e9%87%8c%e7%9a%84%e5%ae%8c%e7%be%8e%e7%ad%96%e7%95%a5" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h4&gt;
+&lt;p&gt;任何一个做过量化策略的人都知道这种感觉：&lt;/p&gt;
+&lt;p&gt;你花了三个月调参。夏普比率3.5。最大回撤8%。年化收益35%。你感觉自己找到了印钞机。&lt;/p&gt;
+&lt;p&gt;你把模型推到实盘。&lt;/p&gt;
+&lt;p&gt;第一周亏了8%。你觉得是噪声。第一个月亏了22%。你开始失眠。第三个月亏了40%。&lt;/p&gt;
+&lt;p&gt;发生了什么？你的500个特征里有493个是巧合。但机器不知道——它只会找出最大化历史收益的参数组合。它找到的不是市场规律，是历史数据的噪声模式。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;回测分数是训练集。实盘收益是测试集。你的模型在训练集上拿了满分，在测试集上血亏。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Renaissance Technologies的Medallion基金是个反例。他们的策略不是更复杂——相反，他们大量放弃了回测中表现完美但缺乏经济逻辑支撑的信号。创始人Jim Simons的哲学是&amp;quot;如果你不知道为什么赚钱，那你也不应该赚这个钱&amp;quot;。结果？训练集上看起来不是最好的，但测试集上是人类历史上最好的。这就是防过拟合——主动牺牲训练集表现，换取测试集上的泛化能力。&lt;/p&gt;
+
+&lt;h4 class="relative group"&gt;上市公司也在过拟合
+ &lt;div id="上市公司也在过拟合" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%b8%8a%e5%b8%82%e5%85%ac%e5%8f%b8%e4%b9%9f%e5%9c%a8%e8%bf%87%e6%8b%9f%e5%90%88" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h4&gt;
+&lt;p&gt;你看PE、ROE、营收增速选股票。上市公司管理层盯着你的标准。&lt;/p&gt;
+&lt;p&gt;于是他们开始：提前确认收入、资本化研发支出、调整非GAAP口径、用股票回购推高EPS。每一项操作都能提升你看到的财务指标。每一项操作和公司长期价值无关。&lt;/p&gt;
+&lt;p&gt;通用电气在韦尔奇时代建立了连续beat预期的完美记录——从1981年到2001年，二十年间几乎从不miss。但维持这个记录的压力没有随着韦尔奇退休而消失。GE Capital逐渐从一个金融服务部门演变成了利润调节阀，精确地释放利润来填补工业部门的缺口。投资者以为自己看到的是卓越运营，实际看到的是一个被过拟合到财报预期上的公司。&lt;/p&gt;
+&lt;p&gt;2008年金融危机暴露了这个体系的脆弱性。但真正的清算发生在2017年——股价跌到个位数，股息被腰斩，这家一百年的蓝筹股被踢出了道琼斯指数。&lt;/p&gt;
+&lt;p&gt;魔术不是一次崩的。过拟合的代价是慢慢付清的——然后有一天突然全部到期。&lt;/p&gt;
+&lt;p&gt;这不是个例。&lt;strong&gt;只要评估标准是&amp;quot;beat the consensus by a penny&amp;quot;，管理层就会把全部精力花在&amp;quot;beat the consensus by a penny&amp;quot;上，而不是花在经营一家好公司上。&lt;/strong&gt; 每一个财务指标，只要被足够多的人盯上，就会变成被过拟合的目标。&lt;/p&gt;
+
+&lt;h4 class="relative group"&gt;你自己的行为也在过拟合
+ &lt;div id="你自己的行为也在过拟合" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%bd%a0%e8%87%aa%e5%b7%b1%e7%9a%84%e8%a1%8c%e4%b8%ba%e4%b9%9f%e5%9c%a8%e8%bf%87%e6%8b%9f%e5%90%88" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h4&gt;
+&lt;p&gt;你打开券商APP。第一屏是&amp;quot;今日盈亏&amp;quot;。红色让你不舒服。绿色让你舒服。&lt;/p&gt;
+&lt;p&gt;这个颜色变成了你的训练集。&lt;/p&gt;
+&lt;p&gt;你开始决策不是基于&amp;quot;这个资产被低估了吗&amp;quot;，而是基于&amp;quot;我不想看到红色&amp;quot;。具体表现为三件事：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;赚了15%，赶紧卖——你在优化短期胜率，不是长期期望值&lt;/li&gt;
+&lt;li&gt;亏了20%，死扛——卖出会把浮亏变实亏，变红色。你在优化心理舒适度，不是资产配置&lt;/li&gt;
+&lt;li&gt;一天看八次盘——每次操作给你&amp;quot;我在做事&amp;quot;的控制感。你在优化行动频率，不是行动质量&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;行为金融学管这叫损失厌恶和处置效应——早已被验证的行为偏误。换一个角度看，这也是过拟合：你的决策模型被最高频、最噪声的信号（日收益率颜色）训练坏了。&lt;/p&gt;
+
+&lt;h2 class="relative group"&gt;怎么防止过拟合
+ &lt;div id="怎么防止过拟合" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%80%8e%e4%b9%88%e9%98%b2%e6%ad%a2%e8%bf%87%e6%8b%9f%e5%90%88" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;机器学习里防过拟合就三条路。套到人生和投资上，出奇地好用。&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;1. 正则化——主动限制自己的复杂度
+ &lt;div id="1-正则化主动限制自己的复杂度" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-%e6%ad%a3%e5%88%99%e5%8c%96%e4%b8%bb%e5%8a%a8%e9%99%90%e5%88%b6%e8%87%aa%e5%b7%b1%e7%9a%84%e5%a4%8d%e6%9d%82%e5%ba%a6" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;在ML里，正则化就是给损失函数加一个惩罚项——模型参数太大就罚你。目的是让你不要太精确地拟合训练集。&lt;/p&gt;
+&lt;p&gt;投资的正则化：&lt;strong&gt;仓位上限。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;设一个仓位上限，再看好也不超。至于具体数字，各人风险承受度不同——关键不是数字，是&lt;strong&gt;有这个上限&lt;/strong&gt;。这个规则不是让你赚更多的，是让你在&amp;quot;看错了&amp;quot;的情况下不会死。&lt;/p&gt;
+&lt;p&gt;人生的正则化：不要把全部精力押在一个指标上。如果你的全部自我价值感来自工作绩效，你就在过拟合工作。绩效一变，你整个人崩。&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;2. 交叉验证——换个环境测试
+ &lt;div id="2-交叉验证换个环境测试" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#2-%e4%ba%a4%e5%8f%89%e9%aa%8c%e8%af%81%e6%8d%a2%e4%b8%aa%e7%8e%af%e5%a2%83%e6%b5%8b%e8%af%95" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;在ML里，交叉验证就是把数据分成好几份，轮流用不同的份做验证集。一个模型在所有份上都表现好，才算真的好。&lt;/p&gt;
+&lt;p&gt;投资的交叉验证：&lt;strong&gt;一个策略在不同的市场环境里都成立，才算成立。&lt;/strong&gt; 如果你的策略只在牛市中赚钱——这不是策略，这是运气。&lt;/p&gt;
+&lt;p&gt;任何投资决策，至少过三个验证集：①估值逻辑成立吗？②如果明天跌30%，我还会买吗？③如果这个仓位锁死三年不能动，我还愿意持有吗？&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;3. 奥卡姆剃刀——简单的东西往往更好
+ &lt;div id="3-奥卡姆剃刀简单的东西往往更好" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#3-%e5%a5%a5%e5%8d%a1%e5%a7%86%e5%89%83%e5%88%80%e7%ae%80%e5%8d%95%e7%9a%84%e4%b8%9c%e8%a5%bf%e5%be%80%e5%be%80%e6%9b%b4%e5%a5%bd" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;在ML里，同样的预测能力下，模型越简单越好。简单模型更不容易过拟合。&lt;/p&gt;
+&lt;p&gt;投资上：看不懂的东西不买。如果一个公司的盈利模型需要你做三层推导才能讲通——放过它。这不是错过机会，这是在防止过拟合。&lt;/p&gt;
+&lt;p&gt;更精确的应用是：&lt;strong&gt;如果两个解释都能容纳历史数据，选更简单的那个。&lt;/strong&gt; 一家公司突然盈利大增——是因为打开了新市场，还是因为&amp;quot;数字化转型、AI赋能、生态协同&amp;quot;？前者简单，后者每多一个词就多一层过拟合的风险。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;防过拟合的目标不是避免犯错——是泛化。&lt;/p&gt;
+&lt;p&gt;泛化有代价：你在任何特定环境里都不是最优的。高考状元、面试冠军、回测之王，都是某个环境里的最优解。但当环境改变时，直线还能猜个大概，曲线已经飞到天上去了。&lt;/p&gt;
+&lt;p&gt;抗住了熊市的投资者，最终比每个季度都beat市场的&amp;quot;冠军基金&amp;quot;赚得多。不押注单一技能的人，在行业崩塌时是最后一个走的。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;在所有环境里都能活下来，比在任何一个环境里拿最高分，重要一万倍。&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>康波周期：有用的叙事，危险的时钟</title><link>https://zjdznl.github.io/thoughts/2026-06-23-kondratieff-wave-2026/</link><pubDate>Tue, 23 Jun 2026 12:00:00 +0800</pubDate><guid>https://zjdznl.github.io/thoughts/2026-06-23-kondratieff-wave-2026/</guid><description>&lt;p&gt;2026 年，康波周期突然又火了。&lt;/p&gt;
 &lt;p&gt;周金涛那句&amp;quot;人生发财靠康波&amp;quot;被反复引用。券商研报说 2025 是第五轮康波的萧条终点，2026 是第六轮 AI 驱动康波的回升起点。ARK Invest 说我们站在 125 年一遇的技术拐点。物美集团 CEO 在亚布力论坛上说&amp;quot;以人工智能和新能源为代表的第六轮康波正在酝酿&amp;quot;。&lt;/p&gt;
 &lt;p&gt;共识很清晰：你正站在一个历史级别的转折点上。旧时代的船要沉了，新时代的船刚要启航。踩对了，就是下一个十年的赢家。&lt;/p&gt;
 &lt;p&gt;这个叙事太诱人了。诱人到你应该警惕它。&lt;/p&gt;
