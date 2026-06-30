@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>思维模型 on 主页</title><link>https://zjdznl.github.io/tags/%E6%80%9D%E7%BB%B4%E6%A8%A1%E5%9E%8B/</link><description>Recent content in 思维模型 on 主页</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>© 2026</copyright><lastBuildDate>Wed, 01 Jul 2026 12:00:00 +0800</lastBuildDate><atom:link href="https://zjdznl.github.io/tags/%E6%80%9D%E7%BB%B4%E6%A8%A1%E5%9E%8B/index.xml" rel="self" type="application/rss+xml"/><item><title>一个程序员在GitHub上给后代写了本「人生参考手册」</title><link>https://zjdznl.github.io/thoughts/2026-07-01-family-cognitive-inheritance/</link><pubDate>Wed, 01 Jul 2026 12:00:00 +0800</pubDate><guid>https://zjdznl.github.io/thoughts/2026-07-01-family-cognitive-inheritance/</guid><description>&lt;p&gt;有个程序员在 GitHub 上建了个仓库，名叫 dpan。&lt;/p&gt;
+&lt;p&gt;里面就四篇 Markdown：一篇 README，一篇关于教育的，一篇关于机遇和长期主义的小故事，还有一篇 24 万字的芒格思维模型研究。&lt;/p&gt;
+&lt;p&gt;没有 Star，没有技术含量，没有 README badges。放在 GitHub 的海洋里，它连个水花都算不上。&lt;/p&gt;
+&lt;p&gt;但我看完之后，想了很久。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;因为这件事回答了一个问题：一个从农村走出来、白手起家的人，怎么给后代留下比钱更值钱的东西？&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 class="relative group"&gt;那个仓库里的第一段话
+ &lt;div id="那个仓库里的第一段话" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e9%82%a3%e4%b8%aa%e4%bb%93%e5%ba%93%e9%87%8c%e7%9a%84%e7%ac%ac%e4%b8%80%e6%ae%b5%e8%af%9d" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;README 是这样开头的：&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;一个家族贫穷，一定是家族里缺少领头人，就是那个高瞻远瞩，认知高，给整个家族做规划。家里长者没有能力给年轻人做规划，反而用自己低认知抹杀年轻人的未来。&lt;/p&gt;
+&lt;/blockquote&gt;&lt;p&gt;他说自己完全白手起家，从家族中得到的帮助少之又少，几乎没有感知到所谓的「家族传承」。&lt;/p&gt;
+&lt;p&gt;然后他写了一句让我停顿的话：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;「我希望从我开始，后辈的发展能够越来越好，少犯我们之前犯过的错，少交我们交过的学费，少走一些人生弯路。」&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这不是一个开源项目。这是一份认知遗嘱。&lt;/p&gt;
+&lt;p&gt;他在做的事，用大白话说就是：我这辈子踩过的坑、学到的东西、悟出来的道理，在我死之前写下来。让后来人不用从头踩一遍。&lt;/p&gt;
+
+&lt;h2 class="relative group"&gt;GitHub 上的「家书」
+ &lt;div id="github-上的家书" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#github-%e4%b8%8a%e7%9a%84%e5%ae%b6%e4%b9%a6" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;用 GitHub 写家书这件事，本身就很有意思。&lt;/p&gt;
+&lt;p&gt;你想，传统家族传承靠什么？靠口口相传，靠逢年过节的饭桌聊天，靠「你长大就懂了」。但口口相传的问题是：传着传着就丢了。爷爷跟爸爸说的，爸爸未必跟儿子说。就算说了，也可能说走样了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;文字不会走样。Git 不会丢 commit。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;他选 GitHub 可能只是顺手——程序员嘛，写东西最习惯的就是 Markdown + Git。但这个选择恰好做对了一件重要的事：&lt;strong&gt;它让这份传承变得可追溯、可更新、可复用。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;不像纸质家书会被老鼠啃掉，不像过年聊天会被打断。它是活的——想加就加，想改就改。子孙随时能看，不管人在哪个城市，不管长辈还在不在。&lt;/p&gt;
+&lt;p&gt;这可能是信息时代最务实的家族传承方式。&lt;/p&gt;
+
+&lt;h2 class="relative group"&gt;认知传承比财富传承难十倍
+ &lt;div id="认知传承比财富传承难十倍" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%ae%a4%e7%9f%a5%e4%bc%a0%e6%89%bf%e6%af%94%e8%b4%a2%e5%af%8c%e4%bc%a0%e6%89%bf%e9%9a%be%e5%8d%81%e5%80%8d" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;留下钱，相对容易。你赚到了，立个遗嘱，写个银行卡密码，完事。&lt;/p&gt;
+&lt;p&gt;但留下认知，难在哪里？&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第一，认知是隐性的。&lt;/strong&gt; 你知道怎么判断一个人靠不靠谱，你知道什么时候该坚持什么时候该放弃——这些判断力在你自己脑子里运行得很顺畅，但要你说出来，你发现很难。它不像「1+1=2」那样可以写成一个明确的公式。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第二，认知需要上下文。&lt;/strong&gt; 你跟后辈说「要真诚」，他听听就过了。但当你说「我当年送了别人一个比特币表示感谢，这件事后来成了我人生最重要的转折点」——他记住了。因为故事提供了上下文，道理长在了场景里。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第三，认知容易被当成说教。&lt;/strong&gt; 他自己也写道：「在后辈面前，我显得有些喜欢说教，喜欢讲大道理，但这种长辈往往显得有些让人厌烦。」这也是为什么他把这些东西写成文档而不是当面讲——写在纸上的道理，比从嘴里说出来的少了一层压迫感。&lt;/p&gt;
+&lt;p&gt;他在仓库里写的那篇关于教育的文章，核心观点其实就一句话：&lt;strong&gt;「想让孩子做正确的事情，父母就应该做正确的事情。」&lt;/strong&gt; 孩子是父母的投影。父母喜欢阅读，孩子也会阅读。父母喜欢运动，孩子也会运动。父母没有担当，孩子也没主见。&lt;/p&gt;
+&lt;p&gt;这个道理不新鲜。但一个从农村走出来、亲眼见过「寒门再难出贵子」的人说出来，分量不一样。&lt;/p&gt;
+
+&lt;h2 class="relative group"&gt;为什么我觉得这件事值得聊
+ &lt;div id="为什么我觉得这件事值得聊" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e6%88%91%e8%a7%89%e5%be%97%e8%bf%99%e4%bb%b6%e4%ba%8b%e5%80%bc%e5%be%97%e8%81%8a" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;不是因为 dpan 写得多好。说实话，那篇芒格的思维模型研究更像是资料汇编，不是原创思考。那篇教育文章的观点也不算新颖。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;但这件事本身很有价值。&lt;/strong&gt; 他在做一件大多数程序员不会做的事——把自己的认知结构化、文档化、留给后来人。&lt;/p&gt;
+&lt;p&gt;我们这些人，每天写代码、写文档、写 RFC、写 postmortem。我们给公司留下了大量文字，但给自己家人留下了什么？&lt;/p&gt;
+&lt;p&gt;你写的那些设计文档，你做的那些架构决策，你踩过的那些坑，你形成的那些判断——它们是你最值钱的东西。但它们全在你的脑子里，等你退休了、老了、不在了，这些东西就没了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;你的子女要重新踩一遍你踩过的坑，从零开始。这不是因为他们笨，是因为你什么都没留下。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;dpan 给了这件事一个模板。不是说他写的内容有多好，而是他用了一种每个程序员都能做到的方式——Markdown + Git——做了一件很少人想到要做的事。&lt;/p&gt;
+
+&lt;h2 class="relative group"&gt;你可以怎么开始
+ &lt;div id="你可以怎么开始" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%bd%a0%e5%8f%af%e4%bb%a5%e6%80%8e%e4%b9%88%e5%bc%80%e5%a7%8b" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;如果你也想做，不需要写 24 万字。从三件事开始：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第一，写下你觉得最重要的三条原则。&lt;/strong&gt; 不是别人告诉你的，是你自己撞墙撞出来的。比如「永远不要在情绪激动的时候做决定」，比如「跟人合作之前先看他的利益结构」。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第二，每一条原则附上一个真实的故事。&lt;/strong&gt; 不是「研究表明」，是「我遇到过这么一件事」。故事是认知的载体。没有故事的原则是空洞的。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第三，把它放在一个子孙能访问到的地方。&lt;/strong&gt; GitHub 也好，飞书文档也好，微信收藏也好——只要它能被找到、能被更新、不会丢。&lt;/p&gt;
+&lt;p&gt;你不需要写出一本完美的书。你只需要开始写。写一条是一条。&lt;/p&gt;
+
+&lt;h2 class="relative group"&gt;最后一句话
+ &lt;div id="最后一句话" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%9c%80%e5%90%8e%e4%b8%80%e5%8f%a5%e8%af%9d" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;dpan 的作者在 README 里说他希望「让遇到问题、感到迷茫的后辈有一本能够参考的人生手册」。&lt;/p&gt;
+&lt;p&gt;我觉得他想做的其实更多。他想打破那个循环——「子女走不出家族影响，不断重复上一辈生活轨迹」。&lt;/p&gt;
+&lt;p&gt;一个从农村走出来、靠自己打到今天的程序员，在 GitHub 上给后代写人生手册。这件事本身，就是那个循环被打破的证据。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;你留给孩子最好的东西，不是钱，是你犯过的错和你想通的道理。写下来。&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;</description></item></channel></rss>
