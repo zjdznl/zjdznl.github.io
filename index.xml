@@ -182,7 +182,227 @@
 &lt;p&gt;防过拟合的目标不是避免犯错——是泛化。&lt;/p&gt;
 &lt;p&gt;泛化有代价：你在任何特定环境里都不是最优的。高考状元、面试冠军、回测之王，都是某个环境里的最优解。但当环境改变时，直线还能猜个大概，曲线已经飞到天上去了。&lt;/p&gt;
 &lt;p&gt;抗住了熊市的投资者，最终比每个季度都beat市场的&amp;quot;冠军基金&amp;quot;赚得多。不押注单一技能的人，在行业崩塌时是最后一个走的。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;在所有环境里都能活下来，比在任何一个环境里拿最高分，重要一万倍。&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>先偷后解：量子破解门槛 4 年降了 99%，而被囤的加密数据已经堆到 EB 级</title><link>https://zjdznl.github.io/investment/2026-06-28-quantum-countdown-pqc/</link><pubDate>Sun, 28 Jun 2026 12:00:00 +0800</pubDate><guid>https://zjdznl.github.io/investment/2026-06-28-quantum-countdown-pqc/</guid><description>&lt;p&gt;两件事在同时发生。把它们放在一起看，结论让人不安。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;在所有环境里都能活下来，比在任何一个环境里拿最高分，重要一万倍。&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>你脑子里那根钉子——锚定效应的攻防战</title><link>https://zjdznl.github.io/thoughts/2026-06-30-anchoring-effect/</link><pubDate>Tue, 30 Jun 2026 12:00:00 +0800</pubDate><guid>https://zjdznl.github.io/thoughts/2026-06-30-anchoring-effect/</guid><description>&lt;p&gt;你走进一家服装店，看中一件夹克。吊牌：原价 ¥1599，现价 ¥499。你觉得捡了便宜。&lt;/p&gt;
+&lt;p&gt;但你有没有想过——这件夹克可能从来就没卖过1599。那个数字的唯一功能，是在你脑子里打下一根钉子。&lt;/p&gt;
+&lt;p&gt;这就是锚定效应。&lt;/p&gt;
+&lt;p&gt;1974年，卡尼曼和特沃斯基做了一个实验。他们在被试者面前转了一个幸运转盘——做了手脚，只会停在10或65。&lt;/p&gt;
+&lt;p&gt;转盘停在10。实验者问：&amp;ldquo;联合国里非洲国家的比例，高于10%还是低于10%？&amp;ldquo;被试者答。实验者接着问：&amp;ldquo;那你觉得具体是多少？&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;换一组人。转盘停在65。同样的问题：高于65%还是低于65%？具体是多少？&lt;/p&gt;
+&lt;p&gt;结果：看到10的人，平均猜25%。看到65的人，平均猜45%。正确答案是28%。&lt;strong&gt;一个被试者自己转出来的、明知道是随机的数字，把判断力偏转了20个百分点。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;但大多数人读完这个实验就停在这里——&amp;ldquo;哦，我有个偏误。&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;知道偏误存在，不等于你能躲开它。更不等于你懂得用它。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这篇文章要解决两个更值钱的问题：怎么不被别人的钉子钉住，和怎么把钉子打进别人脑子里。&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;h2 class="relative group"&gt;锚定为什么会生效
+ &lt;div id="锚定为什么会生效" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e9%94%9a%e5%ae%9a%e4%b8%ba%e4%bb%80%e4%b9%88%e4%bc%9a%e7%94%9f%e6%95%88" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;要防一个东西，你得知它怎么运作的。&lt;/p&gt;
+&lt;p&gt;锚定效应有三层机制，一层比一层深。&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;第一层：启动效应——锚把相关的记忆全调出来了
+ &lt;div id="第一层启动效应锚把相关的记忆全调出来了" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%ac%ac%e4%b8%80%e5%b1%82%e5%90%af%e5%8a%a8%e6%95%88%e5%ba%94%e9%94%9a%e6%8a%8a%e7%9b%b8%e5%85%b3%e7%9a%84%e8%ae%b0%e5%bf%86%e5%85%a8%e8%b0%83%e5%87%ba%e6%9d%a5%e4%ba%86" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;当你看到&amp;quot;原价1599&amp;rdquo;，你的大脑不是在做减法（1599减到499等于便宜了1100）。它在做&lt;strong&gt;联想&lt;/strong&gt;：1599这个价格→中高端品牌→质量应该不错→设计应该有讲究→材质应该不差。&lt;/p&gt;
+&lt;p&gt;这些联想不是&amp;quot;1599&amp;quot;这个数字本身带来的。是你脑子里关于&amp;quot;1500元价位衣服&amp;quot;的所有记忆被激活了。然后你带着这些被激活的记忆去审视这件499的夹克——你当然会觉得它超值。&lt;/p&gt;
+&lt;p&gt;反过来，如果吊牌上写&amp;quot;原价299，现价499&amp;rdquo;——同样的衣服，你只会觉得贵。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;锚定不是在算账。是在改写你调取记忆的范围。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;第二层：调整不足——你的纠偏永远不到位
+ &lt;div id="第二层调整不足你的纠偏永远不到位" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%ac%ac%e4%ba%8c%e5%b1%82%e8%b0%83%e6%95%b4%e4%b8%8d%e8%b6%b3%e4%bd%a0%e7%9a%84%e7%ba%a0%e5%81%8f%e6%b0%b8%e8%bf%9c%e4%b8%8d%e5%88%b0%e4%bd%8d" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;这也是卡尼曼和特沃斯基的核心发现：当你看到一个数字，即使你知道它不对，你的调整也永远不够。&lt;/p&gt;
+&lt;p&gt;实验：问两组人&amp;quot;1×2×3×4×5×6×7×8&amp;quot;等于多少。另一组问&amp;quot;8×7×6×5×4×3×2×1&amp;quot;。两组人必须在5秒内估算。&lt;/p&gt;
+&lt;p&gt;第一组的前几个数字小（1、2、3），估算结果偏低。第二组的前几个数字大（8、7、6），估算结果偏高。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;同样的乘法，只是顺序反了，结果就偏了。&lt;/strong&gt; 你的大脑从锚出发，走几步就停了。它不会走完全程。&lt;/p&gt;
+&lt;p&gt;这就是为什么即使你知道&amp;quot;原价1599是假的&amp;quot;，你的出价还是会比没有看到1599时高。你的调整从1599起步，往下走了几步，停在了一个&amp;quot;看起来已经降了很多&amp;quot;的位置——&lt;strong&gt;但那个位置可能还是比合理价格高。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;第三层：自我说服——锚让你只看到支持它的证据
+ &lt;div id="第三层自我说服锚让你只看到支持它的证据" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%ac%ac%e4%b8%89%e5%b1%82%e8%87%aa%e6%88%91%e8%af%b4%e6%9c%8d%e9%94%9a%e8%ae%a9%e4%bd%a0%e5%8f%aa%e7%9c%8b%e5%88%b0%e6%94%af%e6%8c%81%e5%ae%83%e7%9a%84%e8%af%81%e6%8d%ae" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;这是最深层、也最危险的一层。学界管它叫&amp;quot;选择性通达&amp;quot;，意思就是：&lt;/p&gt;
+&lt;p&gt;一旦锚打进你的脑子，你会自动开始寻找支持这个锚的信息。那件夹克，你开始注意它的剪裁、面料手感、拉链品牌——所有支持&amp;quot;它值这个价&amp;quot;的线索。你忽略缝线不齐、内衬廉价、标牌上的&amp;quot;Made in Unknown&amp;quot;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;锚不是在骗你。它是在让你自己骗自己。&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;h2 class="relative group"&gt;怎么利用锚定效应
+ &lt;div id="怎么利用锚定效应" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%80%8e%e4%b9%88%e5%88%a9%e7%94%a8%e9%94%9a%e5%ae%9a%e6%95%88%e5%ba%94" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;了解了它怎么运作，你就可以反过来用。&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;谈判中：先说数字，而且要说得足够极端
+ &lt;div id="谈判中先说数字而且要说得足够极端" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%b0%88%e5%88%a4%e4%b8%ad%e5%85%88%e8%af%b4%e6%95%b0%e5%ad%97%e8%80%8c%e4%b8%94%e8%a6%81%e8%af%b4%e5%be%97%e8%b6%b3%e5%a4%9f%e6%9e%81%e7%ab%af" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;所有谈判专家第一条法则：&lt;strong&gt;做第一个报数的人。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;你去面试。HR问期望薪资。你说&amp;quot;50万&amp;quot;。谈判就围绕50万展开。你说&amp;quot;看市场水平吧&amp;quot;——好，HR会给你一个锚，那个锚一定比你想要的低。&lt;/p&gt;
+&lt;p&gt;但光先说还不够。数字要够极端。&lt;/p&gt;
+&lt;p&gt;在另一项研究中，Tversky和Kahneman让被试者判断&amp;quot;今年美国死于交通事故的人数&amp;quot;。一组人的锚是&amp;quot;高于还是低于50万？&amp;ldquo;另一组是&amp;quot;高于还是低于5000？&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;锚越极端，调整越不足。&lt;/strong&gt; 50万的锚让估算结果远高于5000的锚——即使两个锚都明显荒谬。&lt;/p&gt;
+&lt;p&gt;所以谈判中不要怕报一个&amp;quot;太高了&amp;quot;的数字。对方会从你的数字往下调，但永远调不到&amp;quot;合理水平&amp;quot;——他会停在&amp;quot;已经砍了很多&amp;quot;的自我满足中。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;你不是在报价格。你是在设定整个谈判的坐标系。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;定价中：用一个你不想卖的东西来卖你想卖的东西
+ &lt;div id="定价中用一个你不想卖的东西来卖你想卖的东西" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%ae%9a%e4%bb%b7%e4%b8%ad%e7%94%a8%e4%b8%80%e4%b8%aa%e4%bd%a0%e4%b8%8d%e6%83%b3%e5%8d%96%e7%9a%84%e4%b8%9c%e8%a5%bf%e6%9d%a5%e5%8d%96%e4%bd%a0%e6%83%b3%e5%8d%96%e7%9a%84%e4%b8%9c%e8%a5%bf" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;餐厅菜单上那个¥888的海鲜拼盘，不指望你点。它在卖的是¥288的牛排和¥168的意面。&lt;/p&gt;
+&lt;p&gt;这叫&lt;strong&gt;诱饵定价&lt;/strong&gt;。精明的商家永远会放一个&amp;quot;极端选项&amp;quot;在菜单上——不是为了卖它，是为了让你选择他们真正想卖的东西时感觉自己很聪明。&lt;/p&gt;
+&lt;p&gt;你自己怎么做：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;提案永远给三个选项。最贵的那个是锚——不是真的想卖，是让中间选项看起来&amp;quot;理性&amp;quot;&lt;/li&gt;
+&lt;li&gt;报价先报全价，再报折扣价。不要只说&amp;quot;这个方案10万块&amp;quot;——要说&amp;quot;标准报价15万，基于我们长期合作，可以给你10万&amp;quot;&lt;/li&gt;
+&lt;li&gt;产品线永远有一个&amp;quot;旗舰版&amp;quot;，价格高到离谱。它会让你真正的利润产品看起来像&amp;quot;聪明人的选择&amp;quot;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 class="relative group"&gt;日常说服中：用锚框定别人的选择
+ &lt;div id="日常说服中用锚框定别人的选择" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%97%a5%e5%b8%b8%e8%af%b4%e6%9c%8d%e4%b8%ad%e7%94%a8%e9%94%9a%e6%a1%86%e5%ae%9a%e5%88%ab%e4%ba%ba%e7%9a%84%e9%80%89%e6%8b%a9" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;你想说服团队采用一个新方案。不要说&amp;quot;我觉得我们应该试一下方案A&amp;quot;——你没有打锚。&lt;/p&gt;
+&lt;p&gt;你要说：&amp;ldquo;我们有两个选择。方案A需要三个月、投入50万，预期提升效率30%。方案B需要一年、投入300万，提升效率60%。考虑到我们现在的资源和时间窗口，我倾向于A。&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;你给的两个选项就是锚。讨论会被框在你的坐标系里。&lt;/strong&gt; 对方不会跳出你的框架去想&amp;quot;也许有方案C只要两周、投入5万块&amp;quot;——因为他的大脑已经被你的锚调入了你设定的记忆库。&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;h2 class="relative group"&gt;怎么防御锚定效应
+ &lt;div id="怎么防御锚定效应" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%80%8e%e4%b9%88%e9%98%b2%e5%be%a1%e9%94%9a%e5%ae%9a%e6%95%88%e5%ba%94" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;防御比进攻难。因为进攻是你主动选择锚，防御是你被动应对别人选的锚。但可以练。&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;第一招：预锚——在你听到别人的数字之前先算自己的
+ &lt;div id="第一招预锚在你听到别人的数字之前先算自己的" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%ac%ac%e4%b8%80%e6%8b%9b%e9%a2%84%e9%94%9a%e5%9c%a8%e4%bd%a0%e5%90%ac%e5%88%b0%e5%88%ab%e4%ba%ba%e7%9a%84%e6%95%b0%e5%ad%97%e4%b9%8b%e5%89%8d%e5%85%88%e7%ae%97%e8%87%aa%e5%b7%b1%e7%9a%84" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;这招最管用，但你必须在&lt;strong&gt;进入场景之前&lt;/strong&gt;就做。&lt;/p&gt;
+&lt;p&gt;走进4S店之前，把你想买的车在三个平台的成交均价查好。走进面试间之前，把自己的底线和期望值写下来。去看房之前，先用周边的租金反推你能接受的买入价。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;你自己的锚要先打进去。&lt;/strong&gt; 让两根钉子互相打架——比一根钉子钉死脑子要好得多。&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;第二招：外视角——先看基础概率，再看具体信息
+ &lt;div id="第二招外视角先看基础概率再看具体信息" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%ac%ac%e4%ba%8c%e6%8b%9b%e5%a4%96%e8%a7%86%e8%a7%92%e5%85%88%e7%9c%8b%e5%9f%ba%e7%a1%80%e6%a6%82%e7%8e%87%e5%86%8d%e7%9c%8b%e5%85%b7%e4%bd%93%e4%bf%a1%e6%81%af" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;卡尼曼管这叫&amp;quot;外视角&amp;quot;。&lt;/p&gt;
+&lt;p&gt;有人介绍一个创业项目给你。创始人清华毕业，之前在腾讯做产品总监，拿了红杉的天使轮。你的直觉已经锚在了&amp;quot;这个项目大概率能成&amp;quot;上。&lt;/p&gt;
+&lt;p&gt;外视角的做法是：先不管这个人是谁。先问——&lt;strong&gt;天使轮到A轮的成功率是多少？&lt;/strong&gt; 行业数据显示大约10%。好，这是基础概率。然后你再叠加这个人的背景——清华、腾讯、红杉——去修正这个概率。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;先从基准线出发，再从具体信息调整。&lt;/strong&gt; 不要反过来——先被具体信息锚住，再从你的锚往外调。后者的调整永远不够。&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;第三招：替身决策——假装是替别人做决定
+ &lt;div id="第三招替身决策假装是替别人做决定" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%ac%ac%e4%b8%89%e6%8b%9b%e6%9b%bf%e8%ba%ab%e5%86%b3%e7%ad%96%e5%81%87%e8%a3%85%e6%98%af%e6%9b%bf%e5%88%ab%e4%ba%ba%e5%81%9a%e5%86%b3%e5%ae%9a" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;这是卡尼曼自己用的技巧，也是最容易上手的。&lt;/p&gt;
+&lt;p&gt;你朋友跟你说：看上了一套房，卖家要530万，你觉得值不值？你大概率会说——&amp;ldquo;看周边成交价，别盯着挂牌价。查过去三个月的成交记录。&amp;ldquo;你说这话时毫无心理负担。&lt;/p&gt;
+&lt;p&gt;但当&amp;quot;朋友&amp;quot;是你自己时，你的大脑已经被530万钉住了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;所以下次你做任何涉及数字的决策时，先告诉自己：这不是我的决定。我是在帮一个朋友出主意。&lt;/strong&gt; 只是碰巧这个朋友的需求和预算跟我一模一样。&lt;/p&gt;
+&lt;p&gt;心理距离一旦拉开，锚的效力会急剧下降。这不是玄学——是因为&amp;quot;替别人决策&amp;quot;会激活你脑中和&amp;quot;自我利益&amp;quot;不同的回路，让你更容易调用大脑里那个慢速、理性、需要刻意动脑的分析系统。&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;第四招：极端化——故意把锚推到荒谬的程度
+ &lt;div id="第四招极端化故意把锚推到荒谬的程度" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%ac%ac%e5%9b%9b%e6%8b%9b%e6%9e%81%e7%ab%af%e5%8c%96%e6%95%85%e6%84%8f%e6%8a%8a%e9%94%9a%e6%8e%a8%e5%88%b0%e8%8d%92%e8%b0%ac%e7%9a%84%e7%a8%8b%e5%ba%a6" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;这招属于&amp;quot;以毒攻毒&amp;rdquo;。&lt;/p&gt;
+&lt;p&gt;你看到&amp;quot;原价1599，现价499&amp;rdquo;。你对自己说：好，这个锚是1599。那如果原价是9999呢？如果是99呢？&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;当你把锚推到荒谬的方向，你就暴露了锚本身的人为性。&lt;/strong&gt; 一旦你意识到&amp;quot;1599这个数字是被人选出来的，不是必然的&amp;quot;——锚的魔力就开始消散。&lt;/p&gt;
+&lt;p&gt;这和认知行为疗法里&amp;quot;灾难化→去灾难化&amp;quot;的技术同源。你说&amp;quot;太贵了买不起&amp;quot;→好，那世界上最贵的是什么？一件夹克1599，和一件爱马仕鳄鱼皮夹克15万比。1599突然看起来就像一个数字了——不是真理，只是数字。&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;第五招：多锚交叉——让四根钉子互相打架
+ &lt;div id="第五招多锚交叉让四根钉子互相打架" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%ac%ac%e4%ba%94%e6%8b%9b%e5%a4%9a%e9%94%9a%e4%ba%a4%e5%8f%89%e8%ae%a9%e5%9b%9b%e6%a0%b9%e9%92%89%e5%ad%90%e4%ba%92%e7%9b%b8%e6%89%93%e6%9e%b6" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;一根钉子钉死你。四根钉子，互相矛盾，你就解放了。&lt;/p&gt;
+&lt;p&gt;买二手车，不要只看卖家的报价。去查：①同款车在瓜子上的挂牌价 ②4S店的官方认证二手车价格 ③过去半年同款在拍卖平台上的成交价 ④修理厂师傅对这车&amp;quot;你觉得值多少&amp;quot;的口头估价。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;这四根钉子各自有不同的偏误。&lt;/strong&gt; 但它们的交叉点，比你被任何一根钉死的位置，离真相近得多。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;锚定效应不会消失。它是你大脑的操作系统，不是bug。&lt;/p&gt;
+&lt;p&gt;但你可以选择两件事：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;谁钉谁。&lt;/strong&gt; 是被别人的钉子钉住，还是把钉子打进别人脑子里。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;停的那一步。&lt;/strong&gt; 在意识到自己被钉住的那一刻——停下来，往后退，问自己：&amp;ldquo;如果这个数字换成另一个呢？&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;下一次你面对一个报价、一个标价、一个薪资数字时，在回应之前做三件事：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;写下你自己的估计&lt;/li&gt;
+&lt;li&gt;查一个外部基准&lt;/li&gt;
+&lt;li&gt;假装这是朋友让你帮忙评估——你会对这个朋友说什么？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这三步不会让你免疫锚定。但会让你离真相比别人近一步。&lt;/p&gt;
+&lt;p&gt;而这一步，你随时都可以迈出去。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;Reference: Daniel Kahneman — Thinking, Fast and Slow (2011); Tversky &amp;amp; Kahneman — Judgment under Uncertainty: Heuristics and Biases (1974); Mussweiler &amp;amp; Strack — Hypothesis-Consistent Testing and Semantic Priming (1999)&lt;/em&gt;&lt;/p&gt;</description></item><item><title>先偷后解：量子破解门槛 4 年降了 99%，而被囤的加密数据已经堆到 EB 级</title><link>https://zjdznl.github.io/investment/2026-06-28-quantum-countdown-pqc/</link><pubDate>Sun, 28 Jun 2026 12:00:00 +0800</pubDate><guid>https://zjdznl.github.io/investment/2026-06-28-quantum-countdown-pqc/</guid><description>&lt;p&gt;两件事在同时发生。把它们放在一起看，结论让人不安。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;第一件事&lt;/strong&gt;：量子计算机破解公钥加密的门槛在暴跌。2022 年学界估计破解比特币椭圆曲线签名（ECDSA）需要 3.17 亿个物理量子比特；到 2026 年 3 月，Oratomic 和 Caltech 的联合论文把这个数字压到了约 2.6 万——四年降了 99.99%。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;第二件事&lt;/strong&gt;：五眼联盟国家已经在全球海缆登陆站大规模囤积加密流量。英国 GCHQ 的 Tempora 项目接入 200 多条跨洋光缆，单日抓取 21PB 数据。美国 NSA 在犹他州建了 20 亿美元的矩阵数据中心，规划 EB 级磁带库，设计目标就是&lt;strong&gt;把今天解不开的加密数据存到量子计算机到位的那一天&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;这两条线正在加速交汇。一边是破解门槛在自由落体，另一边是被囤的数据保质期以十年计。交汇点上的问题是：谁先穿上防弹衣？&lt;/p&gt;
