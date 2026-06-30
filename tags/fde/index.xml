@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>FDE on 主页</title><link>https://zjdznl.github.io/tags/fde/</link><description>Recent content in FDE on 主页</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>© 2026</copyright><lastBuildDate>Wed, 01 Jul 2026 12:00:00 +0800</lastBuildDate><atom:link href="https://zjdznl.github.io/tags/fde/index.xml" rel="self" type="application/rss+xml"/><item><title>聊聊FDE：AI落地最后三公里，最缺的不是模型，是人</title><link>https://zjdznl.github.io/ai/2026-07-01-fde-layered-delivery/</link><pubDate>Wed, 01 Jul 2026 12:00:00 +0800</pubDate><guid>https://zjdznl.github.io/ai/2026-07-01-fde-layered-delivery/</guid><description>&lt;p&gt;2024年秋天，OpenAI派了两个工程师去爱荷华州。&lt;/p&gt;
+&lt;p&gt;不是去开会，不是去做方案汇报。是去种地。&lt;/p&gt;
+&lt;p&gt;他们的任务是嵌入全球最大的农业机械制造商John Deere，把GPT-4塞进拖拉机里。几个月后，搭载AI视觉系统的喷洒装置上线——农药和化肥用量减少了60%到70%。&lt;/p&gt;
+&lt;p&gt;这两个人有一个职位名称：Forward Deployed Engineer，前线部署工程师。&lt;/p&gt;
+&lt;p&gt;这不是一个新鲜的岗位。Palantir在二十年前就发明了它。但到了2025-2026年，FDE成了整个AI行业最烫手的招聘需求——金融时报援引Indeed数据报道，FDE岗位数量在2025年前九个月涨了好几倍。OpenAI的FDE团队从2个人扩到50人，Anthropic的Applied AI团队计划五倍扩张。年薪开到28万美元还不够抢。&lt;/p&gt;
+&lt;p&gt;这个岗位突然爆发的原因很简单：全行业撞上了一堵墙。&lt;/p&gt;
+
+&lt;h2 class="relative group"&gt;绝大多数AI项目没产生任何业务收益，问题出在哪
+ &lt;div id="绝大多数ai项目没产生任何业务收益问题出在哪" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%bb%9d%e5%a4%a7%e5%a4%9a%e6%95%b0ai%e9%a1%b9%e7%9b%ae%e6%b2%a1%e4%ba%a7%e7%94%9f%e4%bb%bb%e4%bd%95%e4%b8%9a%e5%8a%a1%e6%94%b6%e7%9b%8a%e9%97%ae%e9%a2%98%e5%87%ba%e5%9c%a8%e5%93%aa" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;MIT 2024年的一项研究（Project NANDA，覆盖300多个公开部署案例和153位高管调研）给出了一个结论：绝大多数企业AI项目无法产生可衡量的业务价值——不是AI不行，是企业不知道该怎么把AI用进真实的业务流程里。&lt;/p&gt;
+&lt;p&gt;模型能力没问题。2026年的模型在推理、编码、多模态上每一项都在突飞猛进。&lt;/p&gt;
+&lt;p&gt;需求也是真实的。连锁餐饮老板想用AI管加盟商数据，制造厂长想用AI做产线工艺优化，医美连锁想用AI做客户分层运营。预算是批了的。&lt;/p&gt;
+&lt;p&gt;但中间有一段真空地带，没有人填。&lt;/p&gt;
+&lt;p&gt;技术团队说：我们把API调通了，模型跑起来了，你看这个demo多流畅。企业老板说：demo很好看，但我的店员不会用，我的数据导不出来，我的收银系统和你们的系统对不上，我的一线主管说上了这个工作量反而翻倍了。&lt;/p&gt;
+&lt;p&gt;这段真空地带，就是AI落地的最后三公里。&lt;/p&gt;
+&lt;p&gt;而FDE，是唯一被设计来走完这三公里的角色。&lt;/p&gt;
+
+&lt;h2 class="relative group"&gt;FDE不是驻场开发，也别叫它售前或实施
+ &lt;div id="fde不是驻场开发也别叫它售前或实施" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#fde%e4%b8%8d%e6%98%af%e9%a9%bb%e5%9c%ba%e5%bc%80%e5%8f%91%e4%b9%9f%e5%88%ab%e5%8f%ab%e5%ae%83%e5%94%ae%e5%89%8d%e6%88%96%e5%ae%9e%e6%96%bd" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;先正本清源。&lt;/p&gt;
+&lt;p&gt;FDE这个词是Palantir在2004到2009年间创造的。当时Palantir的早期客户是美国情报机构和国防部——CIA、NSA、陆军。这些客户的数据环境极度敏感，数据不能出机房，工程师看不到系统就做不了任何事。&lt;/p&gt;
+&lt;p&gt;Palantir的解法是：把工程师直接塞进客户现场，待几周甚至几个月。他们内部管这群人叫&amp;quot;Deltas&amp;quot;——持有安全许可、在保密硬件上写代码、参加客户的站会、直接往客户的生产环境里提交代码。&lt;/p&gt;
+&lt;p&gt;到2016年，Palantir的FDE数量已经超过了传统软件工程师。&lt;/p&gt;
+&lt;p&gt;这个模式跟传统岗位有本质区别。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;驻场开发&lt;/strong&gt;是被动接需求单的——你给我需求文档，我照着写成代码，交付了事。能不能用？有没有产生业务价值？不在他的KPI里。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;实施工程师&lt;/strong&gt;只会配置系统——标准功能我能给你搭起来，但要打通你们那套十年前买的ERP、要适配你们独有的业务流程、要给一线工人改个自定义工作流？做不了，没这个权限，也没这个能力。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;售前顾问&lt;/strong&gt;做的是PPT——方案漂漂亮亮，讲完就走。坑是谁来填？售后团队。售前承诺的和售后能做到的中间，隔着一条银河。&lt;/p&gt;
+&lt;p&gt;FDE跟这三个角色的核心差异就一个字：&lt;strong&gt;兜底&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;他不是交付一个功能模块，他是交付一个跑通了的、产生业务结果的系统。数据库不通？他直接写数据管道。API对不上？他现场重构接口。一线员工不会用？他手把手教，教完了收集反馈，回来改提示词、调工作流、迭代到能用为止。&lt;/p&gt;
+&lt;p&gt;Palantir内部对FDE有一个精准的概括：「一个客户，多种能力」——传统工程师是「一种能力，多个客户」，FDE反过来，以客户为中心调动一切技术手段。&lt;/p&gt;
+&lt;p&gt;但这个模式有一个结构性缺陷：&lt;strong&gt;成本极高，不可规模化&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;h2 class="relative group"&gt;为什么原版FDE在中国水土不服
+ &lt;div id="为什么原版fde在中国水土不服" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e5%8e%9f%e7%89%88fde%e5%9c%a8%e4%b8%ad%e5%9b%bd%e6%b0%b4%e5%9c%9f%e4%b8%8d%e6%9c%8d" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;Palantir的FDE是单人全能型选手——既懂业务又懂代码，既能跟CEO开战略会又能蹲机房调数据库。这种人的培养周期是三到五年，年薪百万人民币起。而且一个人只能服务一到两个大客户，服务周期按月甚至按年计。&lt;/p&gt;
+&lt;p&gt;这套逻辑在Palantir的场景里是成立的——一个客户是CIA，合同金额上千万美元，工程师驻场一年完全划得来。&lt;/p&gt;
+&lt;p&gt;但中国的企业服务市场长这样：&lt;/p&gt;
+&lt;p&gt;一家连锁餐饮品牌，200家门店，年营收3个亿。老板想做AI辅助招商评估和加盟商经营数据分析。收银系统是美团的，供应链是别家定制的，企微里有几万条客户对话记录，门店POS机的数据格式每家店还不一样。&lt;/p&gt;
+&lt;p&gt;派一个年薪百万的全能FDE去？服务费覆盖不了人力成本。&lt;/p&gt;
+&lt;p&gt;更本质的问题在于：中国的实体商业场景比美国复杂一个量级。&lt;/p&gt;
+&lt;p&gt;美国的连锁企业是高度标准化的——麦当劳的门店操作系统全球统一，沃尔玛的供应链数据规范程度接近军工级别。但中国的连锁加盟业态是另一种生物：总部和加盟商之间的数据博弈、不同批次门店的系统版本差异、一线员工用个人微信跟客户聊天产生的非结构化数据、老板口口相传的行业经验无法转化成可执行的规则。&lt;/p&gt;
+&lt;p&gt;单一FDE面对这种复杂度，必然出现能力短板：懂业务的不懂底层开发，能写代码的不懂行业Know-how，会做实施的不懂怎么跟老板量化AI的投入产出比。&lt;/p&gt;
+&lt;p&gt;解法不是找一个更全能的人。解法是分工。&lt;/p&gt;
+
+&lt;h2 class="relative group"&gt;三层FDE：拆开一个人做不了的事
+ &lt;div id="三层fde拆开一个人做不了的事" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%b8%89%e5%b1%82fde%e6%8b%86%e5%bc%80%e4%b8%80%e4%b8%aa%e4%ba%ba%e5%81%9a%e4%b8%8d%e4%ba%86%e7%9a%84%e4%ba%8b" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;我提出的分层方案是三类FDE，分工互补，覆盖从百万营收小连锁到十亿级集团企业的全类型客户。&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;业务FDE：行业翻译官
+ &lt;div id="业务fde行业翻译官" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%b8%9a%e5%8a%a1fde%e8%a1%8c%e4%b8%9a%e7%bf%bb%e8%af%91%e5%ae%98" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;这个角色不写底层代码。他的核心能力是&lt;strong&gt;把一个行业二十年的经验，翻译成AI能执行的逻辑&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;他对话的对象是企业的一把手和核心管理层。老板脑子里有一整套行业Know-how——什么样的选址能做起来、什么样的加盟商可能出问题、什么样的客诉模式意味着门店在瞒报数据。但这些经验是零散的、口头的、高度场景化的，纯技术人员听不懂，更不知道该怎么建模。&lt;/p&gt;
+&lt;p&gt;业务FDE做的事情是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;跟老板聊三天，把他二十年的判断逻辑抽象成可量化的规则&lt;/li&gt;
+&lt;li&gt;从企业战略里筛出最高ROI的AI落地场景——不是所有问题都值得用AI解决，判断「先做什么」本身就是一种稀缺能力&lt;/li&gt;
+&lt;li&gt;把业务诉求转化成可执行的技术方案，对内协调技术团队，对外向老板用经营指标（而非技术指标）汇报AI效果&lt;/li&gt;
+&lt;li&gt;推动企业开放内部文档、经营数据、行业SOP——这一步最容易被忽略，但缺了这一步后面的人什么都做不了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这里要跟传统的业务分析师（BA）或产品经理（PM）做一个关键区分：BA和PM的核心产出是需求文档和产品规划——他们把业务需求翻译给人看。业务FDE的核心产出是&lt;strong&gt;可直接被AI执行的规则链和推理链路&lt;/strong&gt;——他把业务需求翻译给机器看。他需要对AI的工程边界有判断力：什么场景大模型能做、什么做不了、什么需要传统规则引擎补充。这个工程判断力，是传统BA/PM不具备的。&lt;/p&gt;
+&lt;p&gt;举一个例子：制造业的业务FDE，进到一家中等规模工厂，厂长说「我想用AI优化产线」。业务FDE要做的是——先搞清楚是哪条产线、什么工艺、瓶颈在哪道工序、跟排产计划的关系是什么、历史数据是手写记录还是传感器时序数据。然后告诉厂长：「你的核心问题是热处理工艺参数靠老师傅手感，不是排产调度问题。先做工艺参数优化，ROI是排产优化的三倍。」&lt;/p&gt;
+&lt;p&gt;没有这个翻译层，技术团队上来就开始跑数据、训练预测模型，大概率做的是用户不疼不痒的东西。&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;日常落地FDE：现场执行者
+ &lt;div id="日常落地fde现场执行者" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%97%a5%e5%b8%b8%e8%90%bd%e5%9c%b0fde%e7%8e%b0%e5%9c%ba%e6%89%a7%e8%a1%8c%e8%80%85" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;业务FDE定了方向和场景后，日常落地FDE是真正把方案跑通的人。&lt;/p&gt;
+&lt;p&gt;这里有一个容易产生的误解需要澄清：日常落地FDE做的事情看起来很多，但他和原版Palantir单人全能FDE有本质区别——&lt;strong&gt;他用的是标准化的工具包，不是从零搭建的能力&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;打个比方：全能FDE是建筑设计师+结构工程师+施工队长三位一体，什么都得会。日常落地FDE更像一个经验丰富的施工队长——他不需要懂结构力学计算，但他能用设计师给的图纸、工程师给的施工规范，带着工人把房子盖起来。他的价值不在于每个领域都精通，而在于他知道标准流程里的每个坑在哪。&lt;/p&gt;
+&lt;p&gt;具体来说，日常落地FDE的工作包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用已有的提示词模板和工作流框架搭建AI应用——不需要从零设计RAG（检索增强生成，一种让AI从企业文档中实时获取信息的技术）架构，但知道什么场景该用什么模板&lt;/li&gt;
+&lt;li&gt;对接用友、金蝶、美团、产线MES（制造执行系统）等第三方系统——难点不在接口调用，在适配每个客户不同的数据格式和同步频率&lt;/li&gt;
+&lt;li&gt;培训一线员工使用AI——可能是50岁的车间主任，可能是初中文化的门店店员，不能用PPT讲，要站旁边看他们操作，出错当场改&lt;/li&gt;
+&lt;li&gt;持续收集一线真实经营反馈——很多决策层看不到的数据，一线人员是知道的，但没人问、没反馈渠道&lt;/li&gt;
+&lt;li&gt;清洗脏数据、校验数据真实性——这一步决定了AI效果的上限&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;最关键的是最后一条。连锁加盟业态里，加盟商天然有动机美化经营数据或选择性上报。数据不真实，再好的模型也白搭。日常落地FDE在一次次驻场中，通过交叉校验、异常检测、现场核实，建立一套数据可信度的判断标准。这是纯远程交付永远做不到的事。&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;底层深度交付FDE：技术兜底者
+ &lt;div id="底层深度交付fde技术兜底者" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%ba%95%e5%b1%82%e6%b7%b1%e5%ba%a6%e4%ba%a4%e4%bb%98fde%e6%8a%80%e6%9c%af%e5%85%9c%e5%ba%95%e8%80%85" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;这个角色不直接接触一线业务人员。他的工作对象是服务器、数据库、网络架构、安全合规。&lt;/p&gt;
+&lt;p&gt;很多人觉得这一层跟传统的后端开发差不多。差远了。&lt;/p&gt;
+&lt;p&gt;传统后端开发在公司的标准化环境里工作——统一的工具链、固定的技术栈、已知的部署环境。底层FDE面对的是客户的企业内网、多个版本的私有化系统、等保（中国信息安全等级保护制度）合规要求、数据不出机房的硬约束。&lt;/p&gt;
+&lt;p&gt;他需要：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在客户的物理服务器上部署大模型底座，配GPU驱动、网络隔离、私有化推理&lt;/li&gt;
+&lt;li&gt;搭建多智能体协同架构，处理不同Agent之间的状态同步和任务编排&lt;/li&gt;
+&lt;li&gt;打通ERP、收银、供应链、企微、产线设备等多系统数据管道&lt;/li&gt;
+&lt;li&gt;构建企业文档知识库，管数据权限、合规安全、数据脱敏&lt;/li&gt;
+&lt;li&gt;在断网环境下迭代底层架构——很多政企和军工相关企业不允许外部网络连接&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这部分能力是全行业通用的。制造业的时序数据、餐饮的经营数据、医美的客户隐私数据，都需要同一套底层安全与集成方案。底层FDE像一个特种工兵——不管开到哪个行业，架桥铺路的基础能力是一样的。&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;三层怎么协同
+ &lt;div id="三层怎么协同" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%b8%89%e5%b1%82%e6%80%8e%e4%b9%88%e5%8d%8f%e5%90%8c" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;用一句话说就是：&lt;strong&gt;业务FDE定方向，日常落地FDE跑通路，底层FDE搭底座。缺任何一层，闭环都断。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;业务FDE跟老板开完战略会，确定了「先用AI优化加盟商经营数据上报的真实性」这个场景。日常落地FDE进场，对接20家试点门店的收银系统数据，培训门店主管每天录入数据的方式，发现数据漏报的情况后跟业务FDE反馈「需要同步推进加盟商数据合规培训」。底层FDE同时在后台搭数据库管道，把清洗后的经营数据接入RAG知识库，让老板能直接对话查询每家门店的经营健康度。&lt;/p&gt;
+&lt;p&gt;这不是一个角色能干的事。这是三个角色、三种能力栈、按一个统一的交付逻辑协同推进。&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;为什么三个人反而比一个人便宜
+ &lt;div id="为什么三个人反而比一个人便宜" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e4%b8%89%e4%b8%aa%e4%ba%ba%e5%8f%8d%e8%80%8c%e6%af%94%e4%b8%80%e4%b8%aa%e4%ba%ba%e4%be%bf%e5%ae%9c" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;直觉上这是个矛盾：一个人太贵，所以用三个人？&lt;/p&gt;
+&lt;p&gt;关键在两点：&lt;strong&gt;技能深度决定薪酬，客户复用决定单价。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;全能FDE需要同时具备三种能力——行业Know-how、现场实施、底层架构——每一种都需要三到五年深耕。这类人在市场上极其稀缺，年薪百万是起点。而且他同一时间只能服务一到两个客户。&lt;/p&gt;
+&lt;p&gt;拆成三层以后，每一层的技能要求收窄了：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;业务FDE&lt;/strong&gt;的稀缺性来自行业经验而非代码能力。一个在连锁餐饮做了十年运营总监转型的人，薪酬远低于全能型AI工程师，但他一年可以服务10到12个客户——他不需要驻场，只需要在关键节点跟老板对齐方向、判断场景优先级。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;日常落地FDE&lt;/strong&gt;的操作高度标准化——对接收银系统、调提示词模板、培训店员。他用的是一套可复用的工具包，不需要从零搭建。一个做过三个项目的日常FDE，做第四个项目的效率会大幅提升。他可以同时覆盖3到5个客户，在不同项目阶段穿插进行。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;底层FDE&lt;/strong&gt;是三层中最贵的，但他的技术底座跨客户高度复用——一套私有大模型部署方案、一套数据管道架构、一套安全合规框架，可以在不同客户间迁移，边际成本递减。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;结果：全能FDE服务一个中型客户的年费在80到150万。而三层FDE团队服务同一个客户的年费可以控制在30到50万——因为每个角色的客户单价被摊薄了。&lt;/p&gt;
+&lt;p&gt;说白了：不是把一个贵的人换成三个便宜的人。是把一个什么都要会的人，换成三个只需要会一部分的人——每个人的技能门槛更低、可培养性更强、客户复用率更高。&lt;/p&gt;
+
+&lt;h2 class="relative group"&gt;这套框架的适用边界远不止某一个行业
+ &lt;div id="这套框架的适用边界远不止某一个行业" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%bf%99%e5%a5%97%e6%a1%86%e6%9e%b6%e7%9a%84%e9%80%82%e7%94%a8%e8%be%b9%e7%95%8c%e8%bf%9c%e4%b8%8d%e6%ad%a2%e6%9f%90%e4%b8%80%e4%b8%aa%e8%a1%8c%e4%b8%9a" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;三层FDE体系从连锁餐饮的实践中长出来，但它的适用边界远不止餐饮。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;线下连锁服务业&lt;/strong&gt;（轻医美、零售、酒店）的共性是：门店分散、加盟商多、收银/会员/供应链碎片化。FDE的核心工作是打通门店一线数据、管控加盟商数据质量、用AI轻量化处理招商评估、客户分层、客诉预警等高频业务。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;工业制造&lt;/strong&gt;的共性是：产线设备时序数据多、工艺Know-how壁垒高、生产安全合规要求严。FDE的核心工作是产线数据集成、工艺参数优化建模、设备故障预测——前提是业务FDE能跟工艺工程师对上话，把「这个温度凭经验调到850度左右」翻译成可建模的规则。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;政企和大型集团&lt;/strong&gt;的共性是：数据隔离、等保合规、多层级审批、采购流程漫长。这类客户反而最接近Palantir原生FDE模式，但分层FDE也可以做规模化交付——三类FDE刚好对应总部的战略决策层、业务部门的运营层、IT部门的基建层。&lt;/p&gt;
+&lt;p&gt;跨行业跑一圈，规律是一样的：&lt;strong&gt;只要AI需要接触物理世界的真实经营数据，就需要FDE。只要实体商业场景足够复杂，就需要三层分工。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;脱离一线物理场景的纯代码、纯实验室模型，在真正复杂的商业环境里就像在健身房里练出来的肌肉——好看，干不了工地上的活。&lt;/p&gt;
+
+&lt;h2 class="relative group"&gt;FDE模式背后的一个底层变化
+ &lt;div id="fde模式背后的一个底层变化" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#fde%e6%a8%a1%e5%bc%8f%e8%83%8c%e5%90%8e%e7%9a%84%e4%b8%80%e4%b8%aa%e5%ba%95%e5%b1%82%e5%8f%98%e5%8c%96" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;这不仅是招聘一个新岗位。是行业在重新理解「部署」这件事。&lt;/p&gt;
+&lt;p&gt;过去二十年，软件行业的主流信仰是「先写好产品，再推给用户」。SaaS是这个信仰的终极形态：标准化的代码，服务标准化的需求。&lt;/p&gt;
+&lt;p&gt;但AI把这个逻辑反过来了。AI的能力不是预设的，是跟客户的私有数据和业务逻辑互动后长出来的。同一个GPT-4，接上不同企业的数据、配置不同的工作流、嵌入不同的业务流程，产出的东西完全不同。&lt;strong&gt;部署本身就是产品的一部分&lt;/strong&gt;——你在部署阶段对客户业务钻得多深，直接决定了AI能产生多少价值。&lt;/p&gt;
+&lt;p&gt;a16z合伙人Joe Schmidt把这叫做「部署质量成为竞争护城河」。当模型本身逐渐商品化，企业的核心资产不再是囤了多少GPU，而是&lt;strong&gt;自有真实经营数据的获取速度和质量&lt;/strong&gt;——而这个速度，由FDE团队决定。&lt;/p&gt;
+&lt;p&gt;在中国，这件事被一个独特的因素放大了：实体商业的高度非标准化。这意味着FDE不只是锦上添花的交付优化，它是AI能在这些行业产生商业价值的必要条件。&lt;/p&gt;
+
+&lt;h2 class="relative group"&gt;AI下半场比什么
+ &lt;div id="ai下半场比什么" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#ai%e4%b8%8b%e5%8d%8a%e5%9c%ba%e6%af%94%e4%bb%80%e4%b9%88" aria-label="锚点"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;未来五年，To B市场最稀缺的不是算法工程师——大模型开源趋势下，训练和微调的门槛在快速降低。最稀缺的是懂行业、能驻场、能在一个客户现场待三个月不跑的FDE团队。&lt;/p&gt;
+&lt;p&gt;愿意扎根到各行各业物理现场——工厂车间、连锁门店、医美机构、物流仓库——愿意忍受脏数据和混乱流程，愿意把一手的业务现实转化成AI可用武器的创业者，会抓住这波产业数字化最大的红利。&lt;/p&gt;
+&lt;p&gt;因为说到底，AI值多少钱，不取决于你的模型有多强。&lt;/p&gt;
+&lt;p&gt;取决于你愿意走到离真实业务多近的地方。&lt;/p&gt;</description></item></channel></rss>
